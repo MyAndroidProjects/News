@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">News</string>
+
+    <!-- menu categories -->
+    <string name="yandex">Yandex news</string>
+    <string name="meduza">Meduza news</string>
+    <string name="ngs">Ngs news</string>
+    <string name="lenta">Lenta news</string>
+    <string name="ria">RIA news</string>
+
+    <string name="yandex_world">World</string>
+    <string name="yandex_politics">Politics</string>
+    <string name="yandex_incident">Incident</string>
+    <string name="yandex_computers">Technologies</string>
+    <string name="yandex_business">Economics</string>
 </resources>

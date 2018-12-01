@@ -3,4 +3,25 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="color_red_500">#F44336</color>
+    <color name="color_red_700">#D32F2F</color>
+    <color name="color_orange_500">#FF9800</color>
+    <color name="color_orange_700">#F57C00</color>
+    <color name="color_yellow_500">#FFEB3B</color>
+    <color name="color_yellow_700">#FBC02D</color>
+    <color name="color_green_500">#4CAF50</color>
+    <color name="color_green_700">#388E3C</color>
+    <color name="color_cyan_100">#B2EBF2</color>
+    <color name="color_cyan_500">#00BCD4</color>
+    <color name="color_cyan_700">#0097A7</color>
+    <color name="color_deep_purple_500">#673AB7</color>
+    <color name="color_deep_purple_700">#512DA8</color>
+
+
+    <color name="primary_background">@color/color_cyan_100</color>
+
+    <color name="action_bar_default_background">@color/color_cyan_500</color>
+    <color name="status_bar_default_background">@color/color_cyan_700</color>
+
 </resources>
