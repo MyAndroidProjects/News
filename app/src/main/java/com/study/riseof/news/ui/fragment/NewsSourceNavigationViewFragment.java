@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.study.riseof.news.R;
 
@@ -18,6 +17,7 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
     @BindView(R.id.navigation_view)
     NavigationView navigationView;
 
+    private MenuListener menuListener;
 
     @Override
     protected int getLayoutId() {
@@ -41,24 +41,42 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
         int id = menuItem.getItemId();
         switch (id) {
             case R.id.menu_item_back:
-                Toast.makeText(getContext(), "menu_item_back", Toast.LENGTH_SHORT).show();
+                menuListener.onMenuItemCloseMainDrawer();
                 return true;
             case R.id.menu_item_yandex:
-                Toast.makeText(getContext(), "menu_item_yandex", Toast.LENGTH_SHORT).show();
+                menuListener.onMenuItemYandex();
                 return true;
             case R.id.menu_item_meduza:
-                Toast.makeText(getContext(), "menu_item_meduza", Toast.LENGTH_SHORT).show();
+                menuListener.onMenuItemMeduza();
                 return true;
             case R.id.menu_item_ngs:
-                Toast.makeText(getContext(), "menu_item_ngs", Toast.LENGTH_SHORT).show();
+                menuListener.onMenuItemNgs();
                 return true;
             case R.id.menu_item_lenta:
-                Toast.makeText(getContext(), "menu_item_lenta", Toast.LENGTH_SHORT).show();
+                menuListener.onMenuItemLenta();
                 return true;
             case R.id.menu_item_ria:
-                Toast.makeText(getContext(), "menu_item_ria", Toast.LENGTH_SHORT).show();
+                menuListener.onMenuItemRia();
                 return true;
         }
         return true;
+    }
+
+    public void setMenuListener(MenuListener menuListener) {
+        this.menuListener = menuListener;
+    }
+
+    public interface MenuListener {
+        void onMenuItemCloseMainDrawer();
+
+        void onMenuItemYandex();
+
+        void onMenuItemMeduza();
+
+        void onMenuItemNgs();
+
+        void onMenuItemLenta();
+
+        void onMenuItemRia();
     }
 }

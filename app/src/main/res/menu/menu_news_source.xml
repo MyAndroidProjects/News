@@ -21,11 +21,11 @@
         <item
             android:icon="@drawable/ic_baseline_bookmarks_24px"
             android:id="@+id/menu_item_ngs"
-            android:title="@string/ngs" />
+            android:title="@string/ngs"/>
         <item
             android:icon="@drawable/ic_baseline_bookmarks_24px"
             android:id="@+id/menu_item_lenta"
-            android:title="@string/lenta" />
+            android:title="@string/lenta"/>
         <item
             android:icon="@drawable/ic_baseline_bookmarks_24px"
             android:id="@+id/menu_item_ria"
