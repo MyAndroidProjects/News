@@ -13,4 +13,8 @@
     <string name="yandex_incident">Incident</string>
     <string name="yandex_computers">Technologies</string>
     <string name="yandex_business">Economics</string>
+
+    <string name="rss_news_content">Image with news</string>
+
+
 </resources>

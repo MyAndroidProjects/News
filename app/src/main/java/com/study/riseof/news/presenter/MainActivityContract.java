@@ -2,21 +2,32 @@ package com.study.riseof.news.presenter;
 
 import android.view.View;
 
+import com.study.riseof.news.model.MeduzaCutNews;
 import com.study.riseof.news.ui.activity.MainActivity;
+
+import java.util.List;
 
 public interface MainActivityContract {
     interface MainActivityView {
         void showShortToast(String message);
+
+        void openDrawer();
+
+        void closeDrawer();
+
+        void createRssFragment();
+
+        void createNewsSourceNavigationViewFragment();
+
+        void setRssList(List<MeduzaCutNews> rssList);
     }
 
     interface MainActivityPresenter {
         void attachView(MainActivity activity);
 
-        void viewIsAvailable();
+        void activityOnStart();
 
         void deAttachView();
-
-        void onMenuButtonUpdate();
 
         void onMenuButtonHome();
 
@@ -32,15 +43,17 @@ public interface MainActivityContract {
 
         void onMenuItemCloseMainDrawer();
 
-        void onMenuItemYandex();
+        void onNavigationMenuItemYandex();
 
-        void onMenuItemMeduza();
+        void onNavigationMenuItemMeduza();
 
-        void onMenuItemNgs();
+        void onNavigationMenuItemNgs();
 
-        void onMenuItemLenta();
+        void onNavigationMenuItemLenta();
 
-        void onMenuItemRia();
+        void onNavigationMenuItemRia();
+
+        void onNavigationMenuAnyItem();
     }
 
     interface MainActivityDataLoader {

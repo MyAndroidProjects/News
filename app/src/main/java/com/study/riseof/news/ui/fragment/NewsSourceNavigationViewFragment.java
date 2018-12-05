@@ -17,7 +17,7 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
     @BindView(R.id.navigation_view)
     NavigationView navigationView;
 
-    private MenuListener menuListener;
+    private NavigationViewListener navigationViewListener;
 
     @Override
     protected int getLayoutId() {
@@ -41,42 +41,45 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
         int id = menuItem.getItemId();
         switch (id) {
             case R.id.menu_item_back:
-                menuListener.onMenuItemCloseMainDrawer();
-                return true;
+                navigationViewListener.onMenuItemCloseMainDrawer();
+                break;
             case R.id.menu_item_yandex:
-                menuListener.onMenuItemYandex();
-                return true;
+                navigationViewListener.onNavigationMenuItemYandex();
+                break;
             case R.id.menu_item_meduza:
-                menuListener.onMenuItemMeduza();
-                return true;
+                navigationViewListener.onNavigationMenuItemMeduza();
+                break;
             case R.id.menu_item_ngs:
-                menuListener.onMenuItemNgs();
-                return true;
+                navigationViewListener.onNavigationMenuItemNgs();
+                break;
             case R.id.menu_item_lenta:
-                menuListener.onMenuItemLenta();
-                return true;
+                navigationViewListener.onNavigationMenuItemLenta();
+                break;
             case R.id.menu_item_ria:
-                menuListener.onMenuItemRia();
-                return true;
+                navigationViewListener.onNavigationMenuItemRia();
+                break;
         }
+        navigationViewListener.onNavigationMenuAnyItem();
         return true;
     }
 
-    public void setMenuListener(MenuListener menuListener) {
-        this.menuListener = menuListener;
+    public void setNavigationViewListener(NavigationViewListener navigationViewListener) {
+        this.navigationViewListener = navigationViewListener;
     }
 
-    public interface MenuListener {
+    public interface NavigationViewListener {
         void onMenuItemCloseMainDrawer();
 
-        void onMenuItemYandex();
+        void onNavigationMenuItemYandex();
 
-        void onMenuItemMeduza();
+        void onNavigationMenuItemMeduza();
 
-        void onMenuItemNgs();
+        void onNavigationMenuItemNgs();
 
-        void onMenuItemLenta();
+        void onNavigationMenuItemLenta();
 
-        void onMenuItemRia();
+        void onNavigationMenuItemRia();
+
+        void onNavigationMenuAnyItem();
     }
 }

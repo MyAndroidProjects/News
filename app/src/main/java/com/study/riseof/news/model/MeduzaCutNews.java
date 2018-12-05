@@ -13,17 +13,16 @@ public class MeduzaCutNews {
     String pubDate;
 
     public MeduzaCutNews() {
+        title="«Есть ощущение, что существует список „вредных движений“, которые будут выдавливать из России». Антрополог Александр Панченко — о том, как его уволили из СПбГУ и почему в России боятся сект.";
+        description="3 декабря фольклорист и антрополог, доктор филологических наук Александр Панченко рассказал в фейсбуке о своем увольнении из Санкт-Петербургского государственного университета. По его словам, в августе 2018 года ректорат убрал его из списка преподавателей без объяснения причин. Сам Панченко связывает увольнение с написанной им экспертизой по судебному делу против представителей одной из церквей пятидесятников, которая «существенно поколебала позиции обвинения» (Панченко — один из главных в России специалистов, изучающих народное православие и русские мистические секты). «Медуза» поговорила с Панченко об обстоятельствах его увольнения и о том, почему российское государство борется с религиозными движениями.";
     }
 
-    public MeduzaCutNews(String title, String link, String guid, String enclosure, String description, long length, String type, String url, String pubDate) {
-        this.title = title;
-        this.link = link;
-        this.guid = guid;
-        this.enclosure = enclosure;
-        this.description = description;
-        this.length = length;
-        this.type = type;
-        this.url = url;
-        this.pubDate = pubDate;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

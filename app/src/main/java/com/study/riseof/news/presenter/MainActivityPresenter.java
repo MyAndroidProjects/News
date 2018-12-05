@@ -1,13 +1,19 @@
 package com.study.riseof.news.presenter;
 
+import android.util.Log;
 import android.view.View;
 
+import com.study.riseof.news.model.MeduzaCutNews;
 import com.study.riseof.news.ui.activity.MainActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivityPresenter implements MainActivityContract.MainActivityPresenter {
 
     private static MainActivityPresenter instance;
     private MainActivityContract.MainActivityView activityView;
+    List<MeduzaCutNews> rssList;
 
     private MainActivityPresenter() {
     }
@@ -19,14 +25,26 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
         return instance;
     }
 
+    private void setRssList(/*List<MeduzaCutNews> rssList*/) {
+        // todo сдеалать setter из model.getRssList();
+        List<MeduzaCutNews> rssListTest = new ArrayList<>();
+        for (int i =0;i<20;i++){
+            MeduzaCutNews meduzaCutNews = new MeduzaCutNews();
+            rssListTest.add(meduzaCutNews);
+            Log.d("myLog",meduzaCutNews.getTitle());
+        }
+        this.rssList = rssListTest;
+
+    }
+
     @Override
     public void attachView(MainActivity activity) {
         this.activityView = activity;
     }
 
     @Override
-    public void viewIsAvailable() {
-
+    public void activityOnStart() {
+        activityView.createNewsSourceNavigationViewFragment();
     }
 
     @Override
@@ -34,14 +52,11 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
         this.activityView = null;
     }
 
-    @Override
-    public void onMenuButtonUpdate() {
-
-    }
 
     @Override
     public void onMenuButtonHome() {
-
+        Log.d("myLog", "onMenuButtonHome");
+        activityView.openDrawer();
     }
 
     @Override
@@ -73,30 +88,38 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
     @Override
     public void onMenuItemCloseMainDrawer() {
         activityView.showShortToast("onMenuItemCloseMainDrawer");
+        activityView.closeDrawer();
     }
 
     @Override
-    public void onMenuItemYandex() {
-        activityView.showShortToast("onMenuItemYandex");
+    public void onNavigationMenuAnyItem() {
+        activityView.closeDrawer();
     }
 
     @Override
-    public void onMenuItemMeduza() {
-        activityView.showShortToast("onMenuItemMeduza");
+    public void onNavigationMenuItemYandex() {
+        activityView.createRssFragment();
     }
 
     @Override
-    public void onMenuItemNgs() {
-        activityView.showShortToast("onMenuItemNgs");
+    public void onNavigationMenuItemMeduza() {
+        setRssList();
+        activityView.setRssList(rssList);
+        activityView.createRssFragment();
     }
 
     @Override
-    public void onMenuItemLenta() {
-        activityView.showShortToast("onMenuItemLenta");
+    public void onNavigationMenuItemNgs() {
+        activityView.showShortToast("onNavigationMenuItemNgs");
     }
 
     @Override
-    public void onMenuItemRia() {
-        activityView.showShortToast("onMenuItemRia");
+    public void onNavigationMenuItemLenta() {
+        activityView.showShortToast("onNavigationMenuItemLenta");
+    }
+
+    @Override
+    public void onNavigationMenuItemRia() {
+        activityView.showShortToast("onNavigationMenuItemRia");
     }
 }
