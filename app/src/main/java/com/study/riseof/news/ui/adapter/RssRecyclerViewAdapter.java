@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.study.riseof.news.R;
-import com.study.riseof.news.model.MeduzaCutNews;
+import com.study.riseof.news.model.ngs.Item;
 
 import java.util.List;
 
@@ -19,10 +19,10 @@ import butterknife.ButterKnife;
 
 public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerViewAdapter.Holder> {
     private final LayoutInflater inflater;
-    private final List<MeduzaCutNews> rssList;
+    private final List<Item> rssList;
     private final Context context;
 
-    public RssRecyclerViewAdapter(Context context, List<MeduzaCutNews> rssList) {
+    public RssRecyclerViewAdapter(Context context, List<Item> rssList) {
         this.rssList = rssList;
         this.context = context;
         this.inflater = LayoutInflater.from(context);
@@ -37,9 +37,10 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
 
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
-        MeduzaCutNews meduzaCutNews = rssList.get(position);
-        holder.newsHeader.setText(meduzaCutNews.getTitle());
-        holder.newsCutText.setText(meduzaCutNews.getDescription());
+        Item item = rssList.get(position);
+        holder.newsHeader.setText(item.getTitle());
+        holder.newsCutText.setText(item.getDescription());
+        holder.pubDate.setText((item.getPubDate()));
     }
 
     @Override
@@ -54,6 +55,8 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
         TextView newsHeader;
         @BindView(R.id.news_cut_text)
         TextView newsCutText;
+        @BindView(R.id.pub_date)
+        TextView pubDate;
 
         Holder(@NonNull View itemView) {
             super(itemView);

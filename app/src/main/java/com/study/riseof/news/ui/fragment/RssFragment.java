@@ -6,16 +6,14 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.study.riseof.news.R;
-import com.study.riseof.news.model.MeduzaCutNews;
+import com.study.riseof.news.model.ngs.Item;
 import com.study.riseof.news.ui.adapter.RssRecyclerViewAdapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -25,7 +23,7 @@ public class RssFragment extends BaseFragment {
     RecyclerView recyclerView;
 
     RssFragmentListener rssFragmentListener;
-    List<MeduzaCutNews> rssList;
+    List<Item> rssList;
 
     @Override
     protected int getLayoutId() {
@@ -45,7 +43,7 @@ public class RssFragment extends BaseFragment {
         setRecyclerAdapter(getContext());
     }
 
-    public void setNewsList(List<MeduzaCutNews> rssList) {
+    public void setNewsList(List<Item> rssList) {
         this.rssList = rssList;
     }
 

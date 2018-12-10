@@ -16,5 +16,6 @@
 
     <string name="rss_news_content">Image with news</string>
 
+    <string name="base_url_rss_ngs222">https://news.ngs.ru/news/rss/</string>
 
 </resources>

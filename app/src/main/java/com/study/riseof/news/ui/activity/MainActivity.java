@@ -9,11 +9,8 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -22,14 +19,12 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.study.riseof.news.R;
-import com.study.riseof.news.model.MeduzaCutNews;
+import com.study.riseof.news.model.ngs.Item;
 import com.study.riseof.news.presenter.MainActivityContract;
 import com.study.riseof.news.presenter.MainActivityPresenter;
-import com.study.riseof.news.ui.adapter.RssRecyclerViewAdapter;
 import com.study.riseof.news.ui.fragment.NewsSourceNavigationViewFragment;
 import com.study.riseof.news.ui.fragment.RssFragment;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -55,7 +50,7 @@ public class MainActivity extends BaseActivity implements
     private NewsSourceNavigationViewFragment newsSourceNavigationViewFragment;
     private RssFragment rssFragment;
     private MainActivityContract.MainActivityPresenter presenter;
-    private List<MeduzaCutNews> rssList;
+    private List<Item> rssList;
 
     @Override
     protected int getLayoutId() {
@@ -156,7 +151,7 @@ public class MainActivity extends BaseActivity implements
     }
 
     @Override
-    public void setRssList(List<MeduzaCutNews> rssList) {
+    public void setRssList(List<Item> rssList) {
         this.rssList = rssList;
     }
 

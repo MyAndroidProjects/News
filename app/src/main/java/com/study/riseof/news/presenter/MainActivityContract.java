@@ -2,7 +2,7 @@ package com.study.riseof.news.presenter;
 
 import android.view.View;
 
-import com.study.riseof.news.model.MeduzaCutNews;
+import com.study.riseof.news.model.ngs.Item;
 import com.study.riseof.news.ui.activity.MainActivity;
 
 import java.util.List;
@@ -19,7 +19,7 @@ public interface MainActivityContract {
 
         void createNewsSourceNavigationViewFragment();
 
-        void setRssList(List<MeduzaCutNews> rssList);
+        void setRssList(List<Item> rssList);
     }
 
     interface MainActivityPresenter {

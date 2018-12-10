@@ -50,6 +50,14 @@
             android:layout_marginEnd="@dimen/size_small"
             android:layout_marginStart="@dimen/size_small"
             android:textAlignment="textStart" />
+        <TextView
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Overline"
+            android:id="@+id/pub_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/size_small"
+            android:layout_marginStart="@dimen/size_small"
+            android:textAlignment="textStart" />
     </LinearLayout>
 
 
