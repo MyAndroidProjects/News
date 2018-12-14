@@ -1,704 +1,261 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom"
-    version="2.0">
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
     <channel>
-        <title>Meduza.io</title>
-        <link>https://meduza.io</link>
-        <language>ru</language>
-        <description>
-            Мы выбираем для вас самые важные новости и готовим лучшие тексты о том, что происходит в
-            России и мире.
+        <title>Яндекс.Новости: Главное</title>
+        <link>https://news.yandex.ru/index.html?from=rss</link>
+        <description>Первая в России служба автоматической обработки и систематизации новостей.
+            Сообщения ведущих российских и мировых СМИ. Обновление в режиме реального времени 24
+            часа в сутки.
         </description>
         <image>
-            <url>https://meduza.io/images/rss-logo.png</url>
-            <title>Meduza.io</title>
-            <link>https://meduza.io</link>
+            <url>https://company.yandex.ru/i/50x23.gif</url>
+            <link>https://news.yandex.ru/index.html?from=rss</link>
+            <title>Яндекс.Новости: Главное</title>
         </image>
-        <atom:link
-            href="https://meduza.io/rss/all"
-            rel="self"
-            type="application/rss+xml" />
+        <lastBuildDate>14 Dec 2018 11:10:04 +0000</lastBuildDate>
         <item>
-            <title>
-                <![CDATA[ Умер Андрей Битов ]]>
-            </title>
+            <title>ЦБ повысил ключевую ставку до 7,75%</title>
             <link>
-                https://meduza.io/news/2018/12/03/umer-andrey-bitov
+                https://news.yandex.ru/story/CB_povysil_klyuchevuyu_stavku_do_775--80282767fcfa9ab4b3d4ce536ceda5e6?lang=ru&amp;from=rss&amp;stid=thTcEcAVpnZsL4qCOue9
             </link>
             <guid>
-                https://meduza.io/news/2018/12/03/umer-andrey-bitov
+                https://news.yandex.ru/story/CB_povysil_klyuchevuyu_stavku_do_775--80282767fcfa9ab4b3d4ce536ceda5e6?lang=ru&amp;from=rss&amp;stid=thTcEcAVpnZsL4qCOue9
             </guid>
-            <enclosure
-                length="33103"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543853833/news/2018/12/03/umer-andrey-bitov" />
-            <description>
-                <![CDATA[
-Умер писатель Андрей Битов. Об этом в своем фейсбуке сообщила литературный критик Галина Юзефович.
-]]>
+            <description>Банк России второй раз в году повысил ключевую ставку на 0,25 процентного
+                пункта до 7,75% годовых.
             </description>
-            <pubDate>Mon, 03 Dec 2018 19:13:56 +0300</pubDate>
+            <pubDate>14 Dec 2018 10:31:00 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-В Подмосковье напали на основателя движения по борьбе с рабством Олега Мельникова
-]]>
-            </title>
+            <title>Минздрав подготовил закон об увеличении возраста продажи алкоголя</title>
             <link>
-                https://meduza.io/news/2018/12/03/v-podmoskovie-napali-na-osnovatelya-dvizheniya-po-borbe-s-rabstvom-olega-melnikova
+                https://news.yandex.ru/story/Minzdrav_podgotovil_zakon_ob_uvelichenii_vozrasta_prodazhi_alkogolya--df4968d5314331c1509f1ab0f25ab308?lang=ru&amp;from=rss&amp;stid=bcXHL-qOag3RE4FfJ51w
             </link>
             <guid>
-                https://meduza.io/news/2018/12/03/v-podmoskovie-napali-na-osnovatelya-dvizheniya-po-borbe-s-rabstvom-olega-melnikova
+                https://news.yandex.ru/story/Minzdrav_podgotovil_zakon_ob_uvelichenii_vozrasta_prodazhi_alkogolya--df4968d5314331c1509f1ab0f25ab308?lang=ru&amp;from=rss&amp;stid=bcXHL-qOag3RE4FfJ51w
             </guid>
-            <enclosure
-                length="76946"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543852440/news/2018/12/03/v-podmoskovie-napali-na-osnovatelya-dvizheniya-po-borbe-s-rabstvom-olega-melnikova" />
-            <description>
-                <![CDATA[
-В Подмосковье совершено нападение на Олега Мельникова — основателя движения против современного рабства «Альтернатива». Как сообщается в паблике движения в ВК, ему нанесли три удара ножом около подъезда его дома. Лицо нападавшего было закрыто шарфом и капюшоном.
-]]>
+            <description>Минздрав РФ разработал законопроект об увеличении минимального возраста
+                продажи крепкого алкоголя. Об этом сообщили в пресс-службе ведомства. По словам
+                министра Вероники Скворцовой, алкоголь - это один из серьезных факторов риска для
+                здоровья людей.
             </description>
-            <pubDate>Mon, 03 Dec 2018 18:54:00 +0300</pubDate>
+            <pubDate>14 Dec 2018 09:21:00 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-«Писал какие-то непонятные книги, которые никто из здесь стоящих не читал». Начальник штаба Балтфлота — об Иммануиле Канте
-]]>
-            </title>
+            <title>В Кремле знают о высказываниях Леонтьева в адрес главы Хакасии</title>
             <link>
-                https://meduza.io/news/2018/12/03/pisal-kakie-to-neponyatnye-knigi-kotorye-nikto-iz-zdes-stoyaschih-ne-chital-nachalnik-shtaba-baltflota-ob-immanuile-kante
+                https://news.yandex.ru/story/V_Kremle_znayut_o_vyskazyvaniyakh_Leonteva_v_adres_glavy_KHakasii--ec14657ec1a6b49815cd3fa60df42bbd?lang=ru&amp;from=rss&amp;stid=oaH7sFFiqeLUSliyhEum
             </link>
             <guid>
-                https://meduza.io/news/2018/12/03/pisal-kakie-to-neponyatnye-knigi-kotorye-nikto-iz-zdes-stoyaschih-ne-chital-nachalnik-shtaba-baltflota-ob-immanuile-kante
+                https://news.yandex.ru/story/V_Kremle_znayut_o_vyskazyvaniyakh_Leonteva_v_adres_glavy_KHakasii--ec14657ec1a6b49815cd3fa60df42bbd?lang=ru&amp;from=rss&amp;stid=oaH7sFFiqeLUSliyhEum
             </guid>
-            <enclosure
-                length="100332"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543851806/news/2018/12/03/pisal-kakie-to-neponyatnye-knigi-kotorye-nikto-iz-zdes-stoyaschih-ne-chital-nachalnik-shtaba-baltflota-ob-immanuile-kante" />
-            <description>
-                <![CDATA[
-Военнослужащих Балтийского флота призвали не голосовать за присвоение аэропорту Калининграда имени философа Иммануила Канта. Видео разъяснительной беседы с моряками, появившееся в конце ноября в фейсбуке, публикует «Новый Калининград».
-]]>
+            <description>В Кремле слышали о высказываниях Михаила Леонтьева в адрес главы Хакасии,
+                но в эту ситуацию вмешиваться не собираются, заявил пресс-секретарь президента РФ
+                Дмитрий Песков.
             </description>
-            <pubDate>Mon, 03 Dec 2018 18:39:07 +0300</pubDate>
+            <pubDate>14 Dec 2018 09:34:47 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-СК проверит информацию о создании сайта с предложениями «почасовой аренды» детей
-]]>
-            </title>
+            <title>В Кремле ответили на слова Кадырова о финансировании Чечни</title>
             <link>
-                https://meduza.io/news/2018/12/03/sk-proverit-informatsiyu-o-sozdanii-sayta-s-predlozheniyami-arendy-detey
+                https://news.yandex.ru/story/V_Kremle_otvetili_na_slova_Kadyrova_o_finansirovanii_CHechni--acd4ad0e2d7befef386d90deeebb9d50?lang=ru&amp;from=rss&amp;stid=XRXglG5FTLEzwE4NqYfH
             </link>
             <guid>
-                https://meduza.io/news/2018/12/03/sk-proverit-informatsiyu-o-sozdanii-sayta-s-predlozheniyami-arendy-detey
+                https://news.yandex.ru/story/V_Kremle_otvetili_na_slova_Kadyrova_o_finansirovanii_CHechni--acd4ad0e2d7befef386d90deeebb9d50?lang=ru&amp;from=rss&amp;stid=XRXglG5FTLEzwE4NqYfH
             </guid>
-            <enclosure
-                length="65747"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543850909/news/2018/12/03/sk-proverit-informatsiyu-o-sozdanii-sayta-s-predlozheniyami-arendy-detey" />
-            <description>
-                <![CDATA[
-Следственный комитет и полиция начали проверку сайта, который, вероятно, предлагал услуги по «аренде» детей для занятий проституцией под видом рекламы детской одежды.
-]]>
+            <description>Регионам России всегда не хватает денег и это совершенно нормальный вопрос
+                развития, заявил 14 декабря пресс-секретарь президента РФ Дмитрий Песков,
+                комментирую слова главы Чечни Рамзана Кадырова о том, что для развития республики
+                необходимо больше бюджетных средств.
             </description>
-            <pubDate>Mon, 03 Dec 2018 18:23:33 +0300</pubDate>
+            <pubDate>14 Dec 2018 10:49:45 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-Суд отказал 69-летнему голландцу в праве снизить возраст в документах. В своем иске он ссылался на права трансгендеров
-]]>
-            </title>
+            <title>Лавров объяснил, зачем Бутина пошла на сделку со следствием</title>
             <link>
-                https://meduza.io/feature/2018/12/03/sud-otkazal-69-letnemu-gollandtsu-v-prave-snizit-vozrast-v-dokumentah-v-svoem-iske-on-ssylalsya-na-prava-transgenderov
+                https://news.yandex.ru/story/Lavrov_obyasnil_zachem_Butina_poshla_na_sdelku_so_sledstviem--d5e266fa0ac97e946f9b7b45182e102c?lang=ru&amp;from=rss&amp;stid=lIesN-4bFB7MjHL8TUss
             </link>
             <guid>
-                https://meduza.io/feature/2018/12/03/sud-otkazal-69-letnemu-gollandtsu-v-prave-snizit-vozrast-v-dokumentah-v-svoem-iske-on-ssylalsya-na-prava-transgenderov
+                https://news.yandex.ru/story/Lavrov_obyasnil_zachem_Butina_poshla_na_sdelku_so_sledstviem--d5e266fa0ac97e946f9b7b45182e102c?lang=ru&amp;from=rss&amp;stid=lIesN-4bFB7MjHL8TUss
             </guid>
-            <enclosure
-                length="34017"
-                type="image/jpeg"
-                url="http://meduza.io/image/attachments/images/003/671/320/small/eZQ5JamZ3lkjW8ggMgj0zA.jpg" />
-            <description>
-                <![CDATA[
-Суд в голландском городе Арнем отказал 69-летнему Эмилю Рателбанду в праве официально снизить возраст в документах до 49 лет.
-]]>
+            <description>Россиянка Мария Бутина заключила сделку с правосудием США, чтобы получить
+                возможность скорее освободиться и вернуться на родину. Об этом заявил в пятницу
+                глава МИД РФ Сергей Лавров.
             </description>
-            <pubDate>Mon, 03 Dec 2018 18:14:48 +0300</pubDate>
+            <pubDate>14 Dec 2018 09:05:31 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-Black Sabbath или AC/DC? Хеви-метал-тест «Медузы» 🤘
-]]>
-            </title>
-            <link>https://meduza.io/quiz/black-sabbath-ili-ac-dc</link>
-            <guid>https://meduza.io/quiz/black-sabbath-ili-ac-dc</guid>
-            <enclosure
-                length="46004"
-                type="image/jpeg"
-                url="http://meduza.io/image/attachments/images/003/669/409/small/yHC5vZ9un0jlKDF55I_6MQ.jpg" />
-            <description>
-                <![CDATA[
-Оззи Осборну исполнилось 70 лет. В его честь мы собрали всех хард-рокеров в одном тесте. Попробуйте по короткому отрывку с живого выступления 1970-х и 1980-х годов угадать, какая группа выступает. Не забывайте активно трясти головой и показывать 🤘, поехали.<br> <a href='https://meduza.io/quiz/black-sabbath-ili-ac-dc'>Пройти тест на Медузе</a>
-]]>
-            </description>
-            <pubDate>Mon, 03 Dec 2018 18:07:14 +0300</pubDate>
-        </item>
-        <item>
-            <title>
-                <![CDATA[
-Московская канатная дорога вновь закрыта. За первую неделю она работала четыре дня
-]]>
-            </title>
+            <title>В «Яндексе» объяснили выдачу поисковой системой даты смерти Порошенко</title>
             <link>
-                https://meduza.io/news/2018/12/03/moskovskaya-kanatnaya-doroga-vnov-zakryta-za-pervuyu-nedelyu-ona-rabotala-chetyre-dnya
+                https://news.yandex.ru/story/V_YAndekse_obyasnili_vydachu_poiskovoj_sistemoj_daty_smerti_Poroshenko--f948adb1f33e4aeebd6d4d6ba9baf828?lang=ru&amp;from=rss&amp;stid=pelu4frudjwtATQ0z0Dx
             </link>
             <guid>
-                https://meduza.io/news/2018/12/03/moskovskaya-kanatnaya-doroga-vnov-zakryta-za-pervuyu-nedelyu-ona-rabotala-chetyre-dnya
+                https://news.yandex.ru/story/V_YAndekse_obyasnili_vydachu_poiskovoj_sistemoj_daty_smerti_Poroshenko--f948adb1f33e4aeebd6d4d6ba9baf828?lang=ru&amp;from=rss&amp;stid=pelu4frudjwtATQ0z0Dx
             </guid>
-            <enclosure
-                length="77313"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543851362/news/2018/12/03/moskovskaya-kanatnaya-doroga-vnov-zakryta-za-pervuyu-nedelyu-ona-rabotala-chetyre-dnya" />
-            <description>
-                <![CDATA[
-Московская канатная дорога вновь приостановила работу. С 3 по 6 декабря, сообщила пресс-служба канатной дороги, она будет закрыта для посетителей «в связи с плановым ежегодным освидетельствованием объекта Ростехнадзором».
-]]>
+            <description>В пресс-службе компании «Яндекс» прокомментировали выдачу в поисковой
+                системе даты смерти президента Украины Петра Порошенко. Ранее 14 декабря при вводе
+                имени и фамилии украинского лидера в поиске сообщалось, что он скончался три дня
+                назад.
             </description>
-            <pubDate>Mon, 03 Dec 2018 17:52:16 +0300</pubDate>
+            <pubDate>14 Dec 2018 09:31:55 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-В Казани завели дело из-за ложного звонка о бомбе. Этот звонок стал поводом для отмены концерта IC3PEAK
-]]>
-            </title>
+            <title>Патриарх Кирилл обратился в ООН в связи с давлением на УПЦ</title>
             <link>
-                https://meduza.io/news/2018/12/03/v-kazani-zaveli-delo-iz-za-lozhnogo-zvonka-o-bombe-etot-zvonok-stal-povodom-dlya-otmeny-kontserta-ic3peak
+                https://news.yandex.ru/story/Patriarkh_Kirill_obratilsya_v_OON_v_svyazi_s_davleniem_na_UPC--c210bceb313a3ce41c0ba97ad968f36f?lang=ru&amp;from=rss&amp;stid=rCSU36VtUWWz3TCUSqZU
             </link>
             <guid>
-                https://meduza.io/news/2018/12/03/v-kazani-zaveli-delo-iz-za-lozhnogo-zvonka-o-bombe-etot-zvonok-stal-povodom-dlya-otmeny-kontserta-ic3peak
+                https://news.yandex.ru/story/Patriarkh_Kirill_obratilsya_v_OON_v_svyazi_s_davleniem_na_UPC--c210bceb313a3ce41c0ba97ad968f36f?lang=ru&amp;from=rss&amp;stid=rCSU36VtUWWz3TCUSqZU
             </guid>
-            <enclosure
-                length="85260"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543847388/news/2018/12/03/v-kazani-zaveli-delo-iz-za-lozhnogo-zvonka-o-bombe-etot-zvonok-stal-povodom-dlya-otmeny-kontserta-ic3peak" />
-            <description>
-                <![CDATA[
-Полиция Казани возбудила уголовное дело о заведомо ложном сообщении об акте терроризма после того, как в местном клубе сорвали концерт группы IC3PEAK. Об этом сообщает ТАСС со ссылкой на пресс-службу городского управления МВД.
-]]>
+            <description>Патриарх Московский и всея Руси Кирилл направил обращения главам
+                государств, международных организаций, мировых церквей по поводу нарушения прав
+                иерархов и верующих канонической Украинской православной церкви. Об этом сообщает
+                Отдел внешних церковных связей (ОВЦС) Русской православной церкви.
             </description>
-            <pubDate>Mon, 03 Dec 2018 17:29:48 +0300</pubDate>
+            <pubDate>14 Dec 2018 07:21:46 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-В Марселе умерла пострадавшая в столкновениях полиции с демонстрантами. Ее ранило гранатой со слезоточивым газом
-]]>
-            </title>
+            <title>Украинский десантник объяснил появление шеврона СС на фото с Порошенко</title>
             <link>
-                https://meduza.io/news/2018/12/03/v-marsele-umerla-postradavshaya-v-stolknoveniyah-politsii-s-demonstrantami-ee-ranilo-granatoy-so-slezotochivym-gazom
+                https://news.yandex.ru/story/Ukrainskij_desantnik_obyasnil_poyavlenie_shevrona_SS_na_foto_s_Poroshenko--30f853b0ed84e246da85344cdaf5a8ee?lang=ru&amp;from=rss&amp;stid=a-MEK016Cmkrf4bLmZ5U
             </link>
             <guid>
-                https://meduza.io/news/2018/12/03/v-marsele-umerla-postradavshaya-v-stolknoveniyah-politsii-s-demonstrantami-ee-ranilo-granatoy-so-slezotochivym-gazom
+                https://news.yandex.ru/story/Ukrainskij_desantnik_obyasnil_poyavlenie_shevrona_SS_na_foto_s_Poroshenko--30f853b0ed84e246da85344cdaf5a8ee?lang=ru&amp;from=rss&amp;stid=a-MEK016Cmkrf4bLmZ5U
             </guid>
-            <enclosure
-                length="94426"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543847184/news/2018/12/03/v-marsele-umerla-postradavshaya-v-stolknoveniyah-politsii-s-demonstrantami-ee-ranilo-granatoy-so-slezotochivym-gazom" />
-            <description>
-                <![CDATA[
-В Марселе умерла 80-летняя женщина, которая была ранена гранатой со слезоточивым газом во время столкновений полиции с участниками акции против повышения цен на топливо. Об этом сообщает Le Parisien.
-]]>
+            <description>В специально записанном видеоролике, который был размещен в Facebook на
+                странице командования десантно-штурмовых войск Украины, военнослужащий бодрым и
+                решительным голосом уверяет: якобы он и не подозревал о том, что череп и кости на
+                его форме являются нацистским символом.
             </description>
-            <pubDate>Mon, 03 Dec 2018 17:26:24 +0300</pubDate>
+            <pubDate>14 Dec 2018 06:15:00 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-В Житомирской области пришли с обыском к священнослужителям УПЦ Московского патриархата
-]]>
-            </title>
+            <title>Правительство планирует усилить контроль за автошколами</title>
             <link>
-                https://meduza.io/news/2018/12/03/v-zhitomirskoy-oblasti-prishli-s-obyskom-k-svyaschennosluzhitelyam-upts-moskovskogo-patriarhata
+                https://news.yandex.ru/story/Pravitelstvo_planiruet_usilit_kontrol_za_avtoshkolami--553529511c38d5b20e5a71f90ad45c92?lang=ru&amp;from=rss&amp;stid=26NX4hfwmD_OEKoRcndM
             </link>
             <guid>
-                https://meduza.io/news/2018/12/03/v-zhitomirskoy-oblasti-prishli-s-obyskom-k-svyaschennosluzhitelyam-upts-moskovskogo-patriarhata
+                https://news.yandex.ru/story/Pravitelstvo_planiruet_usilit_kontrol_za_avtoshkolami--553529511c38d5b20e5a71f90ad45c92?lang=ru&amp;from=rss&amp;stid=26NX4hfwmD_OEKoRcndM
             </guid>
-            <enclosure
-                length="84434"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543846685/news/2018/12/03/v-zhitomirskoy-oblasti-prishli-s-obyskom-k-svyaschennosluzhitelyam-upts-moskovskogo-patriarhata" />
-            <description>
-                <![CDATA[
-В Житомирской области проходят обыски у священнослужителей Украинской православной церкви (Московского патриархата).
-]]>
+            <description>МВД России, Минэкономики вместе с «заинтересованными ведомствами» должны
+                представить в правительство к маю 2019 года проект документа, наделяющий полицию
+                полномочиями по контролю за соблюдением автошколами «требований к
+                учебно-материальной базе».
             </description>
-            <pubDate>Mon, 03 Dec 2018 17:18:05 +0300</pubDate>
+            <pubDate>14 Dec 2018 10:34:00 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-«Веду ребенка на автобус и проклинаю власть». Как государство в России оптимизирует расходы: роддома, детсады и школы закрывают, людей увольняют. На примере Карелии
-]]>
-            </title>
+            <title>«Ростех» уходит на вторичный рынок</title>
             <link>
-                https://meduza.io/feature/2018/12/03/vedu-rebenka-na-avtobus-i-proklinayu-vlast
+                https://news.yandex.ru/story/Rostekh_ukhodit_na_vtorichnyj_rynok--8ef1894d776cfaaad26eb3a48e18d670?lang=ru&amp;from=rss&amp;stid=3uv1UZIs4D41bwiGpyX1
             </link>
             <guid>
-                https://meduza.io/feature/2018/12/03/vedu-rebenka-na-avtobus-i-proklinayu-vlast
+                https://news.yandex.ru/story/Rostekh_ukhodit_na_vtorichnyj_rynok--8ef1894d776cfaaad26eb3a48e18d670?lang=ru&amp;from=rss&amp;stid=3uv1UZIs4D41bwiGpyX1
             </guid>
-            <enclosure
-                length="62620"
-                type="image/jpeg"
-                url="http://meduza.io/image/attachments/images/003/670/719/small/d7tWpCh1DN5r-0y0GlS_Wg.jpg" />
-            <description>
-                <![CDATA[
-20 ноября издание «7×7» опубликовало переписку жительницы карельского поселка Суоеки Анны Власовой и главы региона Артура Парфенчикова. Власова жаловалась чиновнику, что в ее поселке нет детского сада и ей не с кем оставить детей, в ответ Парфенчиков предложил ей «договариваться с бабушками» или нанять няню — «как все поступают». Переписка попала в СМИ — губернатор лично приехал в Суоеки решать проблему и вроде бы решил, но случай Власовой — один из многих: в рамках масштабной оптимизации местной экономики в Карелии, как и в других регионах России, закрывают детские сады, школы, больничные отделения и увольняют людей, которые там работают. Специально для «Медузы» журналист издания «Петрозаводск говорит» Георгий Чентемиров рассказывает, как это происходит.
-]]>
+            <description>Из-за скандальной истории с Siemens &amp;quot;дочка&amp;quot; &amp;quot;Ростеха&amp;quot;,
+                которая попала под санкции, может приобрести турбины на вторичном рынке.
             </description>
-            <pubDate>Mon, 03 Dec 2018 17:10:26 +0300</pubDate>
+            <pubDate>14 Dec 2018 10:43:40 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-Московский мусор решили отправлять по всей России. И нигде ему не рады
-]]>
-            </title>
+            <title>Число заключённых в России достигло исторического минимума</title>
             <link>
-                https://meduza.io/video/2018/12/03/moskovskiy-musor-reshili-otpravlyat-po-vsey-rossii-i-nigde-emu-ne-rady
+                https://news.yandex.ru/story/CHislo_zaklyuchyonnykh_v_Rossii_dostiglo_istoricheskogo_minimuma--a1aafe666a40a6592ceb0507cdb50aa4?lang=ru&amp;from=rss&amp;stid=Msz_cyWUgYnFCl7SAVlP
             </link>
             <guid>
-                https://meduza.io/video/2018/12/03/moskovskiy-musor-reshili-otpravlyat-po-vsey-rossii-i-nigde-emu-ne-rady
+                https://news.yandex.ru/story/CHislo_zaklyuchyonnykh_v_Rossii_dostiglo_istoricheskogo_minimuma--a1aafe666a40a6592ceb0507cdb50aa4?lang=ru&amp;from=rss&amp;stid=Msz_cyWUgYnFCl7SAVlP
             </guid>
-            <enclosure
-                length="52592"
-                type="image/jpeg"
-                url="http://meduza.io/image/attachments/images/003/670/468/small/JR7uK4sRRvW-FdS_zQrfPA.jpg" />
-            <description>
-                <![CDATA[
-Мэрия Москвы ищет способы избавляться от 6,6 миллиона тонн мусора в год, который раньше отправляли на полигоны в Подмосковье. Отходы, в частности, планируется по железной дороге увозить в Архангельскую область. Местные жители устраивают акции протеста против московского мусора и даже требуют отставки губернатора. Подробно о том, как и куда планируют свозить мусор из Москвы, можно прочитать в расследовании Ивана Голунова. Видео «Медузы» кратко рассказывает о маршрутах московского мусора.
-]]>
+            <description>Количество заключённых в России достигло исторического минимума. Об этом
+                сообщили в пресс-службе Федеральной службы исполнения наказаний (ФСИН).
             </description>
-            <pubDate>Mon, 03 Dec 2018 17:01:32 +0300</pubDate>
+            <pubDate>14 Dec 2018 08:13:42 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-Петербургские депутаты попросили отменить передачу Исаакиевского собора РПЦ
-]]>
-            </title>
+            <title>В Уфе самолет при взлете ударился хвостом о ВПП</title>
             <link>
-                https://meduza.io/news/2018/12/03/peterburgskie-deputaty-poprosili-otmenit-peredachu-isaakievskogo-sobora-rpts
+                https://news.yandex.ru/story/V_Ufe_samolet_pri_vzlete_udarilsya_khvostom_o_VPP--f09431cf6310a09d6d3ff0a950e634ea?lang=ru&amp;from=rss&amp;stid=iLiktZn369sOY0Qc6-xm
             </link>
             <guid>
-                https://meduza.io/news/2018/12/03/peterburgskie-deputaty-poprosili-otmenit-peredachu-isaakievskogo-sobora-rpts
+                https://news.yandex.ru/story/V_Ufe_samolet_pri_vzlete_udarilsya_khvostom_o_VPP--f09431cf6310a09d6d3ff0a950e634ea?lang=ru&amp;from=rss&amp;stid=iLiktZn369sOY0Qc6-xm
             </guid>
-            <enclosure
-                length="72030"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543845091/news/2018/12/03/peterburgskie-deputaty-poprosili-otmenit-peredachu-isaakievskogo-sobora-rpts" />
-            <description>
-                <![CDATA[
-Десять депутатов Законодательного собрания Петербурга попросили отменить решение о передаче Исаакиевского собора в пользование РПЦ. Об этом говорится в письме на имя временно исполняющего обязанности губернатора Петербурга Александра Беглова, текст которого в фейсбуке опубликовал депутат Максим Резник.
-]]>
+            <description>Самолет авиакомпании &amp;quot;Уральские авиалинии&amp;quot;, следовавший
+                рейсом Уфа — Нижневартовск, в пятницу утром при взлете ударился хвостом о
+                взлетно-посадочную полосу. Об этом РИА Новости сообщил представитель приволжской
+                транспортной прокуратуры. В результате инцидента никто не пострадал.
             </description>
-            <pubDate>Mon, 03 Dec 2018 16:51:31 +0300</pubDate>
+            <pubDate>14 Dec 2018 07:07:39 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-Во Франции две недели митингуют против роста цен на топливо. Участники акций жгут машины, громят магазины и блокируют автозаправки
-]]>
-            </title>
+            <title>Три российских ракетных двигателя РД-181 переданы США</title>
             <link>
-                https://meduza.io/feature/2018/12/03/vo-frantsii-dve-nedeli-mitinguyut-protiv-rosta-tsen-na-toplivo-uchastniki-aktsiy-zhgut-mashiny-gromyat-magaziny-i-blokiruyut-avtozapravki
+                https://news.yandex.ru/story/Tri_rossijskikh_raketnykh_dvigatelya_RD-181_peredany_SSHA--0c7e467c1c2f475a82f409a585b4a669?lang=ru&amp;from=rss&amp;stid=n_-hPgHFTwEuBl_52LwR
             </link>
             <guid>
-                https://meduza.io/feature/2018/12/03/vo-frantsii-dve-nedeli-mitinguyut-protiv-rosta-tsen-na-toplivo-uchastniki-aktsiy-zhgut-mashiny-gromyat-magaziny-i-blokiruyut-avtozapravki
+                https://news.yandex.ru/story/Tri_rossijskikh_raketnykh_dvigatelya_RD-181_peredany_SSHA--0c7e467c1c2f475a82f409a585b4a669?lang=ru&amp;from=rss&amp;stid=n_-hPgHFTwEuBl_52LwR
             </guid>
-            <enclosure
-                length="30974"
-                type="image/jpeg"
-                url="http://meduza.io/image/attachments/images/003/669/753/small/WR-AdrMmljLm0n0T6zyOKQ.jpg" />
-            <description>
-                <![CDATA[
-Во Франции две недели продолжаются протесты из-за повышения цен на топливо. Демонстранты устраивают митинги и шествия, блокируют дороги, автозаправки, хранилища топлива и торговые центры. Первые манифестации начались 17 ноября, в них участвовали 280 тысяч человек по всей стране. С тех пор акции продолжались ежедневно, но достигали пика по субботам. 24 ноября в них участвовали около 106 тысяч человек, 1 декабря — 136 тысяч. За две недели протестов были задержаны не менее 800 демонстрантов; три человека погибли, еще сотни пострадали.
-]]>
+            <description>По информации, размещенной на сайте НПО &amp;quot;Энергомаш&amp;quot;, 12
+                декабря три двигателя РД-181 были доставлены американской компании Orbital Sciences
+                Corporation.
             </description>
-            <pubDate>Mon, 03 Dec 2018 16:15:59 +0300</pubDate>
+            <pubDate>14 Dec 2018 07:47:54 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-В Москве погиб 18-летний футболист «Локомотива» Алексей Ломакин
-]]>
-            </title>
+            <title>На антарктической станции Мак-Мердо погибли два человека</title>
             <link>
-                https://meduza.io/news/2018/12/03/v-moskve-pogib-18-letniy-futbolist-lokomotiva-aleksey-lomakin
+                https://news.yandex.ru/story/Na_antarkticheskoj_stancii_Mak-Merdo_pogibli_dva_cheloveka--5559dad8d0e2a18158b3e756454e88f1?lang=ru&amp;from=rss&amp;stid=etZHP3UZqlqRwmVe8gcE
             </link>
             <guid>
-                https://meduza.io/news/2018/12/03/v-moskve-pogib-18-letniy-futbolist-lokomotiva-aleksey-lomakin
+                https://news.yandex.ru/story/Na_antarkticheskoj_stancii_Mak-Merdo_pogibli_dva_cheloveka--5559dad8d0e2a18158b3e756454e88f1?lang=ru&amp;from=rss&amp;stid=etZHP3UZqlqRwmVe8gcE
             </guid>
-            <enclosure
-                length="65713"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543846018/news/2018/12/03/v-moskve-pogib-18-letniy-futbolist-lokomotiva-aleksey-lomakin" />
-            <description>
-                <![CDATA[
-Полузащитник молодежного состава футбольного клуба «Локомотив» 18-летний Алексей Ломакин найден мертвым в Москве. Информацию о смерти спортсмена телеканалу 360 подтвердила его мать, некролог опубликован на сайте клуба.
-]]>
+            <description>В Антарктике на исследовательской станции Мак-Мердо погибли два человека.
+                Об этом в четверг сообщил Национальный научный фонд США, отвечающий за
+                финансирование науки и технологий. Инцидент произошел во вторник по местному времени
+                на объекте, где расположен генератор.
             </description>
-            <pubDate>Mon, 03 Dec 2018 16:01:07 +0300</pubDate>
+            <pubDate>14 Dec 2018 02:31:00 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-Трамп приревновал Путина к саудовском принцу — из-за слишком горячего рукопожатия (не волнуйтесь, это только пародия SNL)
-]]>
-            </title>
+            <title>Начальник Свердловской железной дороги задержан по делу о взятке</title>
             <link>
-                https://meduza.io/shapito/2018/12/03/tramp-prirevnoval-putina-k-saudovskom-printsu-iz-za-slishkom-goryachego-rukopozhatiya-ne-volnuytes-eto-tolko-parodiya-snl
+                https://news.yandex.ru/story/Nachalnik_Sverdlovskoj_zheleznoj_dorogi_zaderzhan_po_delu_o_vzyatke--d33fdb04a224d0f2ef68ec3867ce439c?lang=ru&amp;from=rss&amp;stid=0dkZqUjyPqJojP74qMyH
             </link>
             <guid>
-                https://meduza.io/shapito/2018/12/03/tramp-prirevnoval-putina-k-saudovskom-printsu-iz-za-slishkom-goryachego-rukopozhatiya-ne-volnuytes-eto-tolko-parodiya-snl
+                https://news.yandex.ru/story/Nachalnik_Sverdlovskoj_zheleznoj_dorogi_zaderzhan_po_delu_o_vzyatke--d33fdb04a224d0f2ef68ec3867ce439c?lang=ru&amp;from=rss&amp;stid=0dkZqUjyPqJojP74qMyH
             </guid>
-            <enclosure
-                length="37508"
-                type="image/jpeg"
-                url="http://meduza.io/image/attachments/images/003/670/517/small/YghI7rG4N-H5VDIE5iQFzA.jpg" />
-            <description>
-                <![CDATA[
-На саммите G20 президент США Дональд Трамп не поздоровался с президентом России Владимиром Путиным. Вместо этого Путин дал пять кронпринцу Саудовской Аравии Мухаммаду бин Салману.
-]]>
+            <description>Начальник Свердловской железной дороги Алексей Миронов был задержан по
+                подозрению в получении взятки. Об этом сообщил Следственный комитет России на своей
+                странице в Twitter. Отмечается, что было возбуждено уголовное дело.
             </description>
-            <pubDate>Mon, 03 Dec 2018 15:54:39 +0300</pubDate>
+            <pubDate>14 Dec 2018 05:49:50 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-Шесть кувшинов или четыре конверта: как научиться экономить, если ты этого совсем не умеешь
-]]>
-            </title>
+            <title>Посол США сравнил самолеты ВКС РФ в Венесуэле с музейными экспонатами</title>
             <link>
-                https://meduza.io/episodes/2018/12/03/shest-kuvshinov-ili-chetyre-konverta-kak-nauchitsya-ekonomit-esli-ty-etogo-sovsem-ne-umeesh
+                https://news.yandex.ru/story/Posol_SSHA_sravnil_samolety_VKS_RF_v_Venesuehle_s_muzejnymi_ehksponatami--0b1d8ab901da648fc3b5ca6321578698?lang=ru&amp;from=rss&amp;stid=LpDEPwV6o0CKZbMwgPok
             </link>
             <guid>
-                https://meduza.io/episodes/2018/12/03/shest-kuvshinov-ili-chetyre-konverta-kak-nauchitsya-ekonomit-esli-ty-etogo-sovsem-ne-umeesh
+                https://news.yandex.ru/story/Posol_SSHA_sravnil_samolety_VKS_RF_v_Venesuehle_s_muzejnymi_ehksponatami--0b1d8ab901da648fc3b5ca6321578698?lang=ru&amp;from=rss&amp;stid=LpDEPwV6o0CKZbMwgPok
             </guid>
-            <enclosure
-                length="175829"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543842818/episodes/2018/12/03/shest-kuvshinov-ili-chetyre-konverta-kak-nauchitsya-ekonomit-esli-ty-etogo-sovsem-ne-umeesh" />
-            <description>
-                <![CDATA[
-Финансовый журналист и ведущая телеграм-канала Moneyhack Александра Краснова рассказывает Илье Красильщику и Саше Поливанову как она много лет писала тексты о том как экономить, а потом решила попробовать все это на себе
-]]>
+            <description>По словам дипломата, США отмечают присутствие в Венесуэле «российских
+                бомбардировщиков 80-х годов». Два стратегических ракетоносца Ту-160, тяжелый
+                военно-транспортный самолет Ан-124 и дальнемагистральный самолет Ил-62 ВКС РФ
+                прибыли в Венесуэлу 10 декабря для участия в совместных полетах.
             </description>
-            <pubDate>Mon, 03 Dec 2018 15:41:34 +0300</pubDate>
+            <pubDate>14 Dec 2018 03:09:48 +0000</pubDate>
         </item>
         <item>
-            <title>
-                <![CDATA[
-Усманов через суд потребовал удалить три статьи о себе и Шакро Молодом
-]]>
-            </title>
+            <title>Евросоюз отказался от повторных переговоров по Brexit</title>
             <link>
-                https://meduza.io/news/2018/12/03/usmanov-cherez-sud-potreboval-udalit-tri-stati-o-sebe-i-shakro-molodom
+                https://news.yandex.ru/story/Evrosoyuz_otkazalsya_ot_povtornykh_peregovorov_po_Brexit--a8aa9878876a3c8f652c2d060f34a2e4?lang=ru&amp;from=rss&amp;stid=3b7BUhkw2lAcx2v4igND
             </link>
             <guid>
-                https://meduza.io/news/2018/12/03/usmanov-cherez-sud-potreboval-udalit-tri-stati-o-sebe-i-shakro-molodom
+                https://news.yandex.ru/story/Evrosoyuz_otkazalsya_ot_povtornykh_peregovorov_po_Brexit--a8aa9878876a3c8f652c2d060f34a2e4?lang=ru&amp;from=rss&amp;stid=3b7BUhkw2lAcx2v4igND
             </guid>
-            <enclosure
-                length="68496"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543842761/news/2018/12/03/usmanov-cherez-sud-potreboval-udalit-tri-stati-o-sebe-i-shakro-molodom" />
-            <description>
-                <![CDATA[
-Миллиардер Алишер Усманов подал в Басманный суд Москвы иск о защите чести, достоинства, и деловой репутации, сообщается на сайте суда.
-]]>
+            <description>Европейский союз отказался проводить повторные переговоры по Brexit.
+                Брюссель не пойдет на новые уступки премьер-министру Терезе Мэй, и договор придется
+                ратифицировать в парламенте на тех условиях, которые уже достигнуты.
             </description>
-            <pubDate>Mon, 03 Dec 2018 15:13:55 +0300</pubDate>
-        </item>
-        <item>
-            <title>
-                <![CDATA[
-«Победа» предложила Минтрансу сделать платной регистрацию в российских аэропортах
-]]>
-            </title>
-            <link>
-                https://meduza.io/news/2018/12/03/pobeda-predlozhila-mintransu-sdelat-platnoy-registratsiyu-v-rossiyskih-aeroportah
-            </link>
-            <guid>
-                https://meduza.io/news/2018/12/03/pobeda-predlozhila-mintransu-sdelat-platnoy-registratsiyu-v-rossiyskih-aeroportah
-            </guid>
-            <enclosure
-                length="79944"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543839110/news/2018/12/03/pobeda-predlozhila-mintransu-sdelat-platnoy-registratsiyu-v-rossiyskih-aeroportah" />
-            <description>
-                <![CDATA[
-«Победа» предлагает ввести плату за регистрацию пассажиров в российских аэропортах, заявил в интервью РБК глава авиакомпании Андрей Калмыков. Стоимость регистрации в российских аэропортах, по его словам, может в среднем составить около 1 тысячи рублей.
-]]>
-            </description>
-            <pubDate>Mon, 03 Dec 2018 15:11:50 +0300</pubDate>
-        </item>
-        <item>
-            <title>
-                <![CDATA[
-С Байконура запустили корабль «Союз» с экипажем МКС
-]]>
-            </title>
-            <link>
-                https://meduza.io/news/2018/12/03/s-baykonura-startoval-korabl-soyuz-s-ekipazhem-mks
-            </link>
-            <guid>
-                https://meduza.io/news/2018/12/03/s-baykonura-startoval-korabl-soyuz-s-ekipazhem-mks
-            </guid>
-            <enclosure
-                length="59311"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543838960/news/2018/12/03/s-baykonura-startoval-korabl-soyuz-s-ekipazhem-mks" />
-            <description>
-                <![CDATA[
-Ракета-носитель «Союз-ФГ» с транспортным пилотируемым кораблем «Союз МС-11» и новым экипажем МКС стартовала с космодрома Байконур. Трансляция запуска прошла на сайте «Роскосмоса».
-]]>
-            </description>
-            <pubDate>Mon, 03 Dec 2018 14:32:31 +0300</pubDate>
-        </item>
-        <item>
-            <title>
-                <![CDATA[
-Первый старт «Союза» к МКС после аварии. Трансляция с Байконура
-]]>
-            </title>
-            <link>
-                https://meduza.io/feature/2018/12/03/pervyy-start-soyuza-posle-avarii-translyatsiya-s-baykonura
-            </link>
-            <guid>
-                https://meduza.io/feature/2018/12/03/pervyy-start-soyuza-posle-avarii-translyatsiya-s-baykonura
-            </guid>
-            <enclosure
-                length="60598"
-                type="image/jpeg"
-                url="http://meduza.io/image/attachments/images/003/670/422/small/FadUg9iDdCPk1mpIiO1j-Q.jpg" />
-            <description>
-                <![CDATA[
-С космодрома Байконур стартовала ракета-носитель «Союз-ФГ» с транспортным пилотируемым кораблем «Союз МС-11» и новым экипажем МКС.
-]]>
-            </description>
-            <pubDate>Mon, 03 Dec 2018 14:25:24 +0300</pubDate>
-        </item>
-        <item>
-            <title>
-                <![CDATA[
-Пара потеряла обручальное кольцо в канализации Нью-Йорка. Полиция его нашла — но потеряла саму пару! (Все закончилось хорошо)
-]]>
-            </title>
-            <link>
-                https://meduza.io/shapito/2018/12/03/para-poteryala-obruchalnoe-koltso-v-kanalizatsii-nyu-yorka-politsiya-ego-nashla-no-poteryala-samu-paru-vse-zakonchilos-horosho
-            </link>
-            <guid>
-                https://meduza.io/shapito/2018/12/03/para-poteryala-obruchalnoe-koltso-v-kanalizatsii-nyu-yorka-politsiya-ego-nashla-no-poteryala-samu-paru-vse-zakonchilos-horosho
-            </guid>
-            <enclosure
-                length="53670"
-                type="image/jpeg"
-                url="http://meduza.io/image/attachments/images/003/669/680/small/Zy9VDZGGRmUgDTCPni3dCA.jpg" />
-            <description>
-                <![CDATA[
-Жители Англии Джон Дреннан и Даниэлла Энтони потеряли обручальное кольцо во время поездки в Нью-Йорк. Они приехали в США, чтобы отметить 10-летие знакомства. Мужчина решил, что сделает своей подруге предложение, но два дня не мог найти подходящего случая. В итоге во время прогулки в Центральном парке Дреннан решился, его возлюбленная ответила согласием. Мужчина подарил ей кольцо, но оно оказалось шире, чем нужно. И, когда они гуляли на Таймс-сквер, кольцо случайно потерялось, упав в канализационную решетку.
-]]>
-            </description>
-            <pubDate>Mon, 03 Dec 2018 14:16:23 +0300</pubDate>
-        </item>
-        <item>
-            <title>
-                <![CDATA[
-В такой фонд можно вложить деньги или мы его выдумали? Тест «Медузы» и «Сбербанк Управление Активами»
-]]>
-            </title>
-            <link>
-                https://meduza.io/quiz/v-takoy-fond-mozhno-vlozhit-dengi-ili-my-ego-vydumali
-            </link>
-            <guid>
-                https://meduza.io/quiz/v-takoy-fond-mozhno-vlozhit-dengi-ili-my-ego-vydumali
-            </guid>
-            <enclosure
-                length="376095"
-                type="image/png"
-                url="http://meduza.io/image/attachments/images/003/657/865/small/BmboZzIaWKwUHofG8XrxDg.png" />
-            <description>
-                <![CDATA[
-Биржевой фонд, или ETF (расшифровывается как Exchange Traded Fund), — популярный инвестиционный инструмент, в который можно вложить деньги, так же как, например, в акции. Это пакет ценных бумаг, который соответствует какому-либо биржевому индексу. То есть когда вы покупаете ETF, вы инвестируете не в одну, а сразу в десятки компаний из отдельной отрасли экономики или определенной страны. Сегодня существуют ETF на любой вкус. Совсем недавно появился и первый российский ETF, отслеживающий индекс Мосбиржи (SMBX), который запустил «Сбербанк Управление Активами». Вместе с ним мы и подготовили тест, который поможет проверить ваше инвестиционное чутье.<br> <a href='https://meduza.io/quiz/v-takoy-fond-mozhno-vlozhit-dengi-ili-my-ego-vydumali'>Пройти тест на Медузе</a>
-]]>
-            </description>
-            <pubDate>Mon, 03 Dec 2018 14:10:20 +0300</pubDate>
-        </item>
-        <item>
-            <title>
-                <![CDATA[
-35 тысяч игрушек разом выбросили на лед. Их отправят в благотворительные организации
-]]>
-            </title>
-            <link>
-                https://meduza.io/video/2018/12/03/35-tysyach-igrushek-razom-vybrosili-na-led-ih-otpravyat-v-blagotvoritelnye-organizatsii
-            </link>
-            <guid>
-                https://meduza.io/video/2018/12/03/35-tysyach-igrushek-razom-vybrosili-na-led-ih-otpravyat-v-blagotvoritelnye-organizatsii
-            </guid>
-            <enclosure
-                length="67740"
-                type="image/jpeg"
-                url="http://meduza.io/image/attachments/images/003/669/817/small/myIfSKK1TnbFV8bf2TDGrg.jpg" />
-            <description>
-                <![CDATA[
-На матче Американской хоккейной лиги между командами «Херши Беарз» и «Бингемтон Девилз» зрители бросили на лед 34 798 мягких игрушек. Так прошла ежегодная благотворительная акция Teddy Bear Toss. Пожертвованные зрителями игрушки отправляют в несколько десятков благотворительных организаций. В 2018-м был установлен рекорд по числу собранных игрушек — годом ранее на домашней площадке «Херши Беарз» на льду оказалось около 25 тысяч плюшевых зверей.
-]]>
-            </description>
-            <pubDate>Mon, 03 Dec 2018 14:04:17 +0300</pubDate>
-        </item>
-        <item>
-            <title>
-                <![CDATA[
-На рассмотрение Верховной Рады внесен законопроект о разрыве договора о дружбе Украины и России
-]]>
-            </title>
-            <link>
-                https://meduza.io/news/2018/12/03/na-rassmotrenie-verhovnoy-rady-vnesen-zakonoproekt-o-razryve-dogovora-o-druzhbe-ukrainy-i-rossii
-            </link>
-            <guid>
-                https://meduza.io/news/2018/12/03/na-rassmotrenie-verhovnoy-rady-vnesen-zakonoproekt-o-razryve-dogovora-o-druzhbe-ukrainy-i-rossii
-            </guid>
-            <enclosure
-                length="89209"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543844171/news/2018/12/03/na-rassmotrenie-verhovnoy-rady-vnesen-zakonoproekt-o-razryve-dogovora-o-druzhbe-ukrainy-i-rossii" />
-            <description>
-                <![CDATA[
-В украинский парламент внесен проект закона о денонсации договора о дружбе с Россией. По информации из базы данных Верховной Рады, законопроект внесен президентом Украины Петром Порошенко, который просит рассмотреть его в ускоренном порядке.
-]]>
-            </description>
-            <pubDate>Mon, 03 Dec 2018 14:01:40 +0300</pubDate>
-        </item>
-        <item>
-            <title>
-                <![CDATA[
-В Австралии нашли редкого желтого поссума — и это вылитый пикачу 😮
-]]>
-            </title>
-            <link>
-                https://meduza.io/shapito/2018/12/03/v-avstralii-nashli-redkogo-zheltogo-opossuma-i-eto-vylityy-pikachu
-            </link>
-            <guid>
-                https://meduza.io/shapito/2018/12/03/v-avstralii-nashli-redkogo-zheltogo-opossuma-i-eto-vylityy-pikachu
-            </guid>
-            <enclosure
-                length="34645"
-                type="image/jpeg"
-                url="http://meduza.io/image/attachments/images/003/669/596/small/kOLTKd6k8bDfnwcx07uIBw.jpg" />
-            <description>
-                <![CDATA[
-В Австралии обнаружили поссума с редкой генетической мутацией. Из-за нехватки меланина в организме шкура животного приобрела необычный желтый окрас, что сделало его похожим на покемона пикачу.
-]]>
-            </description>
-            <pubDate>Mon, 03 Dec 2018 13:25:00 +0300</pubDate>
-        </item>
-        <item>
-            <title>
-                <![CDATA[ Жерар Депардье получил прописку в Новосибирске ]]>
-            </title>
-            <link>
-                https://meduza.io/news/2018/12/03/akter-zherar-depardie-poluchil-propisku-v-novosibirske
-            </link>
-            <guid>
-                https://meduza.io/news/2018/12/03/akter-zherar-depardie-poluchil-propisku-v-novosibirske
-            </guid>
-            <enclosure
-                length="54178"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543832017/news/2018/12/03/akter-zherar-depardie-poluchil-propisku-v-novosibirske" />
-            <description>
-                <![CDATA[
-Французский актер Жерар Депардье получил прописку в Новосибирске. Об этом РБК сообщила представитель актера, его бизнес-партнер Юлия Мосман.
-]]>
-            </description>
-            <pubDate>Mon, 03 Dec 2018 13:07:17 +0300</pubDate>
-        </item>
-        <item>
-            <title>
-                <![CDATA[
-Соломоновы острова отозвали признание независимости Косово. Такое решение приняла уже 11-я страна
-]]>
-            </title>
-            <link>
-                https://meduza.io/news/2018/12/03/solomonovy-ostrova-otozvali-priznanie-nezavisimosti-kosovo-takoe-reshenie-prinyala-uzhe-11-ya-strana
-            </link>
-            <guid>
-                https://meduza.io/news/2018/12/03/solomonovy-ostrova-otozvali-priznanie-nezavisimosti-kosovo-takoe-reshenie-prinyala-uzhe-11-ya-strana
-            </guid>
-            <enclosure
-                length="80578"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543831186/news/2018/12/03/solomonovy-ostrova-otozvali-priznanie-nezavisimosti-kosovo-takoe-reshenie-prinyala-uzhe-11-ya-strana" />
-            <description>
-                <![CDATA[
-Руководство Соломоновых островов отозвало признание независимости частично признанной республики Косово, сообщает косовский телеканал KTV.
-]]>
-            </description>
-            <pubDate>Mon, 03 Dec 2018 12:59:46 +0300</pubDate>
-        </item>
-        <item>
-            <title>
-                <![CDATA[
-Писавшую с ошибками чиновницу решили назначить ректором института в Башкирии. Преподаватели выступили против
-]]>
-            </title>
-            <link>
-                https://meduza.io/news/2018/12/03/pisavshuyu-s-oshibkami-chinovnitsu-reshili-naznachit-rektorom-instituta-v-bashkirii-prepodavateli-vystupili-protiv
-            </link>
-            <guid>
-                https://meduza.io/news/2018/12/03/pisavshuyu-s-oshibkami-chinovnitsu-reshili-naznachit-rektorom-instituta-v-bashkirii-prepodavateli-vystupili-protiv
-            </guid>
-            <enclosure
-                length="91016"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543830896/news/2018/12/03/pisavshuyu-s-oshibkami-chinovnitsu-reshili-naznachit-rektorom-instituta-v-bashkirii-prepodavateli-vystupili-protiv" />
-            <description>
-                <![CDATA[
-Сотрудники Института развития образования (ИРО) Башкирии выступили против возможного назначения на должность ректора Гульназ Шафиковой — бывшего министра образования Башкирии, которая ушла в отставку на прошлой неделе. Об этом пишет РИА Новости со ссылкой на представителя ИРО.
-]]>
-            </description>
-            <pubDate>Mon, 03 Dec 2018 12:40:39 +0300</pubDate>
-        </item>
-        <item>
-            <title>
-                <![CDATA[
-СПбГУ уволил профессора без объяснения причин. Перед этим он провел экспертизу по делу об экстремизме
-]]>
-            </title>
-            <link>
-                https://meduza.io/news/2018/12/03/spbgu-uvolil-professora-bez-ob-yasneniya-prichin-pered-etim-on-provel-ekspertizu-po-delu-ob-ekstremizme
-            </link>
-            <guid>
-                https://meduza.io/news/2018/12/03/spbgu-uvolil-professora-bez-ob-yasneniya-prichin-pered-etim-on-provel-ekspertizu-po-delu-ob-ekstremizme
-            </guid>
-            <enclosure
-                length="96954"
-                type="image/png"
-                url="http://meduza.io/imgly/share/1543824833/news/2018/12/03/spbgu-uvolil-professora-bez-ob-yasneniya-prichin-pered-etim-on-provel-ekspertizu-po-delu-ob-ekstremizme" />
-            <description>
-                <![CDATA[
-Ректорат Санкт-Петербургского государственного университета без объяснения причин уволил профессора факультета свободных искусств и наук Александра Панченко. Об этом преподаватель сообщил в фейсбуке.
-]]>
-            </description>
-            <pubDate>Mon, 03 Dec 2018 11:01:18 +0300</pubDate>
+            <pubDate>14 Dec 2018 01:59:00 +0000</pubDate>
         </item>
     </channel>
 </rss>

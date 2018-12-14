@@ -1,16 +1,22 @@
 package com.study.riseof.news.network;
 
 
-import com.study.riseof.news.model.ngs.NgsRss;
+import com.study.riseof.news.model.xml.Rss;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface RetrofitApi {
-    interface Ngs{
+    interface Xml{
         @GET(".")
-        Call<NgsRss> getRss();
+        Call<Rss> getRss();
+
 /*        @GET()
-        Call<NgsRss> getRss(@Url String url);*/
+        Call<Rss> getRss(@Url String url);*/
+
     }
+    interface Json{
+
+    }
+
 }

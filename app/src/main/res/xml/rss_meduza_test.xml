@@ -1,0 +1,614 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Meduza.io Новости</title>
+        <link>https://meduza.io</link>
+        <language>ru</language>
+        <description>
+            Мы выбираем для вас самые важные новости и готовим лучшие тексты о том, что происходит в России и мире.
+        </description>
+        <image>
+            <url>https://meduza.io/images/rss-logo.png</url>
+            <title>Meduza.io Новости</title>
+            <link>https://meduza.io</link>
+        </image>
+        <atom:link href="https://meduza.io/rss/all" rel="self" type="application/rss+xml"/>
+        <item>
+            <title>
+                <![CDATA[
+Навальный опубликовал расследование о нарушениях в подмосковной больнице. Через несколько часов ее подожгли
+]]>
+            </title>
+            <link>
+                https://meduza.io/feature/2018/12/14/navalnyy-opublikoval-rassledovanie-o-narusheniyah-v-podmoskovnoy-bolnitse-cherez-neskolko-chasov-ee-podozhgli
+            </link>
+            <guid>
+                https://meduza.io/feature/2018/12/14/navalnyy-opublikoval-rassledovanie-o-narusheniyah-v-podmoskovnoy-bolnitse-cherez-neskolko-chasov-ee-podozhgli
+            </guid>
+            <enclosure url="http://meduza.io/image/attachments/images/003/703/390/small/sJSfDTErcUS6kSIK2iCFzg.jpg" length="52225" type="image/jpeg"/>
+            <description>
+                <![CDATA[
+В подмосковном Егорьевске вечером 13 декабря подожгли входную дверь в центральную районную больницу, ставшую незадолго до этого объектом расследования, которое было опубликовано на «Навальный LIVE».
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 14:00:46 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+ЦБ второй раз за год повысил ключевую ставку. И объявил о возобновлении закупки валюты
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/tsb-vtoroy-raz-za-god-povysil-klyuchevuyu-stavku-i-ob-yavil-o-vozobnovlenii-zakupki-valyuty
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/tsb-vtoroy-raz-za-god-povysil-klyuchevuyu-stavku-i-ob-yavil-o-vozobnovlenii-zakupki-valyuty
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544784969/news/2018/12/14/tsb-vtoroy-raz-za-god-povysil-klyuchevuyu-stavku-i-ob-yavil-o-vozobnovlenii-zakupki-valyuty" length="80577" type="image/png"/>
+            <description>
+                <![CDATA[
+Банк России объявил о повышении ключевой ставки на 0,25 процентных пункта до 7,75%.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 13:56:09 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Прокуратура Петербурга оценила ущерб от митинга «Он нам не царь» в 11 миллионов рублей
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/prokuratura-peterburga-otsenila-uscherb-ot-mitinga-on-nam-ne-tsar-v-11-millionov-rubley
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/prokuratura-peterburga-otsenila-uscherb-ot-mitinga-on-nam-ne-tsar-v-11-millionov-rubley
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544785887/news/2018/12/14/prokuratura-peterburga-otsenila-uscherb-ot-mitinga-on-nam-ne-tsar-v-11-millionov-rubley" length="78219" type="image/png"/>
+            <description>
+                <![CDATA[
+Прокуратура Санкт-Петербурга подала иск о причинению вреда городу в результате оппозиционного митинга «Он нам не царь» 5 мая 2018 года.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 13:54:29 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Приставы (пока) не стали заводить на Навального дело за отказ удалить фильм «Он вам не Димон»
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/pristavy-poka-ne-stali-zavodit-na-navalnogo-delo-za-otkaz-udalit-film-on-vam-ne-dimon
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/pristavy-poka-ne-stali-zavodit-na-navalnogo-delo-za-otkaz-udalit-film-on-vam-ne-dimon
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544784043/news/2018/12/14/pristavy-poka-ne-stali-zavodit-na-navalnogo-delo-za-otkaz-udalit-film-on-vam-ne-dimon" length="78438" type="image/png"/>
+            <description>
+                <![CDATA[
+Судебные приставы отказались составлять в отношении Алексея Навального административные протоколы о неисполнении решений судов по трем искам.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 13:40:32 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+СК узнал о массовых избиениях в казачьем кадетском корпусе в Воронеже. Против воспитателей возбудили дело о халатности
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/sk-uznal-o-massovyh-izbieniyah-v-kazachiem-kadetskom-korpuse-v-voronezhe-protiv-vospitateley-vozbudili-delo-o-halatnosti
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/sk-uznal-o-massovyh-izbieniyah-v-kazachiem-kadetskom-korpuse-v-voronezhe-protiv-vospitateley-vozbudili-delo-o-halatnosti
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544785074/news/2018/12/14/sk-uznal-o-massovyh-izbieniyah-v-kazachiem-kadetskom-korpuse-v-voronezhe-protiv-vospitateley-vozbudili-delo-o-halatnosti" length="103774" type="image/png"/>
+            <description>
+                <![CDATA[
+Следственный комитет установил, что в Горожанском казачьем кадетском корпусе под Воронежем происходили систематические избиения одних учащихся другими. Это выяснилось в ходе расследования дела об одном конкретном избиении, о котором стало известно в ноябре.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 13:15:38 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Минздрав подготовил проект закона о повышении возраста продажи алкоголя до 21 года
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/minzdrav-podgotovil-proekt-zakona-o-povyshenii-vozrasta-prodazhi-alkogolya-do-21-goda
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/minzdrav-podgotovil-proekt-zakona-o-povyshenii-vozrasta-prodazhi-alkogolya-do-21-goda
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544781189/news/2018/12/14/minzdrav-podgotovil-proekt-zakona-o-povyshenii-vozrasta-prodazhi-alkogolya-do-21-goda" length="74754" type="image/png"/>
+            <description>
+                <![CDATA[
+Минздрав подготовил проект закона об увеличении минимального возраста продажи алкоголя до 21 года. Соответствующее уведомление опубликовано на портале нормативно-правовых документов.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 12:52:37 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Университет Ганы снес памятник Махатме Ганди. Ученые и студенты обвинили его в расизме
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/universitet-gany-snes-pamyatnik-mahatme-gandi-uchenye-i-studenty-obvinili-ego-v-rasizme
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/universitet-gany-snes-pamyatnik-mahatme-gandi-uchenye-i-studenty-obvinili-ego-v-rasizme
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544780530/news/2018/12/14/universitet-gany-snes-pamyatnik-mahatme-gandi-uchenye-i-studenty-obvinili-ego-v-rasizme" length="76451" type="image/png"/>
+            <description>
+                <![CDATA[
+Руководство университета Ганы в Аккре демонтировало статую Махатмы Ганди спустя два года после ее установки в кампусе, сообщается на сайте студенческой радиостанции университета Radio Univers.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 12:42:10 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+По всему миру рассылают сотни писем с угрозами взрывов. Отправители требуют выкуп в биткоинах
+]]>
+            </title>
+            <link>
+                https://meduza.io/feature/2018/12/14/po-vsemu-miru-rassylayut-sotni-pisem-s-ugrozami-vzryvov-otpraviteli-trebuyut-vykup-v-bitkoinah
+            </link>
+            <guid>
+                https://meduza.io/feature/2018/12/14/po-vsemu-miru-rassylayut-sotni-pisem-s-ugrozami-vzryvov-otpraviteli-trebuyut-vykup-v-bitkoinah
+            </guid>
+            <enclosure url="http://meduza.io/image/attachments/images/003/702/260/small/t7wvvP_A_tBcsLDgfOUhbQ.jpg" length="64095" type="image/jpeg"/>
+            <description>
+                <![CDATA[
+Сотни компаний, государственных учреждений, школ, больниц и других организаций в США, Канаде, Австралии и Новой Зеландии получили электронные письма с угрозой взрывов, сообщает Reuters. Авторы писем угрожают взорвать бомбу, если не получат выкуп в размере до 20 тысяч долларов в биткоинах. В полиции Нью-Йорка заявили, что письма рассылают во многих штатах США, однако эти угрозы «не заслуживают доверия». Полицейские считают, что злоумышленники стремятся дестабилизировать обстановку или получить деньги.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 12:34:12 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Патриарх Кирилл пожаловался на вмешательство государства в дела церкви на Украине. Папе римскому и архиепископу Кентерберийскому
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/patriarh-kirill-pozhalovalsya-na-vmeshatelstvo-gosudarstva-v-dela-tserkvi-na-ukraine-pape-rimskomu-i-arhiepiskopu-kenterberiyskomu
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/patriarh-kirill-pozhalovalsya-na-vmeshatelstvo-gosudarstva-v-dela-tserkvi-na-ukraine-pape-rimskomu-i-arhiepiskopu-kenterberiyskomu
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544782446/news/2018/12/14/patriarh-kirill-pozhalovalsya-na-vmeshatelstvo-gosudarstva-v-dela-tserkvi-na-ukraine-pape-rimskomu-i-arhiepiskopu-kenterberiyskomu" length="108894" type="image/png"/>
+            <description>
+                <![CDATA[
+Патриарх Московский и всея Руси Кирилл обратился к главам мировых церквей и влиятельным политикам с посланиями, в которых обратил их внимание на давление со стороны властей на Украинскую православную церковь Московского патриархата.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 12:25:18 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Завод «Электроцинк» во Владикавказе законсервируют после пожара. Его закрытия требовали местные жители
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/zavod-elektrotsink-vo-vladikavkaze-zakonserviruyut-posle-pozhara-ego-zakrytiya-trebovali-mestnye-zhiteli
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/zavod-elektrotsink-vo-vladikavkaze-zakonserviruyut-posle-pozhara-ego-zakrytiya-trebovali-mestnye-zhiteli
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544778797/news/2018/12/14/zavod-elektrotsink-vo-vladikavkaze-zakonserviruyut-posle-pozhara-ego-zakrytiya-trebovali-mestnye-zhiteli" length="90347" type="image/png"/>
+            <description>
+                <![CDATA[
+Владикавказский завод «Электроцинк», на котором в октябре произошел крупный пожар, будет законсервирован. Об этом сообщила пресс-служба предприятия.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 12:13:17 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Сергей Лавров: к Марии Бутиной применяют «своеобразные пытки»
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/sergey-lavrov-k-marii-butinoy-primenyayutsya-pytki
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/sergey-lavrov-k-marii-butinoy-primenyayutsya-pytki
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544779551/news/2018/12/14/sergey-lavrov-k-marii-butinoy-primenyayutsya-pytki" length="63082" type="image/png"/>
+            <description>
+                <![CDATA[
+Глава российского МИД Сергей Лавров объяснил сделку арестованной в США Марии Бутиной с американским правосудием в том числе тем, что к россиянке применяют «своеобразные пытки».
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 12:12:23 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+После запрета концерта в Минске IC3PEAK провела подпольное выступление. Его тоже сорвали
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/posle-zapreta-kontserta-v-minske-ic3peak-provela-podpolnoe-vystuplenie-ego-tozhe-sorvali
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/posle-zapreta-kontserta-v-minske-ic3peak-provela-podpolnoe-vystuplenie-ego-tozhe-sorvali
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544778496/news/2018/12/14/posle-zapreta-kontserta-v-minske-ic3peak-provela-podpolnoe-vystuplenie-ego-tozhe-sorvali" length="81499" type="image/png"/>
+            <description>
+                <![CDATA[
+Группа IC3PEAK 13 декабря провела подпольный концерт в Минске после того, как городские власти отменили официальное выступление музыкантов. Об этом сообщает белорусское издание TUT.BY.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 12:08:16 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Обвиняемому в госизмене ученому Виктору Кудрявцеву запретили свидания после отказа от сделки со следствием
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/obvinyaemomu-v-gosizmene-uchenomu-viktoru-kudryavtsevu-zapretili-svidaniya-posle-otkaza-ot-sdelki-so-sledstviem
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/obvinyaemomu-v-gosizmene-uchenomu-viktoru-kudryavtsevu-zapretili-svidaniya-posle-otkaza-ot-sdelki-so-sledstviem
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544776924/news/2018/12/14/obvinyaemomu-v-gosizmene-uchenomu-viktoru-kudryavtsevu-zapretili-svidaniya-posle-otkaza-ot-sdelki-so-sledstviem" length="94508" type="image/png"/>
+            <description>
+                <![CDATA[
+Следователь запретил ученому из ЦНИИмаш Виктору Кудрявцеву, обвиняемому в госизмене, свидания с родственниками после отказа признать вину. Об этом рассказал адвокат обвиняемого Иван Павлов.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 11:42:04 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Лидер «Шалтай-Болтая» объявил о планах заняться кибербезопасностью
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/lider-shaltay-baltaya-ob-yavil-o-planah-zanyatsya-kiberbezopasnostyu
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/lider-shaltay-baltaya-ob-yavil-o-planah-zanyatsya-kiberbezopasnostyu
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544779966/news/2018/12/14/lider-shaltay-baltaya-ob-yavil-o-planah-zanyatsya-kiberbezopasnostyu" length="66505" type="image/png"/>
+            <description>
+                <![CDATA[
+Лидер хакерской группировки «Шалтай-Болтай» Владимир Аникеев объявил о планах создать компанию по консалтингу в сфере кибербезопасности. Об этом он сообщил РБК.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 11:30:49 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+«Ведомости» сообщили о планах сократить закупки современных лекарств от гепатита для людей с ВИЧ. Минздрав это отрицает
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/minzdrav-poprosili-izmenit-plan-zakupki-lekarstv-ot-gepatita-dlya-lyudey-s-vich-v-nem-poyavilis-ustarevshie-preparaty
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/minzdrav-poprosili-izmenit-plan-zakupki-lekarstv-ot-gepatita-dlya-lyudey-s-vich-v-nem-poyavilis-ustarevshie-preparaty
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544780615/news/2018/12/14/minzdrav-poprosili-izmenit-plan-zakupki-lekarstv-ot-gepatita-dlya-lyudey-s-vich-v-nem-poyavilis-ustarevshie-preparaty" length="104876" type="image/png"/>
+            <description>
+                <![CDATA[
+Организация «Сообщество людей, живущих с ВИЧ» попросила Минздрав РФ скорректировать планы на закупку лекарств от гепатита C для людей с ВИЧ, поскольку они предполагают замену более эффективных препаратов на устаревшие. Об этом пишет газета «Ведомости».
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 11:03:07 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+«Ростех» вновь ищет турбины для ТЭС в Краснодарском крае. В предыдущий раз турбины вместо Тамани попали в Крым
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/rosteh-vnov-ischet-turbiny-dlya-tes-v-krasnodarskom-krae-v-predyduschiy-raz-turbiny-vmesto-tamani-popali-v-krym
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/rosteh-vnov-ischet-turbiny-dlya-tes-v-krasnodarskom-krae-v-predyduschiy-raz-turbiny-vmesto-tamani-popali-v-krym
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544773286/news/2018/12/14/rosteh-vnov-ischet-turbiny-dlya-tes-v-krasnodarskom-krae-v-predyduschiy-raz-turbiny-vmesto-tamani-popali-v-krym" length="102402" type="image/png"/>
+            <description>
+                <![CDATA[
+Дочерняя компания «Ростеха» «Технопромэкспорт» ищет турбины для ТЭС в Тамани на вторичном рынке, пишет РБК.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 10:41:26 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Организатор шоу «Союзмультфильма» рассказал об отказе британцев от сотрудничества из-за «политической ситуации»
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/organizator-shou-soyuzmultfilma-rasskazal-ob-otkaze-britantsev-ot-sotrudnichestva-iz-za-politicheskoy-situatsii
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/organizator-shou-soyuzmultfilma-rasskazal-ob-otkaze-britantsev-ot-sotrudnichestva-iz-za-politicheskoy-situatsii
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544773255/news/2018/12/14/organizator-shou-soyuzmultfilma-rasskazal-ob-otkaze-britantsev-ot-sotrudnichestva-iz-za-politicheskoy-situatsii" length="566" type="image/png"/>
+            <description>
+                <![CDATA[
+Новогоднее шоу «Союзмультфильма» в «Лужниках» сорвалось, потому что британская компания, которая должна была установить там шатер, отказалась из-за «политической ситуации». Об этом заявил гендиректор организатора шоу, агентства ASAP Юрий Донцов.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 10:27:59 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+«Коммерсант»: правительство предложило вернуть штрафы за превышение скорости на 10-20 километров в час
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/kommersant-pravitelstvo-predlozhilo-vernut-shtrafy-za-prevyshenie-skorosti-na-10-20-kilometrov-v-chas
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/kommersant-pravitelstvo-predlozhilo-vernut-shtrafy-za-prevyshenie-skorosti-na-10-20-kilometrov-v-chas
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544769830/news/2018/12/14/kommersant-pravitelstvo-predlozhilo-vernut-shtrafy-za-prevyshenie-skorosti-na-10-20-kilometrov-v-chas" length="94622" type="image/png"/>
+            <description>
+                <![CDATA[
+Правительственная комиссия по безопасности дорожного движения поручила МВД и Минтрансу до 1 марта 2019 года подготовить предложения по введению штрафа за превышение скорости на 10-20 километров в час. Об этом сообщает «Коммерсант» со ссылкой на текст поручения.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 09:43:50 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+ФСИН: число заключенных в России снизилось до исторического минимума
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/fsin-chislo-zaklyuchennyh-v-rossii-snizilos-do-istoricheskogo-minimuma
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/fsin-chislo-zaklyuchennyh-v-rossii-snizilos-do-istoricheskogo-minimuma
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544771082/news/2018/12/14/fsin-chislo-zaklyuchennyh-v-rossii-snizilos-do-istoricheskogo-minimuma" length="64725" type="image/png"/>
+            <description>
+                <![CDATA[
+В российских колониях отбывают наказание 467 тысяч 724 человека, что является самым маленьким числом заключенных в новейшей истории России, сообщила пресс-служба ФСИН.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 09:39:40 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[ На базе США в Антарктиде погибли двое рабочих ]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/na-baze-ssha-v-antarktide-pogibli-dvoe-rabochih
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/na-baze-ssha-v-antarktide-pogibli-dvoe-rabochih
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544768289/news/2018/12/14/na-baze-ssha-v-antarktide-pogibli-dvoe-rabochih" length="54266" type="image/png"/>
+            <description>
+                <![CDATA[
+Двое рабочих погибли в результате несчастного случая на антарктической станции Мак-Мердо. Об этом, как сообщает The New York Times, заявили в Национальном научном фонде США, управляющем антарктической программой США.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 09:18:08 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+В США начали расследование из-за инаугурации Трампа
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/v-ssha-nachali-rassledovanie-iz-za-inauguratsii-trampa
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/v-ssha-nachali-rassledovanie-iz-za-inauguratsii-trampa
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544765992/news/2018/12/14/v-ssha-nachali-rassledovanie-iz-za-inauguratsii-trampa" length="56653" type="image/png"/>
+            <description>
+                <![CDATA[
+Прокуратура Манхэттена начала расследование из-за возможных нарушений, допущенных при финансировании инаугурации президента США Дональда Трампа, сообщает The Wall Street Journal со ссылкой на собственные источники.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 08:39:52 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+«Разговор был позитивным». Театральные деятели обсудили с Путиным дело «Седьмой студии»
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/razgovor-byl-pozitivnym-teatralnye-deyateli-obsudili-s-putinym-delo-sedmoy-studii
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/razgovor-byl-pozitivnym-teatralnye-deyateli-obsudili-s-putinym-delo-sedmoy-studii
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544769534/news/2018/12/14/razgovor-byl-pozitivnym-teatralnye-deyateli-obsudili-s-putinym-delo-sedmoy-studii" length="83542" type="image/png"/>
+            <description>
+                <![CDATA[
+Директор театральной премии «Золотая маска» Мария Ревякина и художественный руководитель Российского академического молодежного театра Алексей Бородин поговорили с президентом России о деле «Седьмой студии» и режиссера Кирилла Серебренникова.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 08:35:59 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+В Уфе пассажирский самолет ударился хвостом о взлетно-посадочную полосу
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/v-ufe-passazhirskiy-samolet-udarilsya-hvostom-o-vzletno-posadochnuyu-polosu
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/v-ufe-passazhirskiy-samolet-udarilsya-hvostom-o-vzletno-posadochnuyu-polosu
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544765024/news/2018/12/14/v-ufe-passazhirskiy-samolet-udarilsya-hvostom-o-vzletno-posadochnuyu-polosu" length="67635" type="image/png"/>
+            <description>
+                <![CDATA[
+Пассажирский самолет Airbus A321 «Уральских авиалиний» ударился хвостом о взлетно-посадочную полосу в аэропорту Уфы, сообщает «Интерфакс».
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 08:23:44 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Radiohead и The Cure включили в Зал славы рок-н-ролла
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/radiohead-i-the-cure-vklyuchili-v-zal-slavy-rok-n-rolla
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/radiohead-i-the-cure-vklyuchili-v-zal-slavy-rok-n-rolla
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544766678/news/2018/12/14/radiohead-i-the-cure-vklyuchili-v-zal-slavy-rok-n-rolla" length="51042" type="image/png"/>
+            <description>
+                <![CDATA[
+Объявлены новые участники Зала славы рок-н-ролла, находящегося в американском Кливленде.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 08:12:34 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Сенат США возложил ответственность за убийство Джамаля Хашогджи на наследного принца Саудовской Аравии
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/senat-ssha-vozlozhil-otvetstvennost-za-ubiystvo-dzhamalya-hashogdzhi-na-naslednogo-printsa-saudovskoy-aravii
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/senat-ssha-vozlozhil-otvetstvennost-za-ubiystvo-dzhamalya-hashogdzhi-na-naslednogo-printsa-saudovskoy-aravii
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544740812/news/2018/12/14/senat-ssha-vozlozhil-otvetstvennost-za-ubiystvo-dzhamalya-hashogdzhi-na-naslednogo-printsa-saudovskoy-aravii" length="95662" type="image/png"/>
+            <description>
+                <![CDATA[
+Сенат США одобрил резолюцию, которая возлагает ответственность за убийство журналиста Джамаля Хашогджи на наследного принца Саудовской Аравии Мухаммеда бин Салмана. Об этом сообщает Associated Press.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 00:50:23 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Полиция убила подозреваемого в стрельбе на рождественской ярмарке в Страсбурге
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/14/politsiya-ubila-podozrevaemogo-v-strelbe-na-rozhdestvenskoy-yarmarke-v-strasburge
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/14/politsiya-ubila-podozrevaemogo-v-strelbe-na-rozhdestvenskoy-yarmarke-v-strasburge
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544740789/news/2018/12/14/politsiya-ubila-podozrevaemogo-v-strelbe-na-rozhdestvenskoy-yarmarke-v-strasburge" length="78644" type="image/png"/>
+            <description>
+                <![CDATA[
+Французская полиция застрелила Шарифа Шеката, подозреваемого в стрельбе на рождественской ярмарке в Страсбурге. Об этом сообщают AFP и Reuters со ссылкой на источники в полиции.
+]]>
+            </description>
+            <pubDate>Fri, 14 Dec 2018 00:01:10 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Житель Батайска ранил ножом судебного пристава и полицейского
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/13/zhitel-batayska-ranil-nozhom-sudebnogo-pristava-i-politseyskogo
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/13/zhitel-batayska-ranil-nozhom-sudebnogo-pristava-i-politseyskogo
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544731431/news/2018/12/13/zhitel-batayska-ranil-nozhom-sudebnogo-pristava-i-politseyskogo" length="62673" type="image/png"/>
+            <description>
+                <![CDATA[
+Вооруженный ножом житель Батайска ранил судебного пристава и полицейского, сообщает управление СК РФ по Ростовской области.
+]]>
+            </description>
+            <pubDate>Thu, 13 Dec 2018 23:03:51 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Александра Зубкова и еще четверых российских бобслеистов отстранили за допинговые нарушения на Играх в Сочи
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/13/aleksandra-zubkova-i-esche-chetveryh-rossiyskih-bobsleistov-vremenno-otstranili-za-dopingovye-narusheniya-na-igrah-v-sochi
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/13/aleksandra-zubkova-i-esche-chetveryh-rossiyskih-bobsleistov-vremenno-otstranili-za-dopingovye-narusheniya-na-igrah-v-sochi
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544729056/news/2018/12/13/aleksandra-zubkova-i-esche-chetveryh-rossiyskih-bobsleistov-vremenno-otstranili-za-dopingovye-narusheniya-na-igrah-v-sochi" length="90400" type="image/png"/>
+            <description>
+                <![CDATA[
+Международная федерация бобслея и скелетона (IBSF) временно отстранила пятерых российских бобслеистов из-за нарушения антидопинговых правил на Олимпиаде в Сочи.
+]]>
+            </description>
+            <pubDate>Thu, 13 Dec 2018 22:20:04 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Мария Бутина призналась в сговоре против США. В России ее называют жертвой «средневековой инквизиции»
+]]>
+            </title>
+            <link>
+                https://meduza.io/feature/2018/12/13/mariya-butina-priznalas-v-sgovore-protiv-ssha-v-rossii-ee-nazyvayut-zhertvoy-srednevekovoy-inkvizitsii
+            </link>
+            <guid>
+                https://meduza.io/feature/2018/12/13/mariya-butina-priznalas-v-sgovore-protiv-ssha-v-rossii-ee-nazyvayut-zhertvoy-srednevekovoy-inkvizitsii
+            </guid>
+            <enclosure url="http://meduza.io/image/attachments/images/003/699/326/small/T9uYSRdwxl1sRLKjr7LwKg.jpg" length="26224" type="image/jpeg"/>
+            <description>
+                <![CDATA[
+Россиянка Мария Бутина пошла на сделку со следствием и в суде признала себя виновной по одному из двух пунктов обвинения, который ей предъявили в США — в сговоре с целью обмануть или нанести ущерб этой стране. По этому пункту ей грозило до пяти лет тюремного заключения, но теперь, считают американские СМИ, ее отпустят намного раньше. NBC пишет, что Бутиной могут назначить до шести месяцев тюремного заключения, после чего депортируют в Россию.
+]]>
+            </description>
+            <pubDate>Thu, 13 Dec 2018 21:51:04 +0300</pubDate>
+        </item>
+        <item>
+            <title>
+                <![CDATA[
+Советник президента США исключил встречу Трампа с Путиным, пока не отпустят украинских моряков
+]]>
+            </title>
+            <link>
+                https://meduza.io/news/2018/12/13/sovetnik-prezidenta-ssha-isklyuchil-vstrechu-trampa-s-putinym-poka-ne-otpustyat-ukrainskih-moryakov
+            </link>
+            <guid>
+                https://meduza.io/news/2018/12/13/sovetnik-prezidenta-ssha-isklyuchil-vstrechu-trampa-s-putinym-poka-ne-otpustyat-ukrainskih-moryakov
+            </guid>
+            <enclosure url="http://meduza.io/imgly/share/1544725435/news/2018/12/13/sovetnik-prezidenta-ssha-isklyuchil-vstrechu-trampa-s-putinym-poka-ne-otpustyat-ukrainskih-moryakov" length="86119" type="image/png"/>
+            <description>
+                <![CDATA[
+Президент США Дональд Трамп не будет встречаться с российским коллегой Владимиром Путиным, пока Москва не освободит украинских моряков и корабли. Об этом заявил журналистам советник Трампа по национальной безопасности Джон Болтон.
+]]>
+            </description>
+            <pubDate>Thu, 13 Dec 2018 21:23:55 +0300</pubDate>
+        </item>
+    </channel>
+</rss>

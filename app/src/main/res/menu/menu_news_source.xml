@@ -9,26 +9,27 @@
     </group>
     <group android:checkableBehavior="single">
         <item
-            android:icon="@drawable/ic_baseline_arrow_forward_24px"
-            android:id="@+id/menu_item_yandex"
-            android:title="@string/yandex" />
+            android:icon="@drawable/ic_baseline_rss_feed_24px"
+            android:id="@+id/menu_item_ngs"
+            android:title="@string/ngs_menu_category"/>
+
         <item
             android:id="@+id/menu_item_meduza"
             android:icon="@drawable/ic_baseline_rss_feed_24px"
-            android:title="@string/meduza" />
+            android:title="@string/meduza_menu_category" />
     </group>
     <group android:checkableBehavior="none">
         <item
-            android:icon="@drawable/ic_baseline_bookmarks_24px"
-            android:id="@+id/menu_item_ngs"
-            android:title="@string/ngs"/>
+            android:icon="@drawable/ic_baseline_arrow_forward_24px"
+            android:id="@+id/menu_item_yandex"
+            android:title="@string/yandex_menu_category" />
         <item
             android:icon="@drawable/ic_baseline_bookmarks_24px"
             android:id="@+id/menu_item_lenta"
-            android:title="@string/lenta"/>
+            android:title="@string/lenta_menu_category"/>
         <item
             android:icon="@drawable/ic_baseline_bookmarks_24px"
             android:id="@+id/menu_item_ria"
-            android:title="@string/ria" />
+            android:title="@string/ria_menu_category" />
     </group>
 </menu>

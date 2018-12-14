@@ -19,7 +19,11 @@
                 android:id="@+id/toolbar_news_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center" />
+                android:layout_marginStart="@dimen/size_xsmall"
+                android:layout_marginEnd="@dimen/size_xlarge"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textStyle="bold"/>
         </android.support.v7.widget.Toolbar>
 
         <FrameLayout

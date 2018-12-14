@@ -1,4 +1,4 @@
-package com.study.riseof.news.model.ngs;
+package com.study.riseof.news.model.xml;
 
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
@@ -20,13 +20,11 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Root(name = "item")
 public class Item {
-    @Element(name = "title", required = false)
+    @Element(name = "title", data = true, required = false)
     String title;
 
-    @Element(name = "description", required = false)
+    @Element(name = "description", data = true, required = false)
     String description;
-
-
 
     @Element(name = "guid", required = false)
     String guid;
@@ -43,7 +41,7 @@ public class Item {
     @Element(name = "category", required = false)
     String category;
 
-    @ElementList(inline = true, entry = "enclosure")
+    @ElementList(inline = true, entry = "enclosure", required = false)
     private List<Enclosure> enclosureList;
 
     @Element(name = "pubDate", required = false)

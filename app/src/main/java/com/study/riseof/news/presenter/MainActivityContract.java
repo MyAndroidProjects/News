@@ -2,7 +2,7 @@ package com.study.riseof.news.presenter;
 
 import android.view.View;
 
-import com.study.riseof.news.model.ngs.Item;
+import com.study.riseof.news.model.xml.Item;
 import com.study.riseof.news.ui.activity.MainActivity;
 
 import java.util.List;
@@ -16,6 +16,16 @@ public interface MainActivityContract {
         void closeDrawer();
 
         void createRssFragment();
+
+        void createWebViewFragment(String newsUrl);
+
+        void replaceRssFragmentWithWebViewFragment();
+
+        void setActionBarTitle(int textId);
+
+        void setActionBarColor(int color);
+
+        void setStatusBarColor(int color);
 
         void createNewsSourceNavigationViewFragment();
 
@@ -54,6 +64,8 @@ public interface MainActivityContract {
         void onNavigationMenuItemRia();
 
         void onNavigationMenuAnyItem();
+
+        void rssNewsClick(int position,String newsUrl);
     }
 
     interface MainActivityDataLoader {

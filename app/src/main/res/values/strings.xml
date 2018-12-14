@@ -1,12 +1,19 @@
 <resources>
     <string name="app_name">News</string>
 
+    <!-- news sources -->
+    <string name="yandex_source_name">yandex.ru</string>
+    <string name="meduza_source_name">meduza.ru</string>
+    <string name="ngs_source_name">ngs.ru</string>
+    <string name="lenta_source_name">lenta.ru</string>
+    <string name="ria_source_name">ria.ru</string>
+
     <!-- menu categories -->
-    <string name="yandex">Yandex news</string>
-    <string name="meduza">Meduza news</string>
-    <string name="ngs">Ngs news</string>
-    <string name="lenta">Lenta news</string>
-    <string name="ria">RIA news</string>
+    <string name="yandex_menu_category">Yandex news</string>
+    <string name="meduza_menu_category">Meduza news</string>
+    <string name="ngs_menu_category">Ngs news</string>
+    <string name="lenta_menu_category">Lenta news</string>
+    <string name="ria_menu_category">RIA news</string>
 
     <string name="yandex_world">World</string>
     <string name="yandex_politics">Politics</string>
@@ -16,6 +23,5 @@
 
     <string name="rss_news_content">Image with news</string>
 
-    <string name="base_url_rss_ngs222">https://news.ngs.ru/news/rss/</string>
 
 </resources>

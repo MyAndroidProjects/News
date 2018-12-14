@@ -1,7 +1,8 @@
-package com.study.riseof.news.model.ngs;
+package com.study.riseof.news.model.xml;
 
-import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
+import org.simpleframework.xml.Version;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -15,11 +16,11 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @AllArgsConstructor
-@Root(name = "enclosure")
-public class Enclosure {
-    @Attribute(name = "type", required = false)
-    String type;
+@Root(name = "rss")
+public class Rss {
+    @Version
+    double version;
 
-    @Attribute(name = "url", required = false)
-    String url;
+    @Element(name = "channel", required = false)
+    Channel channel;
 }

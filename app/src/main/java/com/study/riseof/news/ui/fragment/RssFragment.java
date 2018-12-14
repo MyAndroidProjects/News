@@ -11,14 +11,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.study.riseof.news.R;
-import com.study.riseof.news.model.ngs.Item;
+import com.study.riseof.news.model.xml.Item;
 import com.study.riseof.news.ui.adapter.RssRecyclerViewAdapter;
 
 import java.util.List;
 
 import butterknife.BindView;
 
-public class RssFragment extends BaseFragment {
+public class RssFragment extends BaseFragment implements
+        RssRecyclerViewAdapter.RssNewsClickListener {
     @BindView(R.id.recycler_view_rss)
     RecyclerView recyclerView;
 
@@ -48,8 +49,9 @@ public class RssFragment extends BaseFragment {
     }
 
     public void setRecyclerAdapter(Context context) {
-        if(rssList!=null){
+        if (rssList != null) {
             RssRecyclerViewAdapter adapter = new RssRecyclerViewAdapter(context, rssList);
+            adapter.setRssNewsClickListener(this);
             LinearLayoutManager layoutManager = new LinearLayoutManager(context);
             recyclerView.setLayoutManager(layoutManager);
             recyclerView.setAdapter(adapter);
@@ -61,7 +63,14 @@ public class RssFragment extends BaseFragment {
     }
 
     public interface RssFragmentListener {
-
+        void rssNewsClick(int position, String newsUrl);
     }
 
+    @Override
+    public void rssNewsClick(int position, String newsUrl) {
+        if (rssFragmentListener != null) {
+            rssFragmentListener.rssNewsClick(position, newsUrl);
+        }
+
+    }
 }

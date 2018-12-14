@@ -1,6 +1,5 @@
 package com.study.riseof.news.ui.activity;
 
-import android.annotation.TargetApi;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.support.v4.app.Fragment;
@@ -16,14 +15,16 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.study.riseof.news.R;
-import com.study.riseof.news.model.ngs.Item;
+import com.study.riseof.news.model.xml.Item;
 import com.study.riseof.news.presenter.MainActivityContract;
 import com.study.riseof.news.presenter.MainActivityPresenter;
 import com.study.riseof.news.ui.fragment.NewsSourceNavigationViewFragment;
 import com.study.riseof.news.ui.fragment.RssFragment;
+import com.study.riseof.news.ui.fragment.WebViewFragment;
 
 import java.util.List;
 
@@ -37,6 +38,9 @@ public class MainActivity extends BaseActivity implements
     @BindView(R.id.toolbar_news)
     Toolbar toolbar;
 
+    @BindView(R.id.toolbar_news_title)
+    TextView toolbarTitle;
+
     @BindView(R.id.drawer_layout_main)
     DrawerLayout drawerLayout;
 
@@ -49,8 +53,10 @@ public class MainActivity extends BaseActivity implements
 
     private NewsSourceNavigationViewFragment newsSourceNavigationViewFragment;
     private RssFragment rssFragment;
+    private WebViewFragment webViewFragment;
     private MainActivityContract.MainActivityPresenter presenter;
     private List<Item> rssList;
+    ActionBar actionbar;
 
     @Override
     protected int getLayoutId() {
@@ -61,9 +67,6 @@ public class MainActivity extends BaseActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            setStatusBarColor(R.color.status_bar_default_background);
-        }
 
         setPresenter();
         setDrawerListener();
@@ -73,13 +76,15 @@ public class MainActivity extends BaseActivity implements
     protected void onStart() {
         super.onStart();
         presenter.activityOnStart();
-        setActionBarColor(R.color.action_bar_default_background);
+        setActionBarColor(R.color.default_action_bar);
+        setStatusBarColor(R.color.default_status_bar);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         presenter.onActivityDestroy();
+        // todo поместить в backstack
     }
 
     private void setDrawerListener() {
@@ -117,7 +122,7 @@ public class MainActivity extends BaseActivity implements
     @Override
     protected void setActionBar() {
         setSupportActionBar(toolbar);
-        ActionBar actionbar = getSupportActionBar();
+        actionbar = getSupportActionBar();
         if (actionbar != null) {
             actionbar.setDisplayHomeAsUpEnabled(true);
             actionbar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24px);
@@ -129,25 +134,59 @@ public class MainActivity extends BaseActivity implements
         presenter.attachView(this);
     }
 
-    private void setActionBarColor(int color) {
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(color)));
+    @Override
+    public void setActionBarTitle(int textId) {
+            toolbarTitle.setText(textId);
+    }
+
+    @Override
+    public void setActionBarColor(int color) {
+        if (actionbar != null) {
+            actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(color)));
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    private void setStatusBarColor(int color) {
-        Window window = this.getWindow();
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(color);
+    @Override
+    public void setStatusBarColor(int color) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = this.getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(color);
+        }
     }
 
-    private void addFragment(Fragment fragment, int fragmentView) {
+    private void addFragment(int fragmentView, Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.add(fragmentView, fragment);
         fragmentTransaction.commit();
+    }
+
+    private void replaceFragment(int fragmentView, Fragment fragment) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+     //   fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        fragmentTransaction.add(fragmentView, fragment);
+        fragmentTransaction.replace(fragmentView, fragment);
+        fragmentTransaction.commit();
+    }
+
+    @Override
+    public void createWebViewFragment(String newsUrl) {
+        Log.d("myLog"," Activity newsUrl "+newsUrl+" HHH");
+        webViewFragment = new WebViewFragment();
+        Bundle webViewFragmentArgs = new Bundle();
+        webViewFragmentArgs.putString("newsUrl", newsUrl);
+        webViewFragment.setArguments(webViewFragmentArgs);
+    }
+
+    @Override
+    public void replaceRssFragmentWithWebViewFragment() {
+        if(webViewFragment!=null){
+            replaceFragment(R.id.frame_news, webViewFragment);
+        }
+
     }
 
     @Override
@@ -159,7 +198,7 @@ public class MainActivity extends BaseActivity implements
     public void createRssFragment() {
         if (rssFragment == null) {
             rssFragment = new RssFragment();
-            addFragment(rssFragment, R.id.frame_news);
+            addFragment(R.id.frame_news, rssFragment);
             rssFragment.setNewsList(rssList);
             rssFragment.setRssFragmentListener(this);
         } else {
@@ -172,7 +211,7 @@ public class MainActivity extends BaseActivity implements
     public void createNewsSourceNavigationViewFragment() {
         if (newsSourceNavigationViewFragment == null) {
             newsSourceNavigationViewFragment = new NewsSourceNavigationViewFragment();
-            addFragment(newsSourceNavigationViewFragment, R.id.fragment_navigation_view);
+            addFragment(R.id.fragment_navigation_view, newsSourceNavigationViewFragment);
         }
         newsSourceNavigationViewFragment.setNavigationViewListener(this);
     }
@@ -237,6 +276,11 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void showShortToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void rssNewsClick(int position, String newsUrl) {
+        presenter.rssNewsClick(position, newsUrl);
     }
 }
 

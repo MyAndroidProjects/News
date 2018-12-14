@@ -37,4 +37,10 @@
     <dimen name="size_xxxlarge">@dimen/size_48dp</dimen>
     <dimen name="size_xxxxlarge">@dimen/size_72dp</dimen>
     <dimen name="size_xxxxxlarge">@dimen/size_144dp</dimen>
+
+    <!--  for picasso dimens -->
+    <integer name="size_xxxxlarge_integer">72</integer>
+    <integer name="size_xxxxxlarge_integer">144</integer>
+
+
 </resources>

@@ -1,4 +1,4 @@
-package com.study.riseof.news.model.ngs;
+package com.study.riseof.news.model.xml;
 
 
 import org.simpleframework.xml.Element;
@@ -30,10 +30,15 @@ public class Channel {
     @Element(name = "language", required = false)
     String language;
 
-    @Element(name = "link", required = false)
-    String link;
+    @Element(name = "image", required = false)
+    RssImage rssImage;
 
-    @ElementList(inline = true, entry = "item")
+    @Element(name = "lastBuildDate", required = false)
+    String lastBuildDate;
+
+    @ElementList(inline = true, entry = "link", required = false)
+    List<Link> linkList;
+
+    @ElementList(inline = true, entry = "item", required = false)
     private List<Item> itemList;
-
 }

@@ -14,6 +14,7 @@ import butterknife.Unbinder;
 public abstract class BaseFragment extends Fragment {
     protected Unbinder unbinder;
     protected View view;
+    protected final String EMPTY_STRING = "";
 
     protected abstract int getLayoutId();
 
