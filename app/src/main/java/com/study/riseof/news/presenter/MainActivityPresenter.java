@@ -8,7 +8,7 @@ import com.study.riseof.news.model.xml.Item;
 import com.study.riseof.news.model.xml.Rss;
 import com.study.riseof.news.network.RetrofitApi;
 import com.study.riseof.news.network.XmlConverterRetrofit;
-import com.study.riseof.news.ui.NewsSource;
+import com.study.riseof.news.NewsSource;
 import com.study.riseof.news.ui.activity.MainActivity;
 
 import java.util.List;
@@ -22,7 +22,7 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
     private static MainActivityPresenter instance;
     private MainActivityContract.MainActivityView activityView;
     private List<Item> rssList;
-
+    private NewsSource currentNewsSource = NewsSource.EMPTY;
 
     private MainActivityPresenter() {
     }
@@ -43,7 +43,11 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
     public void activityOnStart() {
         if (activityView != null) {
             activityView.createNewsSourceNavigationViewFragment();
+            if (currentNewsSource == NewsSource.EMPTY) {
+                activityView.openDrawer();
+            }
         }
+        setNewsSourceAttributesInActivityView(currentNewsSource);
 
     }
 
@@ -55,7 +59,6 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
 
     @Override
     public void onMenuButtonHome() {
-        Log.d("myLog", "onMenuButtonHome");
         if (activityView != null) {
             activityView.openDrawer();
         }
@@ -64,6 +67,10 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
     @Override
     public void onActivityDestroy() {
         deAttachView();
+    }
+
+    public List<Item> getRssList() {
+        return rssList;
     }
 
     @Override
@@ -108,47 +115,44 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
 
     @Override
     public void onNavigationMenuAnyItem() {
+        setNewsSourceAttributesInActivityView(currentNewsSource);
+        getRssListFromNet(currentNewsSource.getXmlApi());
+        setRssListToView();
         if (activityView != null) {
             activityView.closeDrawer();
         }
+
     }
 
     @Override
     public void onNavigationMenuItemYandex() {
-        getRssListAndSetToActivityView(XmlConverterRetrofit.YANDEX.getRetrofitApi());
-        setNewsSourceAttributesInActivityView(NewsSource.YANDEX);
+        currentNewsSource = NewsSource.YANDEX;
     }
 
     @Override
     public void onNavigationMenuItemMeduza() {
-        getRssListAndSetToActivityView(XmlConverterRetrofit.MEDUZA.getRetrofitApi());
-        setNewsSourceAttributesInActivityView(NewsSource.MEDUZA);
+        currentNewsSource = NewsSource.MEDUZA;
     }
 
     @Override
     public void onNavigationMenuItemNgs() {
-        getRssListAndSetToActivityView(XmlConverterRetrofit.NGS.getRetrofitApi());
-        setNewsSourceAttributesInActivityView(NewsSource.NGS);
+        currentNewsSource = NewsSource.NGS;
     }
 
     @Override
     public void onNavigationMenuItemLenta() {
-        getRssListAndSetToActivityView(XmlConverterRetrofit.LENTA.getRetrofitApi());
-        setNewsSourceAttributesInActivityView(NewsSource.LENTA);
+        currentNewsSource = NewsSource.LENTA;
     }
 
     @Override
-    public void onNavigationMenuItemRia() {
-        if (activityView != null) {
-            activityView.showShortToast("onNavigationMenuItemRia");
-        }
-        setNewsSourceAttributesInActivityView(NewsSource.RIA);
+    public void onNavigationMenuItemRbc() {
+        currentNewsSource = NewsSource.RBC;
     }
 
 
     @Override
     public void rssNewsClick(int position, String newsUrl) {
-        activityView.showShortToast("позиция: " + position + " newsUrl "+ newsUrl);
+        activityView.showShortToast("позиция: " + position + " newsUrl " + newsUrl);
         activityView.createWebViewFragment(newsUrl);
         activityView.replaceRssFragmentWithWebViewFragment();
     }
@@ -168,7 +172,7 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
         Log.d("myLog", response.body().getChannel().getItemList().get(1).getPubDate());
     }
 
-    private void setNewsSourceAttributesInActivityView(NewsSource source){
+    private void setNewsSourceAttributesInActivityView(NewsSource source) {
         if (activityView != null) {
             activityView.setActionBarTitle(source.getNameId());
             activityView.setActionBarColor(source.getActionBarColorId());
@@ -176,17 +180,23 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
         }
     }
 
-    private void getRssListAndSetToActivityView(RetrofitApi.Xml xmlApi){
+    private void getRssListFromNet(RetrofitApi.Xml xmlApi) {
+        // todo сделать switch по currentNewsSource в методе  или передовать в метод Api
         xmlApi.getRss().enqueue(new Callback<Rss>() {
             @Override
             public void onResponse(@NonNull Call<Rss> call, @NonNull Response<Rss> response) {
                 if (activityView != null) {
+                    Log.d("myLog", "activityView != null");
                     if (response.body() != null) {
-                        activityView.setRssList(response.body().getChannel().getItemList());
+                        Log.d("myLog", "response.body() != null");
+                        Log.d("myLog", "get(0).getTitle() " + response.body().getChannel().getItemList().get(0).getTitle());
+                        rssList = response.body().getChannel().getItemList();
+                        activityView.setRssList(rssList);
                     }
                     activityView.createRssFragment();
                 }
             }
+
             @Override
             public void onFailure(@NonNull Call<Rss> call, @NonNull Throwable t) {
                 Log.d("myLog", "NewsTestList onFailure " + t);
@@ -194,7 +204,13 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
         });
     }
 
-    //--------------
+    private void setRssListToView() {
+        if (activityView != null) {
+            activityView.setRssList(rssList);
+            activityView.createRssFragment();
+        }
+    }
 
-
+// todo сделать свой backStack из новостных ресурсов чтобы цвет toobar соответствовал новости
+    // todo подумать над backStack rss источника, т.к. при возврате в фрагмент rss загружается последний rssList, а не в обратном порядке.
 }

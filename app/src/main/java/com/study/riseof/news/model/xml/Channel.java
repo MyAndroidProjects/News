@@ -36,6 +36,9 @@ public class Channel {
     @Element(name = "lastBuildDate", required = false)
     String lastBuildDate;
 
+    @Element(name = "pubDate", required = false)
+    String pubDate;
+
     @ElementList(inline = true, entry = "link", required = false)
     List<Link> linkList;
 

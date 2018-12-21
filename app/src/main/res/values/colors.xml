@@ -63,9 +63,9 @@
     <!-- yandex.ru -->
     <color name="yandex_action_bar">@color/red_500</color>
     <color name="yandex_status_bar">@color/red_700</color>
-    <!-- ria.ru -->
-    <color name="ria_action_bar">@color/orange_500</color>
-    <color name="ria_status_bar">@color/orange_700</color>
+    <!-- rbc.ru -->
+    <color name="rbc_action_bar">@color/orange_500</color>
+    <color name="rbc_status_bar">@color/orange_700</color>
 
 
 </resources>

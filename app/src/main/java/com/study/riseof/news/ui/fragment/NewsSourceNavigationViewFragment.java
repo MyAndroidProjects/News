@@ -56,7 +56,7 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
                 navigationViewListener.onNavigationMenuItemLenta();
                 break;
             case R.id.menu_item_ria:
-                navigationViewListener.onNavigationMenuItemRia();
+                navigationViewListener.onNavigationMenuItemRbc();
                 break;
         }
         navigationViewListener.onNavigationMenuAnyItem();
@@ -78,7 +78,7 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
 
         void onNavigationMenuItemLenta();
 
-        void onNavigationMenuItemRia();
+        void onNavigationMenuItemRbc();
 
         void onNavigationMenuAnyItem();
     }

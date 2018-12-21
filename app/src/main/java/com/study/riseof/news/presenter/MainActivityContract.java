@@ -61,11 +61,13 @@ public interface MainActivityContract {
 
         void onNavigationMenuItemLenta();
 
-        void onNavigationMenuItemRia();
+        void onNavigationMenuItemRbc();
 
         void onNavigationMenuAnyItem();
 
         void rssNewsClick(int position,String newsUrl);
+
+        List<Item> getRssList();
     }
 
     interface MainActivityDataLoader {

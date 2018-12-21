@@ -66,18 +66,21 @@ public class MainActivity extends BaseActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setPresenter();
+        if (presenter != null) {
+            rssList = presenter.getRssList();
+        }
         setDrawerListener();
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        presenter.activityOnStart();
-        setActionBarColor(R.color.default_action_bar);
-        setStatusBarColor(R.color.default_status_bar);
+        if (presenter != null) {
+            presenter.activityOnStart();
+        }
+
     }
 
     @Override
@@ -136,7 +139,7 @@ public class MainActivity extends BaseActivity implements
 
     @Override
     public void setActionBarTitle(int textId) {
-            toolbarTitle.setText(textId);
+        toolbarTitle.setText(textId);
     }
 
     @Override
@@ -160,21 +163,21 @@ public class MainActivity extends BaseActivity implements
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.add(fragmentView, fragment);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 
     private void replaceFragment(int fragmentView, Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
-     //   fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        fragmentTransaction.add(fragmentView, fragment);
+        //  fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.replace(fragmentView, fragment);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 
     @Override
     public void createWebViewFragment(String newsUrl) {
-        Log.d("myLog"," Activity newsUrl "+newsUrl+" HHH");
         webViewFragment = new WebViewFragment();
         Bundle webViewFragmentArgs = new Bundle();
         webViewFragmentArgs.putString("newsUrl", newsUrl);
@@ -183,7 +186,7 @@ public class MainActivity extends BaseActivity implements
 
     @Override
     public void replaceRssFragmentWithWebViewFragment() {
-        if(webViewFragment!=null){
+        if (webViewFragment != null) {
             replaceFragment(R.id.frame_news, webViewFragment);
         }
 
@@ -196,12 +199,22 @@ public class MainActivity extends BaseActivity implements
 
     @Override
     public void createRssFragment() {
+        // todo refactor
         if (rssFragment == null) {
             rssFragment = new RssFragment();
             addFragment(R.id.frame_news, rssFragment);
-            rssFragment.setNewsList(rssList);
-            rssFragment.setRssFragmentListener(this);
+            if (presenter != null) {
+                rssFragment.setNewsList(presenter.getRssList());
+            } else {
+                rssFragment.setNewsList(null);
+            }
         } else {
+            replaceFragment(R.id.frame_news, rssFragment);
+            if (presenter != null) {
+                rssFragment.setNewsList(presenter.getRssList());
+            } else {
+                rssFragment.setNewsList(null);
+            }
             rssFragment.setRecyclerAdapter(this);
         }
         rssFragment.setRssFragmentListener(this);
@@ -218,7 +231,6 @@ public class MainActivity extends BaseActivity implements
 
     @Override
     public void openDrawer() {
-        Log.d("myLog", "drawerLayout.openDrawer");
         drawerLayout.openDrawer(GravityCompat.START);
     }
 
@@ -231,11 +243,16 @@ public class MainActivity extends BaseActivity implements
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                Log.d("myLog", "android.R.id.home");
                 presenter.onMenuButtonHome();
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Log.d("myLog", "onBackPressed");
+        super.onBackPressed();
     }
 
     @Override
@@ -264,8 +281,8 @@ public class MainActivity extends BaseActivity implements
     }
 
     @Override
-    public void onNavigationMenuItemRia() {
-        presenter.onNavigationMenuItemRia();
+    public void onNavigationMenuItemRbc() {
+        presenter.onNavigationMenuItemRbc();
     }
 
     @Override

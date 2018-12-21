@@ -1,5 +1,8 @@
 package com.study.riseof.news.ui.fragment;
 
+import android.annotation.TargetApi;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -8,7 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -22,7 +27,6 @@ public class WebViewFragment extends BaseFragment {
     ProgressBar progressBar;
     @BindView(R.id.web_view)
     WebView webView;
-
 
 
     private String newsUrl;
@@ -41,24 +45,39 @@ public class WebViewFragment extends BaseFragment {
         webView.setWebChromeClient(new WebChromeClient() {
             @Override
             public void onProgressChanged(WebView view, int progress) {
-                if(progress < 100 && progressBar.getVisibility() == ProgressBar.GONE){
+                if (progress < 100 && progressBar.getVisibility() == ProgressBar.GONE) {
                     progressBar.setVisibility(ProgressBar.VISIBLE);
                 }
                 progressBar.setProgress(progress);
-                if(progress == 100) {
+                if (progress == 100) {
                     progressBar.setVisibility(ProgressBar.GONE);
                 }
             }
+        });
 
+        webView.setWebViewClient(new WebViewClient() {
+            @SuppressWarnings("deprecation")
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView webView, String url) {
+                return shouldOverrideUrlLoading(url);
+            }
+
+            @TargetApi(Build.VERSION_CODES.N)
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView webView, WebResourceRequest request) {
+                Uri uri = request.getUrl();
+                return shouldOverrideUrlLoading(uri.toString());
+            }
+
+            private boolean shouldOverrideUrlLoading(final String url) {
+                return false;
+            }
         });
 
         webView.loadUrl(newsUrl);
         return view;
     }
 
-    public void setWebView() {
-
-    }
 
     protected void getBundleArgs() {
         if (this.getArguments() != null) {
@@ -67,6 +86,5 @@ public class WebViewFragment extends BaseFragment {
         } else {
             newsUrl = EMPTY_STRING;
         }
-        Log.d("myLog"," newsUrl "+newsUrl+" HHH");
     }
 }

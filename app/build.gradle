@@ -21,7 +21,7 @@ android {
         buildConfigField "String", "URL_RSS_MEDUZA", '"https://meduza.io/rss/news/"'
         buildConfigField "String", "URL_RSS_YANDEX", '"https://news.yandex.ru/index.rss/"'
         buildConfigField "String", "URL_RSS_LENTA", '"https://lenta.ru/rss/"'
-        buildConfigField "String", "URL_RSS_RAMBLER", '"https://news.rambler.ru/rss/world/"'
+        buildConfigField "String", "URL_RSS_RBC", '"http://static.feed.rbc.ru/rbc/logical/footer/news.rss/"'
         buildConfigField "String", "URL_BASE_API_JSON_MEDUZA", '"https://meduza.io/api/v3/"'
     }
 }

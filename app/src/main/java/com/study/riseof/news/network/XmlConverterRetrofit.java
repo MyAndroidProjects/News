@@ -12,9 +12,9 @@ public enum XmlConverterRetrofit {
     NGS(BuildConfig.URL_RSS_NGS),
     MEDUZA(BuildConfig.URL_RSS_MEDUZA),
     YANDEX(BuildConfig.URL_RSS_YANDEX),
-    LENTA(BuildConfig.URL_RSS_LENTA);
+    LENTA(BuildConfig.URL_RSS_LENTA),
+    RBC(BuildConfig.URL_RSS_RBC);
 
-    private Retrofit retrofit;
     private String baseUrl;
     private RetrofitApi.Xml retrofitApiXml;
 
@@ -24,8 +24,8 @@ public enum XmlConverterRetrofit {
     }
 
     private void buildRetrofit() {
-        Log.d("myLog", "buildRetrofit " + baseUrl);
-        retrofit = new Retrofit.Builder()
+       // Log.d("myLog", "buildRetrofit " + baseUrl);
+        Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .client(new OkHttpClient())
                 .addConverterFactory(SimpleXmlConverterFactory.create())

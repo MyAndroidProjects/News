@@ -24,5 +24,5 @@ public class Enclosure {
     String url;
 
     @Attribute(name = "length", required = false)
-    long length;
+    String length;
 }

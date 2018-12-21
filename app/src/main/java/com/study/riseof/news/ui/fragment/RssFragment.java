@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,11 +21,12 @@ import butterknife.BindView;
 
 public class RssFragment extends BaseFragment implements
         RssRecyclerViewAdapter.RssNewsClickListener {
+
     @BindView(R.id.recycler_view_rss)
     RecyclerView recyclerView;
 
-    RssFragmentListener rssFragmentListener;
-    List<Item> rssList;
+    private RssFragmentListener rssFragmentListener;
+    private List<Item> rssList;
 
     @Override
     protected int getLayoutId() {
@@ -35,13 +37,19 @@ public class RssFragment extends BaseFragment implements
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return super.onCreateView(inflater, container, savedInstanceState);
-
     }
+
 
     @Override
     public void onStart() {
         super.onStart();
+        if (rssList != null) {
+            Log.d("myLog", "rssList != null");
+        } else {
+            Log.d("myLog", "rss == null");
+        }
         setRecyclerAdapter(getContext());
+
     }
 
     public void setNewsList(List<Item> rssList) {
@@ -53,8 +61,12 @@ public class RssFragment extends BaseFragment implements
             RssRecyclerViewAdapter adapter = new RssRecyclerViewAdapter(context, rssList);
             adapter.setRssNewsClickListener(this);
             LinearLayoutManager layoutManager = new LinearLayoutManager(context);
-            recyclerView.setLayoutManager(layoutManager);
-            recyclerView.setAdapter(adapter);
+            if (recyclerView != null) {
+                recyclerView.setLayoutManager(layoutManager);
+                recyclerView.setAdapter(adapter);
+            }
+        } else {
+            Log.d("myLog", "setRecyclerAdapter rss == null");
         }
     }
 
