@@ -4,13 +4,17 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 
+import com.study.riseof.news.model.meduza.MeduzaNews;
 import com.study.riseof.news.model.xml.Item;
 import com.study.riseof.news.model.xml.Rss;
+import com.study.riseof.news.network.JsonConverterRetrofit;
 import com.study.riseof.news.network.RetrofitApi;
-import com.study.riseof.news.network.XmlConverterRetrofit;
 import com.study.riseof.news.NewsSource;
 import com.study.riseof.news.ui.activity.MainActivity;
 
+import org.jsoup.Jsoup;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -23,6 +27,7 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
     private MainActivityContract.MainActivityView activityView;
     private List<Item> rssList;
     private NewsSource currentNewsSource = NewsSource.EMPTY;
+    private String EMPTY_STRING = "";
 
     private MainActivityPresenter() {
     }
@@ -114,10 +119,17 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
     }
 
     @Override
+    public void onBackButtonPressed() {
+        // todo оработка нажатия back
+        if (activityView != null) {
+            activityView.closeDrawer();
+        }
+    }
+
+    @Override
     public void onNavigationMenuAnyItem() {
         setNewsSourceAttributesInActivityView(currentNewsSource);
-        getRssListFromNet(currentNewsSource.getXmlApi());
-        setRssListToView();
+        getRssListFromNetAndSetToView(currentNewsSource.getXmlApi());
         if (activityView != null) {
             activityView.closeDrawer();
         }
@@ -152,9 +164,18 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
 
     @Override
     public void rssNewsClick(int position, String newsUrl) {
-        activityView.showShortToast("позиция: " + position + " newsUrl " + newsUrl);
-        activityView.createWebViewFragment(newsUrl);
-        activityView.replaceRssFragmentWithWebViewFragment();
+        //   activityView.showShortToast("позиция: " + position + " newsUrl " + newsUrl);
+
+        if (currentNewsSource == NewsSource.MEDUZA) {
+            getNewsFromJsonAndSetToView(position, JsonConverterRetrofit.MEDUZA.getRetrofitApi());
+
+        } else {
+            if (activityView != null) {
+                activityView.createWebViewFragment(newsUrl);
+                activityView.replaceRssFragmentWithWebViewFragment();
+            }
+        }
+
     }
 
     private void testLogInfo(Response<Rss> response) {
@@ -180,21 +201,15 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
         }
     }
 
-    private void getRssListFromNet(RetrofitApi.Xml xmlApi) {
-        // todo сделать switch по currentNewsSource в методе  или передовать в метод Api
+    private void getRssListFromNetAndSetToView(RetrofitApi.Xml xmlApi) {
         xmlApi.getRss().enqueue(new Callback<Rss>() {
             @Override
             public void onResponse(@NonNull Call<Rss> call, @NonNull Response<Rss> response) {
-                if (activityView != null) {
-                    Log.d("myLog", "activityView != null");
-                    if (response.body() != null) {
-                        Log.d("myLog", "response.body() != null");
-                        Log.d("myLog", "get(0).getTitle() " + response.body().getChannel().getItemList().get(0).getTitle());
-                        rssList = response.body().getChannel().getItemList();
-                        activityView.setRssList(rssList);
-                    }
-                    activityView.createRssFragment();
+                if (response.body() != null) {
+                    Log.d("myLog", "get(0).getTitle() " + response.body().getChannel().getItemList().get(0).getTitle());
+                    rssList = response.body().getChannel().getItemList();
                 }
+                setRssListToView();
             }
 
             @Override
@@ -209,6 +224,40 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
             activityView.setRssList(rssList);
             activityView.createRssFragment();
         }
+    }
+
+    private void getNewsFromJsonAndSetToView(int position, RetrofitApi.Json jsonApi) {
+        String newsUrl = rssList.get(position).getLink();
+        newsUrl = newsUrl.replace(JsonConverterRetrofit.MEDUZA.getMainUrl(),EMPTY_STRING);
+        jsonApi.getData(newsUrl).enqueue(new Callback<MeduzaNews>() {
+            @Override
+            public void onResponse(@NonNull Call<MeduzaNews> call, @NonNull Response<MeduzaNews> response) {
+                if (activityView != null) {
+                    Log.d("myLog", "getNewsFromJsonAndSetToView activityView != null");
+
+                    Log.d("myLog", " getNewsFromJsonAndSetToView " + response.body().getRoot().getTitle());
+                    MeduzaNews meduzaNews = response.body();
+                    if (meduzaNews != null) {
+                        String titleText = meduzaNews.getRoot().getTitle();
+                        String descriptionText = meduzaNews.getRoot().getDescription();
+                        String bodyTextHtml = meduzaNews.getRoot().getContent().getBody();
+                        String bodyText = Jsoup.parse(bodyTextHtml).text();
+                        String pubDateText = meduzaNews.getRoot().getPubDate();
+                        String tempUrl=JsonConverterRetrofit.MEDUZA.getMainUrl()+meduzaNews.getRoot().getShareImage();
+                        ArrayList<String> imageUrlList = new ArrayList<>();
+                        imageUrlList.add(tempUrl);
+
+                        activityView.createNewsFromJsonFragment(titleText, descriptionText, bodyText, pubDateText, imageUrlList);
+                        activityView.replaceRssFragmentWithNewsFromJsonFragment();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<MeduzaNews> call, @NonNull Throwable t) {
+                Log.d("myLog", "getNewsFromJsonAndSetToView onFailure " + t);
+            }
+        });
     }
 
 // todo сделать свой backStack из новостных ресурсов чтобы цвет toobar соответствовал новости

@@ -1,0 +1,70 @@
+{
+  "root": {
+    "url": "news/2018/12/22/poroshenko-podpisal-zakon-napravlennyy-na-pereimenovanie-upts-moskovskogo-patriarhata",
+    "document_type": "news",
+    "pushed": false,
+    "full": true,
+    "share_image": "/imgly/share/1545495465/news/2018/12/22/poroshenko-podpisal-zakon-napravlennyy-na-pereimenovanie-upts-moskovskogo-patriarhata",
+    "share_title": null,
+    "source": {
+      "url": "https://www.president.gov.ua/news/prezident-pidpisav-zakon-shodo-nazvi-religijnoyi-organizaciy-52274",
+      "trust": 3,
+      "name": "Президент Украины",
+      "quote": "\u003cbr\u003e"
+    },
+    "content": {
+      "body": "\n           \u003cdiv class=\"Body\"\u003e\n             \u003cp\u003eПрезидент Украины Петр Порошенко подписал закон, обязывающий церковь, руководящий центр которой находится в «стране-агрессоре», упоминать это в своем названии.\u003c/p\u003e\n\u003cp\u003eЗакон, \u003ca href=\"https://meduza.io/news/2018/12/20/verhovnaya-rada-obyazala-ukrainskuyu-pravoslavnuyu-tserkov-moskovskogo-patriarhata-smenit-nazvanie\" target=\"_blank\"\u003eпринятый\u003c/a\u003e Верховной радой 20 декабря, направлен на переименование Украинской православной церкви Московского патриархата.\u003c/p\u003e\n\u003cp\u003eПорошенко заявил, что новый закон поможет православным определиться, «к какой же юрисдикции принадлежать» — ко «вновь созданной автокефальной Православной церкви Украины» или к «церкви, которая настаивает на сохранении своей связи и зависимости от РПЦ».\u003c/p\u003e\n\u003cp\u003eУПЦ МП \u003ca href=\"https://www.unian.net/society/10387356-v-byvshey-upc-mp-nazvali-rf-gosudarstvom-agressorom-i-poka-otkazalis-menyat-nazvanie-cerkvi.html\" target=\"_blank\"\u003eнастаивает\u003c/a\u003e, что является самоуправляемой церковью, которая осуждает присоединение Крыма к России и конфликт в Донбассе.\u003c/p\u003e\n           \u003c/div\u003e\n\n           \n                     \u003cdiv class=\"Context\"\u003e\n            \u003cdiv class=\"Context-item\"\u003eВ декабре на Украине была учреждена новая православная церковь под покровительством Константинопольского патриархата — Православная церковь Украины. Президент Порошенко активно участвовал в процессе и в день объединительного собора назвал новую религиозную организацию «церковью без Путина».\u003c/div\u003e\n\u003cdiv class=\"Context-item\"\u003eПравославную церковь Украины создали на базе двух неканонических церквей — УПЦ Киевского патриархата и УАПЦ. УПЦ Московского патриархата, контролирующая большую часть православных приходов Украины, отказалась участвовать в соборе.\u003c/div\u003e\n\u003cdiv class=\"Context-item\"\u003eРПЦ разорвала отношения с Константинопольским патриархатом из-за образования на Украине новой церкви.\u003c/div\u003e\n                \u003cdiv class=\"Related\"\u003e\n                  \u003ch3\u003eЧитайте также\u003c/h3\u003e\n                  \u003cul\u003e\n                                        \u003cli\u003e\n                      \u003ca class=\"Related--isRich\" href=\"https://meduza.io/feature/2018/12/17/kto-zdes-gendalf-a-kto-dambldor\"\u003e\n                        \u003cspan class=\"Related-title--first\"\u003eКто здесь Гэндальф, а кто Дамблдор?\u003c/span\u003e\n                        \u003cspan\u003e \u003c/span\u003e\n                        \u003cspan class=\"Related-title--second\"\u003eСоздание новой церкви на Украине показало, что единого мирового православия нет: Carnegie.Ru\u003c/span\u003e\n                      \u003c/a\u003e\n                    \u003c/li\u003e\n\n                  \u003c/ul\u003e\n                \u003c/div\u003e\n\n          \u003c/div\u003e\n\n           \u003cdiv class='MaterialNote'\u003e\u003c/div\u003e\n         ",
+      "layout_url": "layouts/20"
+    },
+    "with_banners": true,
+    "description": "Президент Украины Петр Порошенко подписал закон, обязывающий церковь, руководящий центр которой находится в «стране-агрессоре», упоминать это в своем названии.",
+    "prefs": {
+      "inner": {
+        "layout": "simple",
+        "elements": {
+          "image": {
+            "show": false
+          },
+          "tag": {
+            "name": "новости",
+            "path": "",
+            "show": false
+          },
+          "ads": {
+            "show": true
+          },
+          "reactions": {
+            "show": true
+          }
+        }
+      },
+      "outer": {
+        "layout": "simple",
+        "elements": {
+          "image": {
+            "show": false
+          },
+          "tag": {
+            "name": "новости",
+            "path": "",
+            "show": false
+          }
+        }
+      }
+    },
+    "version": 3,
+    "title": "Порошенко подписал закон, направленный на переименование Украинской православной церкви Московского патриархата",
+    "modified_at": 1545495465,
+    "published_at": 1545485724,
+    "pub_date": "2018-12-22",
+    "tag": {
+      "name": "новости",
+      "path": ""
+    },
+    "footer": {
+      "caption": null,
+      "credit": null
+    }
+  },
+  "documents": {}
+}

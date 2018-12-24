@@ -17,8 +17,6 @@
             android:id="@+id/menu_item_meduza"
             android:icon="@drawable/ic_baseline_rss_feed_24px"
             android:title="@string/meduza_menu_category" />
-    </group>
-    <group android:checkableBehavior="none">
         <item
             android:icon="@drawable/ic_baseline_arrow_forward_24px"
             android:id="@+id/menu_item_yandex"
@@ -29,7 +27,7 @@
             android:title="@string/lenta_menu_category"/>
         <item
             android:icon="@drawable/ic_baseline_bookmarks_24px"
-            android:id="@+id/menu_item_ria"
+            android:id="@+id/menu_item_rbc"
             android:title="@string/rbc_menu_category" />
     </group>
 </menu>

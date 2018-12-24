@@ -1,978 +1,352 @@
-{
-  "has_next": true,
-  "documents": {
-    "video/2018/12/07/film-hrustal-vydvinuli-na-oskar-ot-belorussii-vpervye-za-22-goda-vot-ego-fragment": {
-      "with_banners": true,
-      "version": 1,
-      "url": "video/2018/12/07/film-hrustal-vydvinuli-na-oskar-ot-belorussii-vpervye-za-22-goda-vot-ego-fragment",
-      "title": "Фильм «Хрусталь» выдвинули на «Оскар» от Белоруссии — впервые за 22 года. Вот его фрагмент",
-      "tag": {
-        "path": "articles",
-        "name": "истории"
-      },
-      "source": {
-        "name": "Meduza"
-      },
-      "second_title": "",
-      "pushed": false,
-      "published_at": 1544183764,
-      "pub_date": "2018-12-07",
-      "prefs": {
-        "outer": {
-          "layout": "video",
-          "elements": {
-            "video": {
-              "width": 1920,
-              "id": "pHvMPVJQgbA",
-              "html": "\n      <iframe src=\"https://www.youtube.com/embed/pHvMPVJQgbA?feature=oembed&amp;rel=0&amp;iv_load_policy=3&amp;showinfo=0&amp;color=white\" frameborder=\"0\" allowfullscreen=\"\" style=\"width: 100%; height: 100%; position: absolute\"></iframe>\n    ",
-              "height": 1080,
-              "duration_in_words": "1 минута",
-              "duration": 95.261833,
-              "cover_url": "https://meduza.io/image/attachments/images/003/683/715/original/Nn8eZE0Zbyhj2R1lC29O8A.jpg"
-            },
-            "tag": {
-              "show": true,
-              "path": "articles",
-              "name": "истории"
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachment_overrides/images/003/683/703/ov/h2fS4yxnJ-yMgR9pGkIaJw.jpg",
-              "wh_405_270_url": "/image/attachment_overrides/images/003/683/703/ov/e3dvIrZE2SJeWGraSzmFSg.jpg",
-              "wh_300_200_url": "/image/attachment_overrides/images/003/683/703/ov/qnaBSd8ony3sg6-sCoRYfA.jpg",
-              "wh_165_110_url": "/image/attachments/images/003/683/703/wh_165_110/Ziz5edOGC775sdkXgkzj_w.jpg",
-              "wh_1245_500_url": "/image/attachment_overrides/images/003/683/703/ov/3FZnvAAzRBeQfgvHNQk4sA.jpg",
-              "small_url": "/image/attachments/images/003/683/703/small/Ziz5edOGC775sdkXgkzj_w.jpg",
-              "show": true,
-              "original_width": 1280,
-              "original_height": 732,
-              "large_url": "/image/attachments/images/003/683/703/large/Ziz5edOGC775sdkXgkzj_w.jpg",
-              "credit": "",
-              "caption": "",
-              "blurred_url": "/image/attachments/images/003/683/703/blurred/Ziz5edOGC775sdkXgkzj_w.jpg"
-            }
-          }
-        },
-        "inner": {
-          "layout": "video",
-          "elements": {
-            "video": {
-              "width": 1920,
-              "id": "pHvMPVJQgbA",
-              "height": 1080,
-              "duration_in_words": "1 минута",
-              "duration": 95.261833
-            },
-            "tag": {
-              "show": true,
-              "path": "articles",
-              "name": "истории"
-            },
-            "reactions": {
-              "show": true
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachment_overrides/images/003/683/703/ov/h2fS4yxnJ-yMgR9pGkIaJw.jpg",
-              "wh_405_270_url": "/image/attachment_overrides/images/003/683/703/ov/e3dvIrZE2SJeWGraSzmFSg.jpg",
-              "wh_300_200_url": "/image/attachment_overrides/images/003/683/703/ov/qnaBSd8ony3sg6-sCoRYfA.jpg",
-              "wh_165_110_url": "/image/attachments/images/003/683/703/wh_165_110/Ziz5edOGC775sdkXgkzj_w.jpg",
-              "wh_1245_500_url": "/image/attachment_overrides/images/003/683/703/ov/3FZnvAAzRBeQfgvHNQk4sA.jpg",
-              "small_url": "/image/attachments/images/003/683/703/small/Ziz5edOGC775sdkXgkzj_w.jpg",
-              "show": false,
-              "original_width": 1280,
-              "original_height": 732,
-              "large_url": "/image/attachments/images/003/683/703/large/Ziz5edOGC775sdkXgkzj_w.jpg",
-              "credit": "",
-              "caption": "",
-              "blurred_url": "/image/attachments/images/003/683/703/blurred/Ziz5edOGC775sdkXgkzj_w.jpg"
-            },
-            "ads": {
-              "show": true
-            }
-          }
-        }
-      },
-      "modified_at": 1544183764,
-      "image": {
-        "wh_615_410_url": "/image/attachment_overrides/images/003/683/703/ov/h2fS4yxnJ-yMgR9pGkIaJw.jpg",
-        "wh_405_270_url": "/image/attachment_overrides/images/003/683/703/ov/e3dvIrZE2SJeWGraSzmFSg.jpg",
-        "wh_300_200_url": "/image/attachment_overrides/images/003/683/703/ov/qnaBSd8ony3sg6-sCoRYfA.jpg",
-        "wh_165_110_url": "/image/attachments/images/003/683/703/wh_165_110/Ziz5edOGC775sdkXgkzj_w.jpg",
-        "wh_1245_500_url": "/image/attachment_overrides/images/003/683/703/ov/3FZnvAAzRBeQfgvHNQk4sA.jpg",
-        "small_url": "/image/attachments/images/003/683/703/small/Ziz5edOGC775sdkXgkzj_w.jpg",
-        "original_width": 1280,
-        "original_height": 732,
-        "large_url": "/image/attachments/images/003/683/703/large/Ziz5edOGC775sdkXgkzj_w.jpg",
-        "credit": "",
-        "caption": "",
-        "blurred_url": "/image/attachments/images/003/683/703/blurred/Ziz5edOGC775sdkXgkzj_w.jpg"
-      },
-      "full_width": true,
-      "full": false,
-      "document_type": "video"
-    },
-    "slides/s-est-soevuyu-sobaku-rabotat-kak-ilon-mask-chitateli-meduzy-peredelali-pogovorki-tak-chtoby-ne-obizhat-zhivotnyh": {
-      "with_banners": true,
-      "version": 1,
-      "url": "slides/s-est-soevuyu-sobaku-rabotat-kak-ilon-mask-chitateli-meduzy-peredelali-pogovorki-tak-chtoby-ne-obizhat-zhivotnyh",
-      "title": "Съесть соевую собаку, работать как Илон Маск. Читатели «Медузы» переделали поговорки так, чтобы не обижать животных",
-      "tag": {
-        "path": "shapito",
-        "name": "шапито"
-      },
-      "source": {
-        "name": "Meduza"
-      },
-      "second_title": "",
-      "pushed": false,
-      "published_at": 1544192939,
-      "pub_date": "2018-12-07",
-      "prefs": {
-        "outer": {
-          "layout": "rich",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "shapito",
-              "name": "шапито"
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachment_overrides/images/003/684/173/ov/eWpWKG9aNYFxzAHBLLyPPg.png",
-              "wh_405_270_url": "/image/attachment_overrides/images/003/684/173/ov/Ij_M2VlqtO5pUG_JPov_QA.png",
-              "wh_300_200_url": "/image/attachment_overrides/images/003/684/173/ov/zDZE_5AQzCJ7TKsN0yeaMg.png",
-              "wh_165_110_url": "/image/attachments/images/003/684/173/wh_165_110/XbGRpS8xGFldhA2_7Wbvwg.png",
-              "wh_1245_500_url": "/image/attachment_overrides/images/003/684/173/ov/E2AjXb3xIOW91XP2I-xeyw.png",
-              "small_url": "/image/attachments/images/003/684/173/small/XbGRpS8xGFldhA2_7Wbvwg.png",
-              "show": true,
-              "original_width": 1280,
-              "original_height": 732,
-              "large_url": "/image/attachments/images/003/684/173/large/XbGRpS8xGFldhA2_7Wbvwg.png",
-              "credit": "",
-              "caption": "",
-              "blurred_url": "/image/attachments/images/003/684/173/blurred/XbGRpS8xGFldhA2_7Wbvwg.png"
-            }
-          }
-        },
-        "inner": {
-          "layout": "slides",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "shapito",
-              "name": "шапито"
-            },
-            "reactions": {
-              "show": true
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachment_overrides/images/003/684/173/ov/eWpWKG9aNYFxzAHBLLyPPg.png",
-              "wh_405_270_url": "/image/attachment_overrides/images/003/684/173/ov/Ij_M2VlqtO5pUG_JPov_QA.png",
-              "wh_300_200_url": "/image/attachment_overrides/images/003/684/173/ov/zDZE_5AQzCJ7TKsN0yeaMg.png",
-              "wh_165_110_url": "/image/attachments/images/003/684/173/wh_165_110/XbGRpS8xGFldhA2_7Wbvwg.png",
-              "wh_1245_500_url": "/image/attachment_overrides/images/003/684/173/ov/E2AjXb3xIOW91XP2I-xeyw.png",
-              "small_url": "/image/attachments/images/003/684/173/small/XbGRpS8xGFldhA2_7Wbvwg.png",
-              "show": false,
-              "original_width": 1280,
-              "original_height": 732,
-              "large_url": "/image/attachments/images/003/684/173/large/XbGRpS8xGFldhA2_7Wbvwg.png",
-              "credit": "",
-              "caption": "",
-              "blurred_url": "/image/attachments/images/003/684/173/blurred/XbGRpS8xGFldhA2_7Wbvwg.png"
-            },
-            "bg": {
-              "color": "#F2F2F2"
-            },
-            "ads": {
-              "show": true
-            }
-          }
-        }
-      },
-      "modified_at": 1544192939,
-      "image": {
-        "wh_615_410_url": "/image/attachment_overrides/images/003/684/173/ov/eWpWKG9aNYFxzAHBLLyPPg.png",
-        "wh_405_270_url": "/image/attachment_overrides/images/003/684/173/ov/Ij_M2VlqtO5pUG_JPov_QA.png",
-        "wh_300_200_url": "/image/attachment_overrides/images/003/684/173/ov/zDZE_5AQzCJ7TKsN0yeaMg.png",
-        "wh_165_110_url": "/image/attachments/images/003/684/173/wh_165_110/XbGRpS8xGFldhA2_7Wbvwg.png",
-        "wh_1245_500_url": "/image/attachment_overrides/images/003/684/173/ov/E2AjXb3xIOW91XP2I-xeyw.png",
-        "small_url": "/image/attachments/images/003/684/173/small/XbGRpS8xGFldhA2_7Wbvwg.png",
-        "original_width": 1280,
-        "original_height": 732,
-        "large_url": "/image/attachments/images/003/684/173/large/XbGRpS8xGFldhA2_7Wbvwg.png",
-        "credit": "",
-        "caption": "",
-        "blurred_url": "/image/attachments/images/003/684/173/blurred/XbGRpS8xGFldhA2_7Wbvwg.png"
-      },
-      "full": false,
-      "document_type": "feature"
-    },
-    "slides/na-premii-the-game-awards-nazvali-luchshuyu-igru-2018-goda-i-eto-god-of-war": {
-      "with_banners": true,
-      "version": 7,
-      "url": "slides/na-premii-the-game-awards-nazvali-luchshuyu-igru-2018-goda-i-eto-god-of-war",
-      "title": "На премии The Game Awards показали продолжение Mortal Kombat и игру по «Очень странным делам»",
-      "tag": {
-        "path": "shapito",
-        "name": "шапито"
-      },
-      "source": {
-        "name": "Meduza"
-      },
-      "second_title": "И назвали лучшую игру 2018 года — это God of War",
-      "pushed": false,
-      "published_at": 1544179349,
-      "pub_date": "2018-12-07",
-      "prefs": {
-        "outer": {
-          "layout": "rich",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "shapito",
-              "name": "шапито"
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachment_overrides/images/003/682/361/ov/E5OutUPuXkgH8vKd83D3kA.jpg",
-              "wh_405_270_url": "/image/attachment_overrides/images/003/682/361/ov/TslHpbtEaaloRwaz7htkxw.jpg",
-              "wh_300_200_url": "/image/attachments/images/003/682/361/wh_300_200/oCkdAwPAQezxKs7e3qiB2w.jpg",
-              "wh_165_110_url": "/image/attachments/images/003/682/361/wh_165_110/oCkdAwPAQezxKs7e3qiB2w.jpg",
-              "wh_1245_500_url": "/image/attachment_overrides/images/003/682/361/ov/tbjoXNqBS5-FGfVKARa4TQ.jpg",
-              "small_url": "/image/attachments/images/003/682/361/small/oCkdAwPAQezxKs7e3qiB2w.jpg",
-              "show": true,
-              "original_width": 1280,
-              "original_height": 732,
-              "large_url": "/image/attachments/images/003/682/361/large/oCkdAwPAQezxKs7e3qiB2w.jpg",
-              "credit": "",
-              "caption": "",
-              "blurred_url": "/image/attachments/images/003/682/361/blurred/oCkdAwPAQezxKs7e3qiB2w.jpg"
-            }
-          }
-        },
-        "inner": {
-          "layout": "slides",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "shapito",
-              "name": "шапито"
-            },
-            "reactions": {
-              "show": true
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachment_overrides/images/003/682/361/ov/E5OutUPuXkgH8vKd83D3kA.jpg",
-              "wh_405_270_url": "/image/attachment_overrides/images/003/682/361/ov/TslHpbtEaaloRwaz7htkxw.jpg",
-              "wh_300_200_url": "/image/attachments/images/003/682/361/wh_300_200/oCkdAwPAQezxKs7e3qiB2w.jpg",
-              "wh_165_110_url": "/image/attachments/images/003/682/361/wh_165_110/oCkdAwPAQezxKs7e3qiB2w.jpg",
-              "wh_1245_500_url": "/image/attachment_overrides/images/003/682/361/ov/tbjoXNqBS5-FGfVKARa4TQ.jpg",
-              "small_url": "/image/attachments/images/003/682/361/small/oCkdAwPAQezxKs7e3qiB2w.jpg",
-              "show": false,
-              "original_width": 1280,
-              "original_height": 732,
-              "large_url": "/image/attachments/images/003/682/361/large/oCkdAwPAQezxKs7e3qiB2w.jpg",
-              "credit": "",
-              "caption": "",
-              "blurred_url": "/image/attachments/images/003/682/361/blurred/oCkdAwPAQezxKs7e3qiB2w.jpg"
-            },
-            "bg": {
-              "color": "#F2F2F2"
-            },
-            "ads": {
-              "show": true
-            }
-          }
-        }
-      },
-      "modified_at": 1544195202,
-      "image": {
-        "wh_615_410_url": "/image/attachment_overrides/images/003/682/361/ov/E5OutUPuXkgH8vKd83D3kA.jpg",
-        "wh_405_270_url": "/image/attachment_overrides/images/003/682/361/ov/TslHpbtEaaloRwaz7htkxw.jpg",
-        "wh_300_200_url": "/image/attachments/images/003/682/361/wh_300_200/oCkdAwPAQezxKs7e3qiB2w.jpg",
-        "wh_165_110_url": "/image/attachments/images/003/682/361/wh_165_110/oCkdAwPAQezxKs7e3qiB2w.jpg",
-        "wh_1245_500_url": "/image/attachment_overrides/images/003/682/361/ov/tbjoXNqBS5-FGfVKARa4TQ.jpg",
-        "small_url": "/image/attachments/images/003/682/361/small/oCkdAwPAQezxKs7e3qiB2w.jpg",
-        "original_width": 1280,
-        "original_height": 732,
-        "large_url": "/image/attachments/images/003/682/361/large/oCkdAwPAQezxKs7e3qiB2w.jpg",
-        "credit": "",
-        "caption": "",
-        "blurred_url": "/image/attachments/images/003/682/361/blurred/oCkdAwPAQezxKs7e3qiB2w.jpg"
-      },
-      "full": false,
-      "document_type": "feature"
-    },
-    "short/2018/12/07/skromnost-spravedlivost-neterpimost-k-popraniyu-duhovnyh-tsennostey-prinyat-eticheskiy-kodeks-chlenov-edinoy-rossii": {
-      "with_banners": true,
-      "version": 5,
-      "url": "short/2018/12/07/skromnost-spravedlivost-neterpimost-k-popraniyu-duhovnyh-tsennostey-prinyat-eticheskiy-kodeks-chlenov-edinoy-rossii",
-      "title": "Скромность, справедливость, нетерпимость к попранию духовных ценностей. Каждый член «Единой России» теперь должен соблюдать этический кодекс",
-      "tag": {
-        "path": "",
-        "name": "новости"
-      },
-      "source": {
-        "name": "Meduza"
-      },
-      "second_title": "",
-      "pushed": false,
-      "published_at": 1544179261,
-      "pub_date": "2018-12-07",
-      "prefs": {
-        "outer": {
-          "layout": "picture",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "",
-              "name": "новости"
-            },
-            "picture": {
-              "width": 1220,
-              "mobile_url": "/image/attachments/images/003/683/676/mobile/7o0f_BEB2bQIpnLGX3i2EQ.png",
-              "mobile_retina_url": "/image/attachments/images/003/683/676/mobile_retina/7o0f_BEB2bQIpnLGX3i2EQ.png",
-              "height": 578,
-              "display": "default"
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachment_overrides/images/003/683/667/ov/R6gOPvuu19Rg2_2VXJpOxA.jpg",
-              "wh_405_270_url": "/image/attachment_overrides/images/003/683/667/ov/Hfy21UnQZphaPyPJGkZpuQ.jpg",
-              "wh_300_200_url": "/image/attachment_overrides/images/003/683/667/ov/tbCDTi3iwHpFCJUnW0zqLg.jpg",
-              "wh_165_110_url": "/image/attachments/images/003/683/667/wh_165_110/RPZQp5tqxJvMPRmp1pcSPA.jpg",
-              "wh_1245_500_url": "/image/attachment_overrides/images/003/683/667/ov/k4WNgvpaChlIF6nEIEoEUw.jpg",
-              "small_url": "/image/attachments/images/003/683/667/small/RPZQp5tqxJvMPRmp1pcSPA.jpg",
-              "show": true,
-              "original_width": 1280,
-              "original_height": 732,
-              "large_url": "/image/attachments/images/003/683/667/large/RPZQp5tqxJvMPRmp1pcSPA.jpg",
-              "credit": "",
-              "caption": ""
-            }
-          }
-        },
-        "inner": {
-          "layout": "picture",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "",
-              "name": "новости"
-            },
-            "reactions": {
-              "show": true
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachment_overrides/images/003/683/667/ov/R6gOPvuu19Rg2_2VXJpOxA.jpg",
-              "wh_405_270_url": "/image/attachment_overrides/images/003/683/667/ov/Hfy21UnQZphaPyPJGkZpuQ.jpg",
-              "wh_300_200_url": "/image/attachment_overrides/images/003/683/667/ov/tbCDTi3iwHpFCJUnW0zqLg.jpg",
-              "wh_165_110_url": "/image/attachments/images/003/683/667/wh_165_110/RPZQp5tqxJvMPRmp1pcSPA.jpg",
-              "wh_1245_500_url": "/image/attachment_overrides/images/003/683/667/ov/k4WNgvpaChlIF6nEIEoEUw.jpg",
-              "small_url": "/image/attachments/images/003/683/667/small/RPZQp5tqxJvMPRmp1pcSPA.jpg",
-              "show": false,
-              "original_width": 1280,
-              "original_height": 732,
-              "large_url": "/image/attachments/images/003/683/667/large/RPZQp5tqxJvMPRmp1pcSPA.jpg",
-              "credit": "",
-              "caption": ""
-            },
-            "ads": {
-              "show": true
-            }
-          }
-        }
-      },
-      "one_picture": {
-        "small_url": "/image/attachments/images/003/683/670/small/TNd_Dp9CiRbRQCEiBO5mmA.png",
-        "retina": true,
-        "original_width": 1300,
-        "original_height": 784,
-        "large_url": "/image/attachments/images/003/683/670/large/TNd_Dp9CiRbRQCEiBO5mmA.jpg",
-        "display": "default",
-        "credit": "<br>",
-        "caption": "«Единая Россия» на своем очередном съезде <a href=\"https://tass.ru/obschestvo/5883930\" target=\"_blank\">ввела</a> обязательный к исполнению кодекс этических норм для членов партии. Единоросс должен вести себя сдержанно, выполнять обещания, данные избирателям, внимательно относиться к людям и их проблемам. Отдельным пунктом в кодексе подчеркивается обязанность быть нетерпимым «к попыткам пересмотра и искажения истории России, попранию ее традиций, духовных ценностей наших народов». ",
-        "actual_width": 1300,
-        "actual_height": 784
-      },
-      "modified_at": 1544179780,
-      "image": {
-        "wh_615_410_url": "/image/attachment_overrides/images/003/683/667/ov/R6gOPvuu19Rg2_2VXJpOxA.jpg",
-        "wh_405_270_url": "/image/attachment_overrides/images/003/683/667/ov/Hfy21UnQZphaPyPJGkZpuQ.jpg",
-        "wh_300_200_url": "/image/attachment_overrides/images/003/683/667/ov/tbCDTi3iwHpFCJUnW0zqLg.jpg",
-        "wh_165_110_url": "/image/attachments/images/003/683/667/wh_165_110/RPZQp5tqxJvMPRmp1pcSPA.jpg",
-        "wh_1245_500_url": "/image/attachment_overrides/images/003/683/667/ov/k4WNgvpaChlIF6nEIEoEUw.jpg",
-        "small_url": "/image/attachments/images/003/683/667/small/RPZQp5tqxJvMPRmp1pcSPA.jpg",
-        "original_width": 1280,
-        "original_height": 732,
-        "large_url": "/image/attachments/images/003/683/667/large/RPZQp5tqxJvMPRmp1pcSPA.jpg",
-        "credit": "",
-        "caption": ""
-      },
-      "full_width": true,
-      "full": false,
-      "document_type": "feature"
-    },
-    "shapito/2018/12/07/sportsmeny-tyagayut-ganteli-v-basseyne-i-otzhimayutsya-v-pryzhke-oni-nauchat-i-vas-no-luchshe-za-nimi-ne-povtoryat": {
-      "with_banners": true,
-      "version": 1,
-      "url": "shapito/2018/12/07/sportsmeny-tyagayut-ganteli-v-basseyne-i-otzhimayutsya-v-pryzhke-oni-nauchat-i-vas-no-luchshe-za-nimi-ne-povtoryat",
-      "title": "Спортсмены тягают гантели в бассейне и отжимаются в прыжке. Они научат и вас (но лучше за ними не повторять)",
-      "tag": {
-        "path": "shapito",
-        "name": "шапито"
-      },
-      "source": {
-        "name": "Meduza"
-      },
-      "pushed": false,
-      "published_at": 1544193354,
-      "pub_date": "2018-12-07",
-      "prefs": {
-        "outer": {
-          "layout": "simple",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "shapito",
-              "name": "шапито"
-            },
-            "image": {
-              "wh_693_247_url": "/image/attachment_overrides/images/003/684/716/ov/iaMNbS3867lIfIZp4GxVbg.jpg",
-              "wh_615_410_url": "/image/attachment_overrides/images/003/684/716/ov/7y96rY7Hlx_kSt6l1xR3-A.jpg",
-              "wh_448_523_url": "/image/attachment_overrides/images/003/684/716/ov/y7K3mBRuZi0lgAmtLzybbg.jpg",
-              "wh_405_270_url": "/image/attachment_overrides/images/003/684/716/ov/EIlJPAMaphlhJwQZ2gxE0w.jpg",
-              "wh_300_200_url": "/image/attachments/images/003/684/716/wh_300_200/guMNYkov60xEEyjpQS588w.jpg",
-              "wh_165_110_url": "/image/attachments/images/003/684/716/wh_165_110/guMNYkov60xEEyjpQS588w.jpg",
-              "wh_1245_500_url": "/image/attachment_overrides/images/003/684/716/ov/TNZUIyPLyLTuGG42EF4hAA.jpg",
-              "small_url": "/image/attachments/images/003/684/716/small/guMNYkov60xEEyjpQS588w.jpg",
-              "show": true,
-              "original_width": 1280,
-              "original_height": 732,
-              "large_url": "/image/attachments/images/003/684/716/large/guMNYkov60xEEyjpQS588w.jpg",
-              "credit": "",
-              "caption": ""
-            }
-          }
-        },
-        "inner": {
-          "layout": "simple",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "shapito",
-              "name": "шапито"
-            },
-            "reactions": {
-              "show": true
-            },
-            "image": {
-              "show": false
-            },
-            "ads": {
-              "show": true
-            }
-          }
-        }
-      },
-      "modified_at": 1544193354,
-      "image": {
-        "wh_693_247_url": "/image/attachment_overrides/images/003/684/716/ov/iaMNbS3867lIfIZp4GxVbg.jpg",
-        "wh_615_410_url": "/image/attachment_overrides/images/003/684/716/ov/7y96rY7Hlx_kSt6l1xR3-A.jpg",
-        "wh_448_523_url": "/image/attachment_overrides/images/003/684/716/ov/y7K3mBRuZi0lgAmtLzybbg.jpg",
-        "wh_405_270_url": "/image/attachment_overrides/images/003/684/716/ov/EIlJPAMaphlhJwQZ2gxE0w.jpg",
-        "wh_300_200_url": "/image/attachments/images/003/684/716/wh_300_200/guMNYkov60xEEyjpQS588w.jpg",
-        "wh_165_110_url": "/image/attachments/images/003/684/716/wh_165_110/guMNYkov60xEEyjpQS588w.jpg",
-        "wh_1245_500_url": "/image/attachment_overrides/images/003/684/716/ov/TNZUIyPLyLTuGG42EF4hAA.jpg",
-        "small_url": "/image/attachments/images/003/684/716/small/guMNYkov60xEEyjpQS588w.jpg",
-        "original_width": 1280,
-        "original_height": 732,
-        "large_url": "/image/attachments/images/003/684/716/large/guMNYkov60xEEyjpQS588w.jpg",
-        "credit": "",
-        "caption": ""
-      },
-      "full": false,
-      "document_type": "fun"
-    },
-    "news/2018/12/07/kavkaz-realii-rodstvennik-kadyrova-ustroil-dtp-v-groznom-s-dvumya-pogibshimi-ohrana-iz-yala-telefony-u-ochevidtsev-proisshestviya": {
-      "with_banners": false,
-      "version": 1,
-      "url": "news/2018/12/07/kavkaz-realii-rodstvennik-kadyrova-ustroil-dtp-v-groznom-s-dvumya-pogibshimi-ohrana-iz-yala-telefony-u-ochevidtsev-proisshestviya",
-      "title": "«Кавказ.Реалии»: родственник Кадырова устроил ДТП в Грозном с двумя погибшими. Охрана изъяла телефоны у очевидцев происшествия",
-      "tag": {
-        "path": "",
-        "name": "новости"
-      },
-      "source": {
-        "url": "https://www.kavkazr.com/a/29639235.html",
-        "trust": 3,
-        "quote": "<br>",
-        "name": "Кавказ. Реалии"
-      },
-      "pushed": false,
-      "published_at": 1544184527,
-      "pub_date": "2018-12-07",
-      "prefs": {
-        "outer": {
-          "layout": "simple",
-          "elements": {
-            "tag": {
-              "show": false,
-              "path": "",
-              "name": "новости"
-            },
-            "image": {
-              "show": false
-            }
-          }
-        },
-        "inner": {
-          "layout": "simple",
-          "elements": {
-            "tag": {
-              "show": false,
-              "path": "",
-              "name": "новости"
-            },
-            "reactions": {
-              "show": false
-            },
-            "image": {
-              "show": false
-            },
-            "ads": {
-              "show": false
-            }
-          }
-        }
-      },
-      "modified_at": 1544184527,
-      "full": false,
-      "document_type": "news"
-    },
-    "feature/2018/12/07/my-prochitali-knigu-kotoruyu-edinaya-rossiya-hochet-vklyuchit-v-shkolnuyu-programmu-tam-pro-to-kak-detey-kontroliruyut-cherez-videoigry-i-internet": {
-      "with_banners": true,
-      "version": 2,
-      "url": "feature/2018/12/07/my-prochitali-knigu-kotoruyu-edinaya-rossiya-hochet-vklyuchit-v-shkolnuyu-programmu-tam-pro-to-kak-detey-kontroliruyut-cherez-videoigry-i-internet",
-      "title": "Мы прочитали книгу, которую «Единая Россия» хочет включить в школьную программу. Там про то, как детей контролируют через видеоигры и интернет",
-      "tag": {
-        "path": "articles",
-        "name": "истории"
-      },
-      "source": {
-        "name": "Meduza"
-      },
-      "second_title": "",
-      "pushed": false,
-      "published_at": 1544184720,
-      "pub_date": "2018-12-07",
-      "prefs": {
-        "outer": {
-          "layout": "rich",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "articles",
-              "name": "истории"
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachment_overrides/images/003/683/842/ov/kTFPgSdZsJ5OBDj6wSBJMA.jpg",
-              "wh_405_270_url": "/image/attachment_overrides/images/003/683/842/ov/VILjMz1zBBs4rEa6v-Mgow.jpg",
-              "wh_300_200_url": "/image/attachments/images/003/683/842/wh_300_200/j0E7ZGikdzcC9X-h03vzbA.jpg",
-              "wh_165_110_url": "/image/attachments/images/003/683/842/wh_165_110/j0E7ZGikdzcC9X-h03vzbA.jpg",
-              "wh_1245_500_url": "/image/attachment_overrides/images/003/683/842/ov/JWZ3eKDeZH-2me0E_Y02eA.jpg",
-              "small_url": "/image/attachments/images/003/683/842/small/j0E7ZGikdzcC9X-h03vzbA.jpg",
-              "show": true,
-              "original_width": 1280,
-              "original_height": 732,
-              "large_url": "/image/attachments/images/003/683/842/large/j0E7ZGikdzcC9X-h03vzbA.jpg",
-              "elarge_url": "/image/attachments/images/003/683/842/elarge/j0E7ZGikdzcC9X-h03vzbA.jpg",
-              "display": "default",
-              "credit": "<a href=\"https://er.ru/\" target=\"_blank\">Партия «Единая Россия»</a>",
-              "caption": "Секретарь генерального совета партии «Единая Россия» Андрей Турчак на II Форуме маленьких героев с авторами книги — Верой Рерих и ее сыном Ярославом Портненко, 6 декабря 2018 года"
-            }
-          }
-        },
-        "inner": {
-          "layout": "rich",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "articles",
-              "name": "истории"
-            },
-            "reactions": {
-              "show": true
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachment_overrides/images/003/683/842/ov/kTFPgSdZsJ5OBDj6wSBJMA.jpg",
-              "wh_405_270_url": "/image/attachment_overrides/images/003/683/842/ov/VILjMz1zBBs4rEa6v-Mgow.jpg",
-              "wh_300_200_url": "/image/attachments/images/003/683/842/wh_300_200/j0E7ZGikdzcC9X-h03vzbA.jpg",
-              "wh_165_110_url": "/image/attachments/images/003/683/842/wh_165_110/j0E7ZGikdzcC9X-h03vzbA.jpg",
-              "wh_1245_500_url": "/image/attachment_overrides/images/003/683/842/ov/JWZ3eKDeZH-2me0E_Y02eA.jpg",
-              "small_url": "/image/attachments/images/003/683/842/small/j0E7ZGikdzcC9X-h03vzbA.jpg",
-              "show": true,
-              "original_width": 1280,
-              "original_height": 732,
-              "large_url": "/image/attachments/images/003/683/842/large/j0E7ZGikdzcC9X-h03vzbA.jpg",
-              "elarge_url": "/image/attachments/images/003/683/842/elarge/j0E7ZGikdzcC9X-h03vzbA.jpg",
-              "display": "default",
-              "credit": "<a href=\"https://er.ru/\" target=\"_blank\">Партия «Единая Россия»</a>",
-              "caption": "Секретарь генерального совета партии «Единая Россия» Андрей Турчак на II Форуме маленьких героев с авторами книги — Верой Рерих и ее сыном Ярославом Портненко, 6 декабря 2018 года"
-            },
-            "ads": {
-              "show": true
-            }
-          }
-        }
-      },
-      "modified_at": 1544184996,
-      "image": {
-        "wh_615_410_url": "/image/attachment_overrides/images/003/683/842/ov/kTFPgSdZsJ5OBDj6wSBJMA.jpg",
-        "wh_405_270_url": "/image/attachment_overrides/images/003/683/842/ov/VILjMz1zBBs4rEa6v-Mgow.jpg",
-        "wh_300_200_url": "/image/attachments/images/003/683/842/wh_300_200/j0E7ZGikdzcC9X-h03vzbA.jpg",
-        "wh_165_110_url": "/image/attachments/images/003/683/842/wh_165_110/j0E7ZGikdzcC9X-h03vzbA.jpg",
-        "wh_1245_500_url": "/image/attachment_overrides/images/003/683/842/ov/JWZ3eKDeZH-2me0E_Y02eA.jpg",
-        "small_url": "/image/attachments/images/003/683/842/small/j0E7ZGikdzcC9X-h03vzbA.jpg",
-        "original_width": 1280,
-        "original_height": 732,
-        "large_url": "/image/attachments/images/003/683/842/large/j0E7ZGikdzcC9X-h03vzbA.jpg",
-        "elarge_url": "/image/attachments/images/003/683/842/elarge/j0E7ZGikdzcC9X-h03vzbA.jpg",
-        "display": "default",
-        "credit": "<a href=\"https://er.ru/\" target=\"_blank\">Партия «Единая Россия»</a>",
-        "caption": "Секретарь генерального совета партии «Единая Россия» Андрей Турчак на II Форуме маленьких героев с авторами книги — Верой Рерих и ее сыном Ярославом Портненко, 6 декабря 2018 года"
-      },
-      "full_width": false,
-      "full": false,
-      "document_type": "feature"
-    },
-    "feature/2018/12/07/dva-goda-nazad-programma-google-pobedila-silneyshego-igroka-v-go-novaya-versiya-uchitsya-igram-bez-pomoschi-lyudey-i-ona-uzhe-kruche-vseh-v-go-i-shahmatah": {
-      "with_banners": true,
-      "version": 6,
-      "url": "feature/2018/12/07/dva-goda-nazad-programma-google-pobedila-silneyshego-igroka-v-go-novaya-versiya-uchitsya-igram-bez-pomoschi-lyudey-i-ona-uzhe-kruche-vseh-v-go-i-shahmatah",
-      "title": "Два года назад программа Google победила сильнейшего игрока в го. Новая версия учится играм без помощи людей — и она уже круче всех в го и шахматах",
-      "tag": {
-        "path": "",
-        "name": "новости"
-      },
-      "source": {
-        "name": "Meduza"
-      },
-      "second_title": "",
-      "pushed": false,
-      "published_at": 1544188505,
-      "pub_date": "2018-12-07",
-      "prefs": {
-        "outer": {
-          "layout": "rich",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "",
-              "name": "новости"
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachment_overrides/images/003/683/454/ov/ApyhnU7ADaWxNUbwfg6skg.jpg",
-              "wh_405_270_url": "/image/attachment_overrides/images/003/683/454/ov/AQyCJx5bH7tkBTTe_VlPXQ.jpg",
-              "wh_300_200_url": "/image/attachment_overrides/images/003/683/454/ov/5nLP7-vk1EfWRTgxDRqhxw.jpg",
-              "wh_165_110_url": "/image/attachments/images/003/683/454/wh_165_110/b5yBwI37Xbc2gyTLr5hw-A.jpg",
-              "wh_1245_500_url": "/image/attachment_overrides/images/003/683/454/ov/D86I0mrIMPU-PtAhluPgmA.jpg",
-              "small_url": "/image/attachments/images/003/683/454/small/b5yBwI37Xbc2gyTLr5hw-A.jpg",
-              "show": true,
-              "original_width": 1280,
-              "original_height": 732,
-              "large_url": "/image/attachments/images/003/683/454/large/b5yBwI37Xbc2gyTLr5hw-A.jpg",
-              "elarge_url": "/image/attachments/images/003/683/454/elarge/b5yBwI37Xbc2gyTLr5hw-A.jpg",
-              "display": "default",
-              "credit": "DeepMind Technologies Limited",
-              "caption": ""
-            }
-          }
-        },
-        "inner": {
-          "layout": "rich",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "",
-              "name": "новости"
-            },
-            "reactions": {
-              "show": true
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachment_overrides/images/003/683/454/ov/ApyhnU7ADaWxNUbwfg6skg.jpg",
-              "wh_405_270_url": "/image/attachment_overrides/images/003/683/454/ov/AQyCJx5bH7tkBTTe_VlPXQ.jpg",
-              "wh_300_200_url": "/image/attachment_overrides/images/003/683/454/ov/5nLP7-vk1EfWRTgxDRqhxw.jpg",
-              "wh_165_110_url": "/image/attachments/images/003/683/454/wh_165_110/b5yBwI37Xbc2gyTLr5hw-A.jpg",
-              "wh_1245_500_url": "/image/attachment_overrides/images/003/683/454/ov/D86I0mrIMPU-PtAhluPgmA.jpg",
-              "small_url": "/image/attachments/images/003/683/454/small/b5yBwI37Xbc2gyTLr5hw-A.jpg",
-              "show": true,
-              "original_width": 1280,
-              "original_height": 732,
-              "large_url": "/image/attachments/images/003/683/454/large/b5yBwI37Xbc2gyTLr5hw-A.jpg",
-              "elarge_url": "/image/attachments/images/003/683/454/elarge/b5yBwI37Xbc2gyTLr5hw-A.jpg",
-              "display": "default",
-              "credit": "DeepMind Technologies Limited",
-              "caption": ""
-            },
-            "ads": {
-              "show": true
-            }
-          }
-        }
-      },
-      "modified_at": 1544261574,
-      "image": {
-        "wh_615_410_url": "/image/attachment_overrides/images/003/683/454/ov/ApyhnU7ADaWxNUbwfg6skg.jpg",
-        "wh_405_270_url": "/image/attachment_overrides/images/003/683/454/ov/AQyCJx5bH7tkBTTe_VlPXQ.jpg",
-        "wh_300_200_url": "/image/attachment_overrides/images/003/683/454/ov/5nLP7-vk1EfWRTgxDRqhxw.jpg",
-        "wh_165_110_url": "/image/attachments/images/003/683/454/wh_165_110/b5yBwI37Xbc2gyTLr5hw-A.jpg",
-        "wh_1245_500_url": "/image/attachment_overrides/images/003/683/454/ov/D86I0mrIMPU-PtAhluPgmA.jpg",
-        "small_url": "/image/attachments/images/003/683/454/small/b5yBwI37Xbc2gyTLr5hw-A.jpg",
-        "original_width": 1280,
-        "original_height": 732,
-        "large_url": "/image/attachments/images/003/683/454/large/b5yBwI37Xbc2gyTLr5hw-A.jpg",
-        "elarge_url": "/image/attachments/images/003/683/454/elarge/b5yBwI37Xbc2gyTLr5hw-A.jpg",
-        "display": "default",
-        "credit": "DeepMind Technologies Limited",
-        "caption": ""
-      },
-      "full_width": false,
-      "full": false,
-      "document_type": "feature"
-    },
-    "episodes/2018/12/07/kak-vladimir-medinskiy-iskal-dokazatelstva-podviga-28-panfilovtsev": {
-      "with_banners": true,
-      "version": 5,
-      "url": "episodes/2018/12/07/kak-vladimir-medinskiy-iskal-dokazatelstva-podviga-28-panfilovtsev",
-      "title": "Как Владимир Мединский искал доказательства подвига 28 панфиловцев",
-      "tag": {
-        "path": "podcasts",
-        "name": "подкасты"
-      },
-      "source": {
-        "name": "Meduza"
-      },
-      "search_keywords": "meduza, новости, медуза, политика, панфиловцы, мединский, архив, документы, история, война",
-      "published_at": 1544192286,
-      "pub_date": "2018-12-07",
-      "prefs": {
-        "outer": {
-          "layout": "episode",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "podcasts",
-              "name": "подкасты"
-            },
-            "image": {
-              "squarelarge_url": "/image/attachments/images/002/487/602/squarelarge/YZ50CgOYzqd4HLi4Bz74xQ.png",
-              "small_url": "/image/attachments/images/002/487/602/small/YZ50CgOYzqd4HLi4Bz74xQ.png",
-              "show": true,
-              "original_width": 1400,
-              "original_height": 1400,
-              "normal_retina_url": "/image/attachments/images/002/487/602/normal_retina/YZ50CgOYzqd4HLi4Bz74xQ.png",
-              "huge_url": "/image/attachments/images/002/487/602/huge/YZ50CgOYzqd4HLi4Bz74xQ.png",
-              "huge_retina_url": "/image/attachments/images/002/487/602/huge_retina/YZ50CgOYzqd4HLi4Bz74xQ.png"
-            },
-            "audio": {
-              "url": "episodes/2018/12/07/kak-vladimir-medinskiy-iskal-dokazatelstva-podviga-28-panfilovtsev",
-              "title": "Как Владимир Мединский искал доказательства подвига 28 панфиловцев",
-              "mp3_url": "/audio/1544220735/episodes/2018/12/07/kak-vladimir-medinskiy-iskal-dokazatelstva-podviga-28-panfilovtsev.mp3?client=native",
-              "mp3_duration_in_words": "1 минута",
-              "mp3_duration": 1390.527275
-            }
-          }
-        },
-        "inner": {
-          "layout": "episode",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "podcasts",
-              "name": "подкасты"
-            },
-            "reactions": {
-              "show": true
-            },
-            "image": {
-              "squarelarge_url": "/image/attachments/images/002/487/602/squarelarge/YZ50CgOYzqd4HLi4Bz74xQ.png",
-              "small_url": "/image/attachments/images/002/487/602/small/YZ50CgOYzqd4HLi4Bz74xQ.png",
-              "show": true,
-              "original_width": 1400,
-              "original_height": 1400,
-              "normal_retina_url": "/image/attachments/images/002/487/602/normal_retina/YZ50CgOYzqd4HLi4Bz74xQ.png",
-              "huge_url": "/image/attachments/images/002/487/602/huge/YZ50CgOYzqd4HLi4Bz74xQ.png",
-              "huge_retina_url": "/image/attachments/images/002/487/602/huge_retina/YZ50CgOYzqd4HLi4Bz74xQ.png"
-            },
-            "audio": {
-              "mp3_duration_in_words": "1 минута",
-              "mp3_duration": 1390.527275,
-              "explicit": false
-            },
-            "ads": {
-              "show": true
-            }
-          }
-        }
-      },
-      "modified_at": 1544220735,
-      "full_width": true,
-      "full": false,
-      "document_type": "episode"
-    },
-    "brand/kazhdaya-oshibka-mozhet-vas-chemu-to-nauchit": {
-      "with_banners": false,
-      "version": 3,
-      "url": "brand/kazhdaya-oshibka-mozhet-vas-chemu-to-nauchit",
-      "title": "«Каждая ошибка может вас чему-то научить»",
-      "tag": {
-        "path": "",
-        "name": "промо"
-      },
-      "source": {
-        "name": "Meduza"
-      },
-      "second_title": "Принципы успеха Рэя Далио — основателя крупнейшего хедж-фонда в мире",
-      "published_at": 1544191784,
-      "pub_date": "2018-12-07",
-      "prefs": {
-        "outer": {
-          "layout": "rich",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "",
-              "name": "промо"
-            },
-            "partner": {
-              "show": true,
-              "partner_url": "https://meduza.io/brand/kazhdaya-oshibka-mozhet-vas-chemu-to-nauchit",
-              "partner_image_url": "/image/attachments/images/003/676/856/original/Ig-tAZXK_nSzKxK4LRs7xA.png"
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachments/images/003/676/836/wh_615_410/bVyw6QZJyZNaMRhSiHdexg.png",
-              "wh_405_270_url": "/image/attachments/images/003/676/836/wh_405_270/bVyw6QZJyZNaMRhSiHdexg.png",
-              "wh_300_200_url": "/image/attachments/images/003/676/836/wh_300_200/bVyw6QZJyZNaMRhSiHdexg.png",
-              "wh_165_110_url": "/image/attachments/images/003/676/836/wh_165_110/bVyw6QZJyZNaMRhSiHdexg.png",
-              "wh_1245_500_url": "/image/attachments/images/003/676/836/wh_1245_500/bVyw6QZJyZNaMRhSiHdexg.png",
-              "small_url": "/image/attachments/images/003/676/836/small/bVyw6QZJyZNaMRhSiHdexg.png",
-              "show": true,
-              "original_width": 1680,
-              "original_height": 900,
-              "large_url": "/image/attachments/images/003/676/836/large/bVyw6QZJyZNaMRhSiHdexg.png",
-              "elarge_url": "/image/attachments/images/003/676/836/elarge/bVyw6QZJyZNaMRhSiHdexg.png",
-              "display": "default",
-              "credit": "",
-              "caption": ""
-            },
-            "affiliate": {
-              "sponsored_url": "https://mdza.io/aUeF0OZLSW8",
-              "show": true,
-              "image_url": "/image/attachments/images/003/676/856/original/Ig-tAZXK_nSzKxK4LRs7xA.png"
-            }
-          }
-        },
-        "inner": {
-          "layout": "brand",
-          "elements": {
-            "tag": {
-              "show": true,
-              "path": "",
-              "name": "промо"
-            },
-            "reactions": {
-              "show": false
-            },
-            "image": {
-              "wh_615_410_url": "/image/attachments/images/003/676/836/wh_615_410/bVyw6QZJyZNaMRhSiHdexg.png",
-              "wh_405_270_url": "/image/attachments/images/003/676/836/wh_405_270/bVyw6QZJyZNaMRhSiHdexg.png",
-              "wh_300_200_url": "/image/attachments/images/003/676/836/wh_300_200/bVyw6QZJyZNaMRhSiHdexg.png",
-              "wh_165_110_url": "/image/attachments/images/003/676/836/wh_165_110/bVyw6QZJyZNaMRhSiHdexg.png",
-              "wh_1245_500_url": "/image/attachments/images/003/676/836/wh_1245_500/bVyw6QZJyZNaMRhSiHdexg.png",
-              "small_url": "/image/attachments/images/003/676/836/small/bVyw6QZJyZNaMRhSiHdexg.png",
-              "show": true,
-              "original_width": 1680,
-              "original_height": 900,
-              "large_url": "/image/attachments/images/003/676/836/large/bVyw6QZJyZNaMRhSiHdexg.png",
-              "elarge_url": "/image/attachments/images/003/676/836/elarge/bVyw6QZJyZNaMRhSiHdexg.png",
-              "display": "default",
-              "credit": "",
-              "caption": ""
-            },
-            "brand": {
-              "top": {
-                "url": "https://mdza.io/IwMKCc9ygg0",
-                "mobile": {
-                  "url": "/image/attachments/images/003/676/827/mobile/7gaU--QQy6Ly0RmKpayEBA.png",
-                  "retina_url": "/image/attachments/images/003/676/827/mobile_retina/7gaU--QQy6Ly0RmKpayEBA.png",
-                  "original_width": 750,
-                  "original_height": 266
-                },
-                "desktop": {
-                  "url": "/image/attachments/images/003/676/826/desktop/z6nofGeo9VXpwmqec4vfMw.png",
-                  "retina_url": "/image/attachments/images/003/676/826/desktop_retina/z6nofGeo9VXpwmqec4vfMw.png",
-                  "original_width": 3600,
-                  "original_height": 834
-                }
-              },
-              "bottom": {
-                "url": "https://mdza.io/7cPie27myOo",
-                "mobile": {
-                  "url": "/image/attachments/images/003/676/831/mobile/puVN_mKBEgm7yzT15YrJqQ.png",
-                  "retina_url": "/image/attachments/images/003/676/831/mobile_retina/puVN_mKBEgm7yzT15YrJqQ.png",
-                  "original_width": 750,
-                  "original_height": 206
-                },
-                "desktop": {
-                  "url": "/image/attachments/images/003/676/830/desktop/kp0JhP9gWQ30jBnLCSe90A.png",
-                  "retina_url": "/image/attachments/images/003/676/830/desktop_retina/kp0JhP9gWQ30jBnLCSe90A.png",
-                  "original_width": 3600,
-                  "original_height": 510
-                }
-              },
-              "background_color": "#FCF5EF"
-            },
-            "affiliate": {
-              "sponsored_url": "https://mdza.io/aUeF0OZLSW8",
-              "show": true,
-              "image_url": "/image/attachments/images/003/676/856/original/Ig-tAZXK_nSzKxK4LRs7xA.png"
-            },
-            "ads": {
-              "show": false
-            }
-          }
-        }
-      },
-      "modified_at": 1544192268,
-      "image": {
-        "wh_615_410_url": "/image/attachments/images/003/676/836/wh_615_410/bVyw6QZJyZNaMRhSiHdexg.png",
-        "wh_405_270_url": "/image/attachments/images/003/676/836/wh_405_270/bVyw6QZJyZNaMRhSiHdexg.png",
-        "wh_300_200_url": "/image/attachments/images/003/676/836/wh_300_200/bVyw6QZJyZNaMRhSiHdexg.png",
-        "wh_165_110_url": "/image/attachments/images/003/676/836/wh_165_110/bVyw6QZJyZNaMRhSiHdexg.png",
-        "wh_1245_500_url": "/image/attachments/images/003/676/836/wh_1245_500/bVyw6QZJyZNaMRhSiHdexg.png",
-        "small_url": "/image/attachments/images/003/676/836/small/bVyw6QZJyZNaMRhSiHdexg.png",
-        "original_width": 1680,
-        "original_height": 900,
-        "large_url": "/image/attachments/images/003/676/836/large/bVyw6QZJyZNaMRhSiHdexg.png",
-        "elarge_url": "/image/attachments/images/003/676/836/elarge/bVyw6QZJyZNaMRhSiHdexg.png",
-        "display": "default",
-        "credit": "",
-        "caption": ""
-      },
-      "full_width": true,
-      "full": false,
-      "document_type": "brand",
-      "affiliate": {
-        "sponsored_url": "https://mdza.io/aUeF0OZLSW8",
-        "show": true,
-        "image_url": "/image/attachments/images/003/676/856/original/Ig-tAZXK_nSzKxK4LRs7xA.png"
-      }
-    }
+[
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Только что в одном из магазинов бытовой химии и косметики стою в очереди. Впереди меня покупательница. \n<br />Выкладывает перед кассиром два тюбика \n<br /> \n<br />П - покупательница \n<br />К - кассир \n<br /> \n<br />П: какой тюбик лучше? \n<br />К: О_о не знаю. \n<br />П: как вы можете не знать? Вы обязаны знать свой товар! Какой тюбик лучше, этот или этот? \n<br />К: да не знаю я. Как же я могу знать? \n<br />П: понаберут по объявлениям! Вы должны знать! Обязаны! И обязаны проконсультировать! \n<br />К: женщина, один тюбик у вас - зубная паста, второй - детский крем! Как я могу знать, что лучше? \n<br />П: ой! Я перепутала. \n<br />"
   },
-  "collection": [
-    "news/2018/12/07/proizvoditel-sigaret-marlboro-zaymetsya-vyraschivaniem-marihuany-v-kanade",
-    "news/2018/12/07/roskomnadzor-zablokiroval-sayt-navalnogo-pro-umnoe-golosovanie-protiv-edinoy-rossii",
-    "news/2018/12/07/litva-pervoy-iz-stran-nato-vvela-sanktsii-iz-za-konflikta-v-kerchenskom-prolive",
-    "slides/na-premii-the-game-awards-nazvali-luchshuyu-igru-2018-goda-i-eto-god-of-war",
-    "short/2018/12/07/skromnost-spravedlivost-neterpimost-k-popraniyu-duhovnyh-tsennostey-prinyat-eticheskiy-kodeks-chlenov-edinoy-rossii"
-  ],
-  "_count": 24
-}
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: Точнее не придумаешь. Не работа, а &quot;Приключения Элеткроника&quot;. \n<br />yyy: Я уже 12 лет работаю админом в бюджетной конторе и моя должность так и называется - &laquo;Электроник&raquo; ))"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "ххх: сцуко, метро жжот на своих экранах! \n<br />ххх: &quot;ваш пес откопал в парке спящего ежа? закопайте его обратно!&quot; \n<br />ууу: а то вдруг номерной ещё откопает \n<br /> \n<br />(кто не в курсе: &quot;ежи&quot; и &quot;номерные&quot; - сленговые названия моделей поездов метро)"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Таксую. Наклейка &laquo;Видеозапись&raquo; в салоне создаёт тишину и уют на всю поездку. Да, я пишу всё происходящее в салоне, но по закону я должен уведомить об этом клиента. Ночные пьяные поездки стали тише вполовину. И вoт однажды… \n<br /> \n<br />…Садится девушка, видит, чтo написано: \n<br />– Ой, а у вac чтo, тyт на видео снимают? \n<br />– Ну да. \n<br />– А ктo смотреть будет? \n<br />– Никтo, ecли вce в порядке бyдeт. \n<br />– Нeт, ну тaк вce paвнo нельзя, – опускает козырёк, – мoжнo? \n<br /> \n<br />Открывает зеркальце, поправляет причёску, макияж. Козырёк на место, улыбается: \n<br />– Тeпepь снимайте :)) \n<br /> \n<br />"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: Вспомнил знакомого телохранителя, который путал Джейлбрейк и Блоуджоб. \n<br /> \n<br />yyy: так ты ему в итоге что делал?"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "&laquo;Лолиту&raquo; я прочла в 15 - благодаря матушке, которая, узнав, что нонеча в школе проходят Набокова, не замедлила приволочь её в дом (тот факт, что в школе проходят &laquo;Машеньку&raquo; и &laquo;Защиту Лужина&raquo;, от внимания матушки непостижимым образом ускользнул). \n<br />Захер-Мазоховскую &laquo;Венеру в мехах&raquo; я прочла в том же возрасте: её матушка притараканила просто из соображений &laquo;я подумала, что тебе понравится и ты узнаешь там себя&raquo;. \n<br />P.S. Она всерьез удивилась, когда я не выросла нормальной!"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "На сайте 4pda обсуждение новости о новых телевизорах. \n<br />aaa: зачем вешать телевизор на стену, если можно кинуть ноутбук на пузо? \n<br />bbb: Не у всех же пузо. У многих плоский спортивный живот с прессом. \n<br />ccc: Это их проблемы, причём решаемые. \n<br />ddd: Помогу отрастить пузо, недорого. Полное онлайн сопровождение. Составлю режим питания, проконтролирую технику лежания на диване, дам советы и рекомендации. Так же проводим семинары и вебинары на тему &quot;Пузо мечты&quot;. Все записавшиеся получают в подарок пиво и чесночные гренки."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Странный тренд среди морских котиков на Гавайских островах: местные исследователи все чаще стали замечать этих зверьков с торчащими угрями из их ноздрей. \n<br /> \n<br />Ученые говорят, что это не случайность или какой-то странный способ охоты, а именно челендж: один подростковый морской котик так сделал, а другие увидели и пытаются повторить. \n<br /> \n<br />xxx: \n<br />Ох, эта молодежь \n<br />А ведь у морских котиков даже не лапки, а ласты! \n<br />Зато они умеют ноздри под водой зажимать \n<br />Угря ноздрёй поймать - крутяк!"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Накопилось много мусора, пришел к мусоропроводу и выкидывая про себя думаю: &quot;Как бы эффективно все одним запросом отправить?&quot;."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: А перед коллегией адвокатов поставим памятник Гагарину и Королеву, пожимающим руки. И назовем его &quot;Юрик и физик&quot;."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "У нас так собаки воду из пустой миски добывают - уверены, что если усердно с грохотом посреди ночи лизать миску, там появится вода. \n<br />Старшая двенадцать лет в этом уверена и младшую научила."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "RaccunPotaskun: Работа в режиме перманентного пиздеца хороша тем, что ты не мучаешься и не страдаешь в ожидании, что это когда-нибудь кончится. НЕ КОНЧИТСЯ"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "На хоккейном турнире, в Норвегии, вместо гимна Беларуси включили народную песню &laquo;Касіў Ясь канюшыну&raquo;. \n<br /> \n<br />Evgeniy_Petrov: как сыграли–то? \n<br />dimdoom: 6:1 Норвегия выиграла. Сейчас выясняют, у кого. \n<br />"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Швейное ателье, посетитель приносит куртку с растерзанным в хлам краем и спрашивает, сколько стоит починить. Такого повреждения мастеры еще не встречали и первым делом спросили &quot;как?!&quot;. \n<br />Посетитель: Стиральная машина зажевала. \n<br />Мастеры: А что за марка? \n<br />Посетитель, на серьезе: Эта, как его... эээ... Инквизит."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: Ну, я например надолго офигел, когда осознал воплощённую идею кабеля 2 см в диаметре, выполненного из аллюминиевых жилок с волос толщиной, каждая из которых подкрашена медью под цвет меди."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: Если бы у тараканов была литература, в ней был бы очень популярен жанр пост-тапок."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: Продуктовый магазин &quot;ВкусВилл&quot; - это шедевр. Можно ещё открыть блинную &quot;ВкусЛопатт&quot;."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Иванович : секретарша бедняга расстроилась ))) к директору подошла - а МОЖНО домой съездить перед корпоративом накраситься - а он на нее посмотрел и говорит - НУЖНО ))))"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: Были же люди, как люди, и вдруг все стали блогерами!"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "У гитары из нижнего держателя вылетела струна. \n<br />ххх: вылетела, надо переустановить)"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: Земля напоминает коммуналку. Все срутся, но никуда не денутся."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "когда 15 лет назад я слышал от сноубордистов выражение &quot;нюхнуть Губахинского кокса&quot;, я недоумевал. Потом я узнал, что такое неудачная роза ветров и коксохимический комбинат"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: баг-репорт: &quot;Touching a Huion graphic tablet with its pen causes GTK applications to crash&quot; \n<br /> \n<br />ну а что вы хотели от железки с таким названием..."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "&lt;комментарии под фотографией сисек&gt; \n<br />xxx: Скажите, натуральные ли это сиськи. \n<br />yyy: Какая тебе разница? \n<br />xxx: Если сиськи натуральные, дрочить в 10 раз приятней. \n<br />zzz: Тогда начинай дрочить. Если будет в 10 раз приятней, значит натуральные."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Авиакомпания-лоукостер: \n<br /> \n<br />- Какие будут идеи, чтоб увеличить нашу прибыль? \n<br /> \n<br />- Давайте раздадим им стаканчики по пять рублей, потом нальем туда мочегонный чай по 20 и сделаем туалет платным, по 1000 с человека. \n<br /> \n<br />- Гениально!"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "из прекрасного на работе. система автоматом запускала документы и исполнителем ставила некоего пользователя &quot;Робот&quot;...так сегодня позвонила коллега и на полном серьезе стала спрашивать, как у этого Робота фамилия и кто это на самом деле"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "mer: Разработчики такие нежные пошли! Долго их задачу не тестируешь – плохо, долго тестируешь – плохо, много багов находишь – плохо, ничего не находишь – тоже плохо!"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "на форуме 1С: \n<br />- обновились до (Х.Х.Х.Х) и там возникали очень много ошибок, в режиме предприятия было внесено много изменения, если откат зделаю все прподет \n<br />- ага, например зряплата :)"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: а потом - ожирение, холестериновые бляшки, артроз, варикоз, гипертония, диабет, остеопороз, атеросклероз....маразм, наконец!.. ну-ну, на здоровьичко, кушайте, не обляпайтесь жирненьким оливьешечкой, новогодние свинки его тоже любят, прятнага (гастрита) аппетита! \n<br />yyy: Так, верблюжьи колючки не предлагать! \n<br />zzz: прану будешь?) \n<br />yyy: Наливай!"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Как-то лет в 14, с отцом на поле грузил сено на бортовой газ-52 с наращенными бортами, я стоял наверху на сене, на высоте около 3.5 метров, отец закидывал наверх сено вилами, я его принимал, распределял и утаптывал. И, как водится, я оступился и полетел вниз, рухнул плашмя, чудом миновав отцовские вилы. Встал, кряхтя походил кругами, отец спрашивает: &quot;Ты как? В порядке?&quot;. Говорю: &quot;Да&quot;.&quot;Тогда лезь наверх&quot;."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx \n<br />есть минимальный мануал по ЕРЕ? чёт надоело по каждому простому вопросу втыкать в её интерфейс) \n<br /> \n<br />xxx \n<br />Её какие-то сатанисты писали \n<br /> \n<br />yyy \n<br />Egress peering engineering? \n<br /> \n<br />yyy \n<br />Там нельзя обойтись мануалом одним \n<br /> \n<br />xxx \n<br />я уже скоро демона из ада через её интерфейс вызову, а надо всего-то сменить рабочее место принтера"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: ОЛДЫ НА МЕСТЕ? \n<br />yyy: Нет, мама сказала спать, завтра в садик"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: \n<br />Я сейчас очень громко орал. \n<br /> \n<br />Полтора часа разговаривал о гендерах, в конце концов девушка решила, что гендер это социальный конструкт, так что она агендер_ка."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Дорабатывали сайт турбазы на Байкале. Верстак по ошибке заменил номер в шапке на тестовый, что был закомментирован в коде. \n<br /> \n<br />Всплыло, когда позвонил злой заказчик. А ему позвонили и рассказали друзья. \n<br /> \n<br />Решили они поехать на Байкал, зашли на сайт, звонят, спрашивают на счёт свободных мест. \n<br /> \n<br />А в ответ злой женский голос: &quot;Да как вы достали!!! Это не база отдыха, это городской морг!!!&quot; \n<br /> \n<br />Номер оперативно поменяли на нормальный, но работница морга запомнила этот день надолго)))"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: Из того что играл нового, лучшим оказалась RDR2. \n<br /> \n<br />Хотя я до сих пор стреляю на уровне паралитика ковбоя, которому револьвер запихали в жопу и он пытается так стрелять. \n<br /> \n<br />A лошади меня уже начали обходить стороной так как я их регулярно загоняю то на дерево, то на крышу дома. Но всё равно игра хорошая."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Раздача Battlefield V. Вес - 40 Гб, сингл - на 4 часа, мультиплеера нет. \n<br /> \n<br />xxx: \n<br />Да уж, 40 Гб - на два вечера прохождения... \n<br />Иногда скучаю по тем временам, когда компьютеры были большими, а игры маленькими."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx (ветеринар): Есть некая позитивная сторона моей работы, связаная с именами животных. Так, например: \n<br />Дейнерис обкакалась жидким от страха прямо на приеме; \n<br />Шелдона в истерике тошнило прилипалами; \n<br />Халк прятался от меня в шкафу; \n<br />Гендальф и Фродо на пару плакали на прививке; \n<br />Шерлок в результате оказался женского пола и родил(а) от Ватсона; \n<br />Люк оказался крипторхом, а его отец одновременно являлся его старшим братом; \n<br />Спок уписался от перевозбуждения; \n<br />Добби... о, Добби вел себя хорошо, просто активно &quot;встречался&quot; с переноской каждый раз когда я на него смотрела."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: а если проводятся тренировки в горной местности со снаряжением – этот показатель увеличивается до 6-7 тысяч калорий \n<br />yyy: Врёшь буржуй! Солдат столько брюквы сожрать не может."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: Что-то странное в нотном ряде. \n<br />yyy: А что не так? \n<br />xxx: Ну До-Ре-Ми-Фа-Соль-Ля-Си. \n<br />yyy: И что не так? \n<br />xxx: Не по алфавиту. Неопрятненько."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Дочка пишет реферат на ноутбуке и бубнит &quot;Вот за что я не люблю компьютеры, постоянно вверх страницы проматывать долго.&quot; \n<br />Я:&quot;Там вообще-то есть кнопка PageUp&quot; \n<br />Д:&quot;Блин!!!&quot; \n<br />Я:&quot;Это все что вам нужно знать о людях, которые не любят компьютеры.&quot;"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: А ты знаешь, как на современный лад звучит &quot;Свет мой, зеркальце, скажи&quot;? \n<br />yyy: ??? \n<br />xxxx: &quot;Окей, зеркало!&quot;"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: Я, собственно идейный противник кредитов. Кредит это топор над головой, который в любой момент может ударить. \n<br />yyy: Да неее. \n<br />yyy: Не топор. \n<br />yyy: Так - молоток."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Недавно знакомый выяснял отношения с налоговой. Его, как директора ООО, пытали, зачем он отправлял деньги фирмам, которые имеют признаки фирм-однодневок. На что тот отвечал, что здание налоговой-3 этажа, на входе охранник-вышибала, в комнатах работают молодые девушки, заправляет всм пожилая дама, всех называют клиентами, то есть все признаки барделя. Тоже просил пояснить... Получил штраф."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: Я вообще люблю наблюдать расклеенные объявления о поиске расклейщиков объявлений. Есть в этом некая матрёшечная фрактальность."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Сейчас читаю название новости: &quot;В московском Театре сатиры нашли труп&quot;. Пытаюсь понять, откуда в каком-то театре появились сатиры и почему они нашли труп."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "ххх: тут сотрудникам лаборатории на подпись передали две ведомости. В одной мы расписываемся за то, что знаем, как эвакуироваться, а в другой - что все уволены)"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: yyy заказал двадцать две пиццы, нажрался супа, пока их везли, и теперь сидит с лицом человека, который совершил ошибку"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "Отзыв. \n<br />Ирландский паб со стажем. Мне нравится это место, хоть и до пабов в самой Ирландии ни один из посещенных мной пабов в России не дотягивает. \n<br /> \n<br />Ответ владельца \n<br />Хочу заметить, что ни одна пельменная в Ирландии не дотягивает до наших пельменных!"
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: \n<br />Полиаморный брак должен быть похож на детство в многодетной семье. С некоторыми варициями. Тоже вечный дефицит и нехватка, но теперь уже не системных ресурсов, а незанятых портов. А дальше все по классике, &quot;Ун гроссен фамилен нихт клювен клац клац&quot; - Хлебалом не хлопай. И булки не расслабляй."
+  },
+  {
+    "site": "bash.im",
+    "name": "bash",
+    "desc": "Цитатник Рунета",
+    "link": null,
+    "elementPureHtml": "xxx: В последнее время кусты активно сносят, &quot;ибо в них ссут&quot;. И деревья, даже очень молодые, очищают на метр-полтора от земли от веток. В результате шум оставшееся задерживает так себе... А как хорош был шиповник метр в ширину и метр в высоту вместо забора вокруг трамвайных выделенок на разделительных - и не бегал никто (колючий) и шум от трамваев (они были куда более шумными) гасился, и зелено-непыльно. Асфальт и заборы - хуже. \n<br /> \n<br />yyy: А что плохого в том, что ссут в кусты? Убираем кусты - снова начнут ссать в парадных, как в 90х было. И домофоны не спасут, есть и заводские спецкоды и таблетки универсальные по 100 рублей на Сенной: спаммерам тоже ведь надо как-то в парадные проникать, и связки по паре сотен таблеток от всех парадных района они вряд ли с собой таскают (да и откуда бы спаммерам их взять, а на звонки от левых людей уже давно никто не открывает)."
+  }
+]

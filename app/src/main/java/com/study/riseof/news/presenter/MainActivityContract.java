@@ -5,6 +5,7 @@ import android.view.View;
 import com.study.riseof.news.model.xml.Item;
 import com.study.riseof.news.ui.activity.MainActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface MainActivityContract {
@@ -20,6 +21,10 @@ public interface MainActivityContract {
         void createWebViewFragment(String newsUrl);
 
         void replaceRssFragmentWithWebViewFragment();
+
+        void createNewsFromJsonFragment(String titleText, String descriptionText, String bodyText, String pubDateText, ArrayList<String> imageUrlList);
+
+        void replaceRssFragmentWithNewsFromJsonFragment();
 
         void setActionBarTitle(int textId);
 
@@ -51,6 +56,8 @@ public interface MainActivityContract {
 
         void onDrawerStateChanged(int newState);
 
+        void onBackButtonPressed();
+
         void onMenuItemCloseMainDrawer();
 
         void onNavigationMenuItemYandex();
@@ -65,7 +72,7 @@ public interface MainActivityContract {
 
         void onNavigationMenuAnyItem();
 
-        void rssNewsClick(int position,String newsUrl);
+        void rssNewsClick(int position, String newsUrl);
 
         List<Item> getRssList();
     }

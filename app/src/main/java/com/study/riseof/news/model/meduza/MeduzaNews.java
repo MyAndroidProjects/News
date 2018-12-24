@@ -15,10 +15,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class TestJson {
-
-
+public class MeduzaNews {
     @SerializedName("root")
     @Expose
     public Root root;
@@ -26,12 +23,4 @@ public class TestJson {
     @SerializedName("documents")
     @Expose
     public Documents documents;
-
-    private  static  class Root{
-
-    }
-    private  static  class Documents{
-
-    }
-
 }

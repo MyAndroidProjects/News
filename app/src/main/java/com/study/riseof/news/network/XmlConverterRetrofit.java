@@ -1,7 +1,5 @@
 package com.study.riseof.news.network;
 
-import android.util.Log;
-
 import com.study.riseof.news.BuildConfig;
 
 import okhttp3.OkHttpClient;

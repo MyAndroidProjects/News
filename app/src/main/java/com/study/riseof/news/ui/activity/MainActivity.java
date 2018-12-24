@@ -2,6 +2,7 @@ package com.study.riseof.news.ui.activity;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -22,10 +23,12 @@ import com.study.riseof.news.R;
 import com.study.riseof.news.model.xml.Item;
 import com.study.riseof.news.presenter.MainActivityContract;
 import com.study.riseof.news.presenter.MainActivityPresenter;
+import com.study.riseof.news.ui.fragment.NewsFromJsonFragment;
 import com.study.riseof.news.ui.fragment.NewsSourceNavigationViewFragment;
 import com.study.riseof.news.ui.fragment.RssFragment;
 import com.study.riseof.news.ui.fragment.WebViewFragment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -54,6 +57,7 @@ public class MainActivity extends BaseActivity implements
     private NewsSourceNavigationViewFragment newsSourceNavigationViewFragment;
     private RssFragment rssFragment;
     private WebViewFragment webViewFragment;
+    private NewsFromJsonFragment newsFromJsonFragment;
     private MainActivityContract.MainActivityPresenter presenter;
     private List<Item> rssList;
     ActionBar actionbar;
@@ -87,31 +91,24 @@ public class MainActivity extends BaseActivity implements
     protected void onDestroy() {
         super.onDestroy();
         presenter.onActivityDestroy();
-        // todo поместить в backstack
     }
 
     private void setDrawerListener() {
         drawerLayout.addDrawerListener(
                 new DrawerLayout.DrawerListener() {
                     @Override
-                    public void onDrawerSlide(View drawerView, float slideOffset) {
-                        if (drawerView != null) {
-                            presenter.onDrawerSlide(drawerView, slideOffset);
-                        }
+                    public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
+                        presenter.onDrawerSlide(drawerView, slideOffset);
                     }
 
                     @Override
-                    public void onDrawerOpened(View drawerView) {
-                        if (drawerView != null) {
-                            presenter.onDrawerOpened(drawerView);
-                        }
+                    public void onDrawerOpened(@NonNull View drawerView) {
+                        presenter.onDrawerOpened(drawerView);
                     }
 
                     @Override
-                    public void onDrawerClosed(View drawerView) {
-                        if (drawerView != null) {
-                            presenter.onDrawerClosed(drawerView);
-                        }
+                    public void onDrawerClosed(@NonNull View drawerView) {
+                        presenter.onDrawerClosed(drawerView);
                     }
 
                     @Override
@@ -189,7 +186,26 @@ public class MainActivity extends BaseActivity implements
         if (webViewFragment != null) {
             replaceFragment(R.id.frame_news, webViewFragment);
         }
+    }
 
+    @Override
+    public void createNewsFromJsonFragment(String titleText, String descriptionText, String bodyText, String pubDateText, ArrayList<String> imageUrlList) {
+
+        newsFromJsonFragment = new NewsFromJsonFragment();
+        Bundle newsFromJsonFragmentArgs = new Bundle();
+        newsFromJsonFragmentArgs.putString("titleText", titleText);
+        newsFromJsonFragmentArgs.putString("descriptionText", descriptionText);
+        newsFromJsonFragmentArgs.putString("bodyText", bodyText);
+        newsFromJsonFragmentArgs.putString("pubDateText", pubDateText);
+        newsFromJsonFragmentArgs.putStringArrayList("imageUrlList", imageUrlList);
+        newsFromJsonFragment.setArguments(newsFromJsonFragmentArgs);
+    }
+
+    @Override
+    public void replaceRssFragmentWithNewsFromJsonFragment() {
+        if (newsFromJsonFragment != null) {
+            replaceFragment(R.id.frame_news, newsFromJsonFragment);
+        }
     }
 
     @Override
@@ -199,26 +215,21 @@ public class MainActivity extends BaseActivity implements
 
     @Override
     public void createRssFragment() {
-        // todo refactor
         if (rssFragment == null) {
             rssFragment = new RssFragment();
             addFragment(R.id.frame_news, rssFragment);
-            if (presenter != null) {
-                rssFragment.setNewsList(presenter.getRssList());
-            } else {
-                rssFragment.setNewsList(null);
-            }
         } else {
             replaceFragment(R.id.frame_news, rssFragment);
-            if (presenter != null) {
-                rssFragment.setNewsList(presenter.getRssList());
-            } else {
-                rssFragment.setNewsList(null);
-            }
-            rssFragment.setRecyclerAdapter(this);
         }
+       // setNewsListToFragment();
         rssFragment.setRssFragmentListener(this);
+        if (presenter != null) {
+            rssFragment.setNewsListAndContext(presenter.getRssList(),this);
+        } else {
+            rssFragment.setNewsListAndContext(null,this);
+        }
     }
+
 
     @Override
     public void createNewsSourceNavigationViewFragment() {
@@ -253,6 +264,7 @@ public class MainActivity extends BaseActivity implements
     public void onBackPressed() {
         Log.d("myLog", "onBackPressed");
         super.onBackPressed();
+        presenter.onBackButtonPressed();
     }
 
     @Override

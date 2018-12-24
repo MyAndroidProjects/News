@@ -1,22 +1,22 @@
 package com.study.riseof.news.network;
 
 
+import com.study.riseof.news.model.meduza.MeduzaNews;
 import com.study.riseof.news.model.xml.Rss;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Url;
 
 public interface RetrofitApi {
-    interface Xml{
+    interface Xml {
         @GET(".")
         Call<Rss> getRss();
-
-/*        @GET()
-        Call<Rss> getRss(@Url String url);*/
-
     }
-    interface Json{
 
+    interface Json {
+        @GET()
+        Call<MeduzaNews> getData(@Url String url);
     }
 
 }

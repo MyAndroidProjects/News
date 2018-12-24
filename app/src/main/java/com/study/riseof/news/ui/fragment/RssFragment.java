@@ -27,16 +27,29 @@ public class RssFragment extends BaseFragment implements
 
     private RssFragmentListener rssFragmentListener;
     private List<Item> rssList;
+    private RssRecyclerViewAdapter adapter;
+    private Context context;
+    private LinearLayoutManager layoutManager;
+    private View view;
+
 
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_rss;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+
+        view = super.onCreateView(inflater, container, savedInstanceState);
+       // setRecyclerAdapter();
+        return view;
     }
 
 
@@ -48,23 +61,28 @@ public class RssFragment extends BaseFragment implements
         } else {
             Log.d("myLog", "rss == null");
         }
-        setRecyclerAdapter(getContext());
+
+            setRecyclerAdapter();
 
     }
 
-    public void setNewsList(List<Item> rssList) {
+    public void setNewsListAndContext(List<Item> rssList, Context context) {
         this.rssList = rssList;
+        this.context = context;
     }
 
-    public void setRecyclerAdapter(Context context) {
+    private void setRecyclerAdapter() {
+        adapter = new RssRecyclerViewAdapter(context, rssList);
+        adapter.setRssNewsClickListener(this);
+        layoutManager = new LinearLayoutManager(context);
         if (rssList != null) {
-            RssRecyclerViewAdapter adapter = new RssRecyclerViewAdapter(context, rssList);
-            adapter.setRssNewsClickListener(this);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(context);
             if (recyclerView != null) {
                 recyclerView.setLayoutManager(layoutManager);
                 recyclerView.setAdapter(adapter);
+            }else {
+                Log.d("myLog", "recyclerView == null");
             }
+            Log.d("myLog", "setRecyclerAdapter rssList != null");
         } else {
             Log.d("myLog", "setRecyclerAdapter rss == null");
         }

@@ -6,7 +6,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,6 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import com.study.riseof.news.R;
 
@@ -27,7 +25,6 @@ public class WebViewFragment extends BaseFragment {
     ProgressBar progressBar;
     @BindView(R.id.web_view)
     WebView webView;
-
 
     private String newsUrl;
 
@@ -41,7 +38,6 @@ public class WebViewFragment extends BaseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         getBundleArgs();
-
         webView.setWebChromeClient(new WebChromeClient() {
             @Override
             public void onProgressChanged(WebView view, int progress) {
@@ -73,11 +69,15 @@ public class WebViewFragment extends BaseFragment {
                 return false;
             }
         });
-
         webView.loadUrl(newsUrl);
         return view;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
 
     protected void getBundleArgs() {
         if (this.getArguments() != null) {

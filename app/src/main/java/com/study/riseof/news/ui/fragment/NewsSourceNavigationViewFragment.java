@@ -42,7 +42,7 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
         switch (id) {
             case R.id.menu_item_back:
                 navigationViewListener.onMenuItemCloseMainDrawer();
-                break;
+                return true;
             case R.id.menu_item_yandex:
                 navigationViewListener.onNavigationMenuItemYandex();
                 break;
@@ -55,7 +55,7 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
             case R.id.menu_item_lenta:
                 navigationViewListener.onNavigationMenuItemLenta();
                 break;
-            case R.id.menu_item_ria:
+            case R.id.menu_item_rbc:
                 navigationViewListener.onNavigationMenuItemRbc();
                 break;
         }

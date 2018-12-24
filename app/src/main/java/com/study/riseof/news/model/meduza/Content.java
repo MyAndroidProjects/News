@@ -15,23 +15,14 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @AllArgsConstructor
+public class Content {
 
-public class TestJson {
-
-
-    @SerializedName("root")
+    @SerializedName("body")
     @Expose
-    public Root root;
+    String body;
 
-    @SerializedName("documents")
+    @SerializedName("layout_url")
     @Expose
-    public Documents documents;
-
-    private  static  class Root{
-
-    }
-    private  static  class Documents{
-
-    }
+    String layoutUrl;
 
 }
