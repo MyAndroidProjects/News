@@ -16,7 +16,15 @@ public interface MainActivityContract {
 
         void closeDrawer();
 
-        void createRssFragment();
+        void callSuperOnBackPressed();
+
+        void uncheckAllNavigationMenuItems();
+
+        boolean webViewGoBack();
+
+        void cleanBackStack();
+
+        //      void createRssFragmentOld();
 
         void createWebViewFragment(String newsUrl);
 
@@ -34,7 +42,15 @@ public interface MainActivityContract {
 
         void createNewsSourceNavigationViewFragment();
 
+
         void setRssList(List<Item> rssList);
+
+        void createRssFragment(List<Item> rssList);
+
+        void updateRssListAndAdapter(List<Item> rssList);
+
+
+        boolean isNavigationViewFragmentExist();
     }
 
     interface MainActivityPresenter {
@@ -70,11 +86,14 @@ public interface MainActivityContract {
 
         void onNavigationMenuItemRbc();
 
-        void onNavigationMenuAnyItem();
+        void onNavigationMenuSelectAnyItem();
+        //    void onNavigationMenuStartOfSelectAnyItem();
 
         void rssNewsClick(int position, String newsUrl);
 
         List<Item> getRssList();
+
+
     }
 
     interface MainActivityDataLoader {

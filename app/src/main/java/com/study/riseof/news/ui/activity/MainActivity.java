@@ -47,8 +47,8 @@ public class MainActivity extends BaseActivity implements
     @BindView(R.id.drawer_layout_main)
     DrawerLayout drawerLayout;
 
-    @BindView(R.id.fragment_navigation_view)
-    FrameLayout navigationView;
+/*    @BindView(R.id.fragment_navigation_view)
+    FrameLayout navigationView;*/
 
     @BindView(R.id.frame_news)
     FrameLayout frameNews;
@@ -59,7 +59,6 @@ public class MainActivity extends BaseActivity implements
     private WebViewFragment webViewFragment;
     private NewsFromJsonFragment newsFromJsonFragment;
     private MainActivityContract.MainActivityPresenter presenter;
-    private List<Item> rssList;
     ActionBar actionbar;
 
     @Override
@@ -71,11 +70,7 @@ public class MainActivity extends BaseActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setPresenter();
-        if (presenter != null) {
-            rssList = presenter.getRssList();
-        }
         setDrawerListener();
-
     }
 
     @Override
@@ -91,6 +86,7 @@ public class MainActivity extends BaseActivity implements
     protected void onDestroy() {
         super.onDestroy();
         presenter.onActivityDestroy();
+        Log.d("myLog", " onDestroy " + this.toString());
     }
 
     private void setDrawerListener() {
@@ -156,20 +152,25 @@ public class MainActivity extends BaseActivity implements
         }
     }
 
-    private void addFragment(int fragmentView, Fragment fragment) {
+    private void addFragment(int fragmentView, Fragment fragment, boolean addTransactionToBackStack) {
+
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.add(fragmentView, fragment);
-        fragmentTransaction.addToBackStack(null);
+        if (addTransactionToBackStack) {
+            fragmentTransaction.addToBackStack(null);
+        }
         fragmentTransaction.commit();
     }
 
-    private void replaceFragment(int fragmentView, Fragment fragment) {
+    private void replaceFragment(int fragmentView, Fragment fragment, boolean addTransactionToBackStack) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         //  fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.replace(fragmentView, fragment);
-        fragmentTransaction.addToBackStack(null);
+        if (addTransactionToBackStack) {
+            fragmentTransaction.addToBackStack(null);
+        }
         fragmentTransaction.commit();
     }
 
@@ -184,7 +185,7 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void replaceRssFragmentWithWebViewFragment() {
         if (webViewFragment != null) {
-            replaceFragment(R.id.frame_news, webViewFragment);
+            replaceFragment(R.id.frame_news, webViewFragment, true);
         }
     }
 
@@ -204,45 +205,80 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void replaceRssFragmentWithNewsFromJsonFragment() {
         if (newsFromJsonFragment != null) {
-            replaceFragment(R.id.frame_news, newsFromJsonFragment);
+            replaceFragment(R.id.frame_news, newsFromJsonFragment, true);
         }
     }
 
     @Override
     public void setRssList(List<Item> rssList) {
-        this.rssList = rssList;
+        // todo дублирование кода и null pointer
+        if (presenter != null && rssFragment != null) {
+            showShortToast("setNewsListAndContext(rssList,");
+
+            rssFragment.setNewsListAndContext(rssList, this);
+        } else {
+            if (rssFragment != null) {
+                showShortToast("setNewsListAndContext(null,");
+                rssFragment.setNewsListAndContext(null, this);
+            }
+        }
+        if (rssFragment != null) {
+            showShortToast("setNewsListAndContext(null,");
+            rssFragment.setRecyclerAdapter();
+        }
     }
 
     @Override
-    public void createRssFragment() {
+    public void createRssFragment(List<Item> rssList) {
+        Log.d("myLog", "createRssFragment");
         if (rssFragment == null) {
             rssFragment = new RssFragment();
-            addFragment(R.id.frame_news, rssFragment);
+            addFragment(R.id.frame_news, rssFragment, true);
         } else {
-            replaceFragment(R.id.frame_news, rssFragment);
+            replaceFragment(R.id.frame_news, rssFragment, true);
         }
-       // setNewsListToFragment();
         rssFragment.setRssFragmentListener(this);
-        if (presenter != null) {
-            rssFragment.setNewsListAndContext(presenter.getRssList(),this);
-        } else {
-            rssFragment.setNewsListAndContext(null,this);
-        }
+
+        updateRssListAndAdapter(rssList);
     }
 
+    @Override
+    public void updateRssListAndAdapter(List<Item> rssList) {
+        Log.d("myLog", "updateRssListAndAdapter");
+        if (rssList != null) {
+            if (rssFragment != null) {
+                rssFragment.setNewsListAndContext(rssList, this);
+                rssFragment.setRecyclerAdapter();
+            } else {
+                createRssFragment(rssList);
+                Log.d("myLog", "rssFragment==null");
+            }
+        }
+    }
 
     @Override
     public void createNewsSourceNavigationViewFragment() {
+        Log.d("myLog", "createNewsSourceNavigationViewFragment");
         if (newsSourceNavigationViewFragment == null) {
+            Log.d("myLog", "newsSourceNavigationViewFragment == null");
             newsSourceNavigationViewFragment = new NewsSourceNavigationViewFragment();
-            addFragment(R.id.fragment_navigation_view, newsSourceNavigationViewFragment);
+            addFragment(R.id.fragment_navigation_view, newsSourceNavigationViewFragment, false);
+            setDrawerListener();
+        } else {
+            Log.d("myLog", "newsSourceNavigationViewFragment !!= null");
         }
         newsSourceNavigationViewFragment.setNavigationViewListener(this);
     }
 
     @Override
+    public boolean isNavigationViewFragmentExist() {
+        return newsSourceNavigationViewFragment != null;
+    }
+
+    @Override
     public void openDrawer() {
         drawerLayout.openDrawer(GravityCompat.START);
+        Log.d("myLog", "  public void openDrawer() ");
     }
 
     @Override
@@ -263,8 +299,38 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void onBackPressed() {
         Log.d("myLog", "onBackPressed");
-        super.onBackPressed();
         presenter.onBackButtonPressed();
+    }
+
+
+    @Override
+    public void callSuperOnBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
+    public void uncheckAllNavigationMenuItems() {
+        if (newsSourceNavigationViewFragment != null) {
+            newsSourceNavigationViewFragment.uncheckAllNavigationMenuItems();
+        }
+    }
+
+    @Override
+    public void cleanBackStack() {
+        getSupportFragmentManager().popBackStackImmediate();
+    }
+
+    @Override
+    public boolean webViewGoBack() {
+        if (webViewFragment == null || webViewFragment.webView == null) {
+            return false;
+        }
+        if (webViewFragment.webView.canGoBack()) {
+            webViewFragment.webView.goBack();
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
@@ -297,9 +363,16 @@ public class MainActivity extends BaseActivity implements
         presenter.onNavigationMenuItemRbc();
     }
 
+
     @Override
-    public void onNavigationMenuAnyItem() {
-        presenter.onNavigationMenuAnyItem();
+    public void onNavigationMenuStartOfSelectAnyItem() {
+        // todo удалить цепочку вызовов
+        //     presenter.onNavigationMenuStartOfSelectAnyItem();
+    }
+
+    @Override
+    public void onNavigationMenuSelectAnyItem() {
+        presenter.onNavigationMenuSelectAnyItem();
     }
 
     @Override
@@ -312,5 +385,3 @@ public class MainActivity extends BaseActivity implements
         presenter.rssNewsClick(position, newsUrl);
     }
 }
-
-

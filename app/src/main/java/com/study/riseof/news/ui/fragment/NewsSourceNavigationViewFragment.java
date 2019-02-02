@@ -24,6 +24,13 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
         return R.layout.fragment_news_source_navigation_view;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //Log.d("myLog"," onCreate " + this.toString());
+        setRetainInstance(false);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -39,10 +46,12 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int id = menuItem.getItemId();
+        if (id == R.id.menu_item_back) {
+            navigationViewListener.onMenuItemCloseMainDrawer();
+            return true;
+        }
+        navigationViewListener.onNavigationMenuStartOfSelectAnyItem();
         switch (id) {
-            case R.id.menu_item_back:
-                navigationViewListener.onMenuItemCloseMainDrawer();
-                return true;
             case R.id.menu_item_yandex:
                 navigationViewListener.onNavigationMenuItemYandex();
                 break;
@@ -59,12 +68,22 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
                 navigationViewListener.onNavigationMenuItemRbc();
                 break;
         }
-        navigationViewListener.onNavigationMenuAnyItem();
+        navigationViewListener.onNavigationMenuSelectAnyItem();
         return true;
     }
 
     public void setNavigationViewListener(NavigationViewListener navigationViewListener) {
         this.navigationViewListener = navigationViewListener;
+    }
+
+    public void uncheckAllNavigationMenuItems() {
+        if(navigationView==null){
+            return;
+        }
+        int menuSize = navigationView.getMenu().size();
+        for (int i = 0; i < menuSize; i++) {
+            navigationView.getMenu().getItem(i).setChecked(false);
+        }
     }
 
     public interface NavigationViewListener {
@@ -80,6 +99,8 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
 
         void onNavigationMenuItemRbc();
 
-        void onNavigationMenuAnyItem();
+        void onNavigationMenuStartOfSelectAnyItem();
+
+        void onNavigationMenuSelectAnyItem();
     }
 }

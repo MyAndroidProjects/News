@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
@@ -24,7 +25,7 @@ public class WebViewFragment extends BaseFragment {
     @BindView(R.id.web_loading_progress_bar)
     ProgressBar progressBar;
     @BindView(R.id.web_view)
-    WebView webView;
+    public WebView webView;
 
     private String newsUrl;
 
@@ -38,15 +39,18 @@ public class WebViewFragment extends BaseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         getBundleArgs();
+
         webView.setWebChromeClient(new WebChromeClient() {
             @Override
             public void onProgressChanged(WebView view, int progress) {
-                if (progress < 100 && progressBar.getVisibility() == ProgressBar.GONE) {
-                    progressBar.setVisibility(ProgressBar.VISIBLE);
-                }
-                progressBar.setProgress(progress);
-                if (progress == 100) {
-                    progressBar.setVisibility(ProgressBar.GONE);
+                if (progressBar != null) {
+                    if (progress < 100 && progressBar.getVisibility() == ProgressBar.GONE) {
+                        progressBar.setVisibility(ProgressBar.VISIBLE);
+                    }
+                    progressBar.setProgress(progress);
+                    if (progress == 100) {
+                        progressBar.setVisibility(ProgressBar.GONE);
+                    }
                 }
             }
         });
@@ -69,6 +73,7 @@ public class WebViewFragment extends BaseFragment {
                 return false;
             }
         });
+
         webView.loadUrl(newsUrl);
         return view;
     }

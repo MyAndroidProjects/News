@@ -23,7 +23,7 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
     private final LayoutInflater inflater;
     private final List<Item> rssList;
     private final Context context;
-    RssNewsClickListener rssNewsClickListener;
+    private RssNewsClickListener rssNewsClickListener;
 
     public RssRecyclerViewAdapter(Context context, List<Item> rssList) {
         this.rssList = rssList;

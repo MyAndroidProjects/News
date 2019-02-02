@@ -48,7 +48,7 @@ public class RssFragment extends BaseFragment implements
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         view = super.onCreateView(inflater, container, savedInstanceState);
-       // setRecyclerAdapter();
+        // setRecyclerAdapter();
         return view;
     }
 
@@ -62,7 +62,7 @@ public class RssFragment extends BaseFragment implements
             Log.d("myLog", "rss == null");
         }
 
-            setRecyclerAdapter();
+        setRecyclerAdapter();
 
     }
 
@@ -71,10 +71,13 @@ public class RssFragment extends BaseFragment implements
         this.context = context;
     }
 
-    private void setRecyclerAdapter() {
+    public void setRecyclerAdapter() {
         adapter = new RssRecyclerViewAdapter(context, rssList);
         adapter.setRssNewsClickListener(this);
         layoutManager = new LinearLayoutManager(context);
+        if (context == null) {
+            Log.d("myLog", "context == null");
+        }
         if (rssList != null) {
             if (recyclerView != null) {
                 recyclerView.setLayoutManager(layoutManager);
