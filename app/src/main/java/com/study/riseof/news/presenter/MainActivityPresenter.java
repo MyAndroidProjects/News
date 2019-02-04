@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.study.riseof.news.model.meduza.MeduzaNews;
+import com.study.riseof.news.model.xml.Channel;
 import com.study.riseof.news.model.xml.Item;
 import com.study.riseof.news.model.xml.Rss;
 import com.study.riseof.news.network.JsonConverterRetrofit;
@@ -32,7 +33,7 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
 
     enum FragmentContent {
         RSS,
-        NOT_RSS;
+        NOT_RSS
     }
 
 
@@ -82,8 +83,6 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
 
     @Override
     public void onMenuButtonHome() {
-        Log.d("myLog", " onMenuButtonHome START");
-
         if (activityView != null) {
             if (activityView.isNavigationViewFragmentExist()) {
                 activityView.openDrawer();
@@ -99,23 +98,11 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
                 }, openDrawerDelay);
             }
         }
-
-
-        Log.d("myLog", " onMenuButtonHome END");
     }
 
     @Override
     public void onActivityDestroy() {
-        deAttachView();
-    }
-
-    @Override
-    public void deAttachView() {
         this.activityView = null;
-    }
-
-    public List<Item> getRssList() {
-        return rssList;
     }
 
     @Override
@@ -159,24 +146,26 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
 
     @Override
     public void onBackButtonPressed() {
-        activityView.closeDrawer();
-        if (!activityView.webViewGoBack()) {
-            activityView.callSuperOnBackPressed();
-            if (currentFragmentContent == FragmentContent.RSS) {
-                currentNewsSource = NewsSource.EMPTY;
-                setNewsSourceAttributesInActivityView(currentNewsSource);
-                activityView.openDrawer();
-                activityView.uncheckAllNavigationMenuItems();
-                currentFragmentContent = FragmentContent.NOT_RSS;
-            } else {
-                currentFragmentContent = FragmentContent.RSS;
+        if (activityView != null) {
+            activityView.closeDrawer();
+            if (!activityView.webViewGoBack()) {
+                activityView.callSuperOnBackPressed();
+                if (currentFragmentContent == FragmentContent.RSS) {
+                    currentNewsSource = NewsSource.EMPTY;
+                    setNewsSourceAttributesInActivityView(currentNewsSource);
+                    activityView.openDrawer();
+                    activityView.uncheckAllNavigationMenuItems();
+                    currentFragmentContent = FragmentContent.NOT_RSS;
+                } else {
+                    currentFragmentContent = FragmentContent.RSS;
+                }
             }
         }
     }
 
     @Override
     public void onNavigationMenuSelectAnyItem() {
-        Log.d("myLog", "onNavigationMenuSelectAnyItem");
+
         if (currentFragmentContent == FragmentContent.RSS) {
             getRssListFromNetAndCreateOrUpdateRssFragment(currentNewsSource.getXmlApi(), false);
         } else {
@@ -192,7 +181,6 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
     @Override
     public void onNavigationMenuItemNgs() {
         currentNewsSource = NewsSource.NGS;
-
     }
 
     @Override
@@ -244,21 +232,17 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
         xmlApi.getRss().enqueue(new Callback<Rss>() {
             @Override
             public void onResponse(@NonNull Call<Rss> call, @NonNull Response<Rss> response) {
-                if (response.body() != null) {
-                    try {
-                        Log.d("myLog", "get(0).getTitle() " + response.body().getChannel().getItemList().get(0).getTitle());
-                        rssList = response.body().getChannel().getItemList();
-                    } catch (Exception ex) {
-                        Log.d("myLog", ex.toString());
+                Rss rss = response.body();
+                if (rss != null) {
+                    Channel chanel = rss.getChannel();
+                    if (chanel != null) {
+                        rssList = chanel.getItemList();
                     }
-
                 }
                 if (activityView != null) {
                     if (needToCreateRssFragment) {
-                        Log.d("myLog", "needToCreateRssFragment");
                         activityView.createRssFragment(rssList);
                     } else {
-                        Log.d("myLog", "!!!!!!!!!! needToCreateRssFragment");
                         activityView.updateRssListAndAdapter(rssList);
                     }
                 }

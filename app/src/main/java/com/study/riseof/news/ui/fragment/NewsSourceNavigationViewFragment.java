@@ -28,7 +28,7 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Log.d("myLog"," onCreate " + this.toString());
-        setRetainInstance(false);
+      //  setRetainInstance(false);
     }
 
     @Nullable
@@ -50,7 +50,6 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
             navigationViewListener.onMenuItemCloseMainDrawer();
             return true;
         }
-        navigationViewListener.onNavigationMenuStartOfSelectAnyItem();
         switch (id) {
             case R.id.menu_item_yandex:
                 navigationViewListener.onNavigationMenuItemYandex();
@@ -98,8 +97,6 @@ public class NewsSourceNavigationViewFragment extends BaseFragment implements Na
         void onNavigationMenuItemLenta();
 
         void onNavigationMenuItemRbc();
-
-        void onNavigationMenuStartOfSelectAnyItem();
 
         void onNavigationMenuSelectAnyItem();
     }

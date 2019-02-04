@@ -4,6 +4,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -55,11 +56,12 @@ public class MainActivity extends BaseActivity implements
 
 
     private NewsSourceNavigationViewFragment newsSourceNavigationViewFragment;
+    private String tagNavigationViewFragment = "NavigationViewFragment";
     private RssFragment rssFragment;
     private WebViewFragment webViewFragment;
     private NewsFromJsonFragment newsFromJsonFragment;
     private MainActivityContract.MainActivityPresenter presenter;
-    ActionBar actionbar;
+    private ActionBar actionbar;
 
     @Override
     protected int getLayoutId() {
@@ -70,7 +72,6 @@ public class MainActivity extends BaseActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setPresenter();
-        setDrawerListener();
     }
 
     @Override
@@ -89,31 +90,6 @@ public class MainActivity extends BaseActivity implements
         Log.d("myLog", " onDestroy " + this.toString());
     }
 
-    private void setDrawerListener() {
-        drawerLayout.addDrawerListener(
-                new DrawerLayout.DrawerListener() {
-                    @Override
-                    public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
-                        presenter.onDrawerSlide(drawerView, slideOffset);
-                    }
-
-                    @Override
-                    public void onDrawerOpened(@NonNull View drawerView) {
-                        presenter.onDrawerOpened(drawerView);
-                    }
-
-                    @Override
-                    public void onDrawerClosed(@NonNull View drawerView) {
-                        presenter.onDrawerClosed(drawerView);
-                    }
-
-                    @Override
-                    public void onDrawerStateChanged(int newState) {
-                        presenter.onDrawerStateChanged(newState);
-                    }
-                }
-        );
-    }
 
     @Override
     protected void setActionBar() {
@@ -152,24 +128,26 @@ public class MainActivity extends BaseActivity implements
         }
     }
 
-    private void addFragment(int fragmentView, Fragment fragment, boolean addTransactionToBackStack) {
+    private void addFragment(int fragmentView, Fragment fragment, String tag, boolean addTransactionToBackStack) {
 
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        fragmentTransaction.add(fragmentView, fragment);
+        fragmentTransaction.add(fragmentView, fragment, tag);
         if (addTransactionToBackStack) {
             fragmentTransaction.addToBackStack(null);
+            Log.d("myLog", "addFragment addToBackStack ");
         }
         fragmentTransaction.commit();
     }
 
-    private void replaceFragment(int fragmentView, Fragment fragment, boolean addTransactionToBackStack) {
+    private void replaceFragment(int fragmentView, Fragment fragment, String tag, boolean addTransactionToBackStack) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         //  fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        fragmentTransaction.replace(fragmentView, fragment);
+        fragmentTransaction.replace(fragmentView, fragment, tag);
         if (addTransactionToBackStack) {
             fragmentTransaction.addToBackStack(null);
+            Log.d("myLog", "replaceFragment addToBackStack ");
         }
         fragmentTransaction.commit();
     }
@@ -185,7 +163,7 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void replaceRssFragmentWithWebViewFragment() {
         if (webViewFragment != null) {
-            replaceFragment(R.id.frame_news, webViewFragment, true);
+            replaceFragment(R.id.frame_news, webViewFragment, null, true);
         }
     }
 
@@ -205,26 +183,7 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void replaceRssFragmentWithNewsFromJsonFragment() {
         if (newsFromJsonFragment != null) {
-            replaceFragment(R.id.frame_news, newsFromJsonFragment, true);
-        }
-    }
-
-    @Override
-    public void setRssList(List<Item> rssList) {
-        // todo дублирование кода и null pointer
-        if (presenter != null && rssFragment != null) {
-            showShortToast("setNewsListAndContext(rssList,");
-
-            rssFragment.setNewsListAndContext(rssList, this);
-        } else {
-            if (rssFragment != null) {
-                showShortToast("setNewsListAndContext(null,");
-                rssFragment.setNewsListAndContext(null, this);
-            }
-        }
-        if (rssFragment != null) {
-            showShortToast("setNewsListAndContext(null,");
-            rssFragment.setRecyclerAdapter();
+            replaceFragment(R.id.frame_news, newsFromJsonFragment, null, true);
         }
     }
 
@@ -233,9 +192,9 @@ public class MainActivity extends BaseActivity implements
         Log.d("myLog", "createRssFragment");
         if (rssFragment == null) {
             rssFragment = new RssFragment();
-            addFragment(R.id.frame_news, rssFragment, true);
+            addFragment(R.id.frame_news, rssFragment, null, true);
         } else {
-            replaceFragment(R.id.frame_news, rssFragment, true);
+            replaceFragment(R.id.frame_news, rssFragment, null, true);
         }
         rssFragment.setRssFragmentListener(this);
 
@@ -259,11 +218,18 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void createNewsSourceNavigationViewFragment() {
         Log.d("myLog", "createNewsSourceNavigationViewFragment");
+
         if (newsSourceNavigationViewFragment == null) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            newsSourceNavigationViewFragment = (NewsSourceNavigationViewFragment) fragmentManager.findFragmentByTag(tagNavigationViewFragment);
             Log.d("myLog", "newsSourceNavigationViewFragment == null");
-            newsSourceNavigationViewFragment = new NewsSourceNavigationViewFragment();
-            addFragment(R.id.fragment_navigation_view, newsSourceNavigationViewFragment, false);
-            setDrawerListener();
+
+            if (newsSourceNavigationViewFragment == null) {
+                newsSourceNavigationViewFragment = new NewsSourceNavigationViewFragment();
+                addFragment(R.id.fragment_navigation_view, newsSourceNavigationViewFragment, tagNavigationViewFragment, false);
+            } else {
+                Log.d("myLog", " findFragmentByTag ");
+            }
         } else {
             Log.d("myLog", "newsSourceNavigationViewFragment !!= null");
         }
@@ -312,12 +278,25 @@ public class MainActivity extends BaseActivity implements
     public void uncheckAllNavigationMenuItems() {
         if (newsSourceNavigationViewFragment != null) {
             newsSourceNavigationViewFragment.uncheckAllNavigationMenuItems();
+            Log.d("myLog", "  newsSourceNavigationViewFragment.uncheckAllNavigationMenuItems() ");
+        } else {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            newsSourceNavigationViewFragment = (NewsSourceNavigationViewFragment) fragmentManager.findFragmentByTag(tagNavigationViewFragment);
+            if (newsSourceNavigationViewFragment != null) {
+                newsSourceNavigationViewFragment.uncheckAllNavigationMenuItems();
+                Log.d("myLog", " findFragmentByTag ");
+            }
+            Log.d("myLog", " uncheckAllNavigationMenuItems (newsSourceNavigationViewFragment == null) ");
         }
     }
 
     @Override
     public void cleanBackStack() {
-        getSupportFragmentManager().popBackStackImmediate();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        int count = fragmentManager.getBackStackEntryCount();
+        for (int i = 0; i < count; ++i) {
+            fragmentManager.popBackStackImmediate();
+        }
     }
 
     @Override
@@ -361,13 +340,6 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void onNavigationMenuItemRbc() {
         presenter.onNavigationMenuItemRbc();
-    }
-
-
-    @Override
-    public void onNavigationMenuStartOfSelectAnyItem() {
-        // todo удалить цепочку вызовов
-        //     presenter.onNavigationMenuStartOfSelectAnyItem();
     }
 
     @Override

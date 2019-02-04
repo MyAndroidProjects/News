@@ -30,28 +30,13 @@ public class RssFragment extends BaseFragment implements
     private RssRecyclerViewAdapter adapter;
     private Context context;
     private LinearLayoutManager layoutManager;
-    private View view;
+   // private View view;
 
 
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_rss;
     }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        view = super.onCreateView(inflater, container, savedInstanceState);
-        // setRecyclerAdapter();
-        return view;
-    }
-
 
     @Override
     public void onStart() {
@@ -61,9 +46,7 @@ public class RssFragment extends BaseFragment implements
         } else {
             Log.d("myLog", "rss == null");
         }
-
         setRecyclerAdapter();
-
     }
 
     public void setNewsListAndContext(List<Item> rssList, Context context) {

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface MainActivityContract {
+
     interface MainActivityView {
         void showShortToast(String message);
 
@@ -23,8 +24,6 @@ public interface MainActivityContract {
         boolean webViewGoBack();
 
         void cleanBackStack();
-
-        //      void createRssFragmentOld();
 
         void createWebViewFragment(String newsUrl);
 
@@ -42,13 +41,9 @@ public interface MainActivityContract {
 
         void createNewsSourceNavigationViewFragment();
 
-
-        void setRssList(List<Item> rssList);
-
         void createRssFragment(List<Item> rssList);
 
         void updateRssListAndAdapter(List<Item> rssList);
-
 
         boolean isNavigationViewFragmentExist();
     }
@@ -57,8 +52,6 @@ public interface MainActivityContract {
         void attachView(MainActivity activity);
 
         void activityOnStart();
-
-        void deAttachView();
 
         void onMenuButtonHome();
 
@@ -87,13 +80,8 @@ public interface MainActivityContract {
         void onNavigationMenuItemRbc();
 
         void onNavigationMenuSelectAnyItem();
-        //    void onNavigationMenuStartOfSelectAnyItem();
 
         void rssNewsClick(int position, String newsUrl);
-
-        List<Item> getRssList();
-
-
     }
 
     interface MainActivityDataLoader {

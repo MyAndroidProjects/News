@@ -57,7 +57,7 @@ public class NewsFromJsonFragment extends BaseFragment {
         getBundleArgs();
     }
 
-    protected void getBundleArgs() {
+    private void getBundleArgs() {
         if (this.getArguments() != null) {
             Bundle args = getArguments();
             titleText = args.getString("titleText", EMPTY_STRING);
@@ -91,7 +91,6 @@ public class NewsFromJsonFragment extends BaseFragment {
             linearLayout.addView(imageView);
         }
     }
-
 
     private void setTextToFields() {
         title.setText(titleText);

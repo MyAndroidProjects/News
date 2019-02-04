@@ -13,7 +13,7 @@ public enum XmlConverterRetrofit {
     LENTA(BuildConfig.URL_RSS_LENTA),
     RBC(BuildConfig.URL_RSS_RBC);
 
-    private String baseUrl;
+    private final String baseUrl;
     private RetrofitApi.Xml retrofitApiXml;
 
     XmlConverterRetrofit(String baseUrl) {

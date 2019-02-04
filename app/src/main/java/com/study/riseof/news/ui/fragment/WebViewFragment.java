@@ -78,13 +78,7 @@ public class WebViewFragment extends BaseFragment {
         return view;
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
-
-    protected void getBundleArgs() {
+    private void getBundleArgs() {
         if (this.getArguments() != null) {
             Bundle args = getArguments();
             newsUrl = args.getString("newsUrl", EMPTY_STRING);
