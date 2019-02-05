@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="base_url_meduza">https://meduza.io/rss/</string>
-    <string name="base_url_json_meduza">https://meduza.io/api/v3/</string>
-    <string name="base_url_rss_ngs">https://news.ngs.ru/news/rss/</string>
-
-
-</resources>

@@ -3,7 +3,6 @@ package com.study.riseof.news.presenter;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.util.Log;
-import android.view.View;
 
 import com.study.riseof.news.model.meduza.MeduzaNews;
 import com.study.riseof.news.model.xml.Channel;
@@ -18,7 +17,6 @@ import org.jsoup.Jsoup;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -30,12 +28,10 @@ import retrofit2.Response;
 
 public class MainActivityPresenter implements MainActivityContract.MainActivityPresenter {
 
-
     enum FragmentContent {
         RSS,
         NOT_RSS
     }
-
 
     private static boolean firstStart = true;
 
@@ -49,12 +45,10 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
     private FragmentContent currentFragmentContent = FragmentContent.NOT_RSS;
 
     private MainActivityPresenter() {
-        Log.d("myLog", " MainActivityPresenter КОНСТРУКТОР ");
+        Log.d("myLog", " MainActivityPresenter CONSTRUCTOR ");
     }
 
     public static MainActivityPresenter getInstance() {
-        Log.d("myLog", " MainActivityPresenter getInstance() ");
-        Log.d("myLog", " firstStart " + firstStart);
         if (instance == null) {
             instance = new MainActivityPresenter();
         }
@@ -80,20 +74,17 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
         setNewsSourceAttributesInActivityView(currentNewsSource);
     }
 
-
     @Override
     public void onMenuButtonHome() {
         if (activityView != null) {
             if (activityView.isNavigationViewFragmentExist()) {
                 activityView.openDrawer();
-                Log.d("myLog", " simple openDrawer");
             } else {
                 activityView.createNewsSourceNavigationViewFragment();
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     public void run() {
                         activityView.openDrawer();
-                        Log.d("myLog", " postDelayed openDrawer");
                     }
                 }, openDrawerDelay);
             }
@@ -106,40 +97,8 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
     }
 
     @Override
-    public void onDrawerSlide(View drawerView, float slideOffset) {
-        if (activityView != null) {
-            // activityView.showShortToast("onDrawerSlide");
-        }
-    }
-
-    @Override
-    public void onDrawerOpened(View drawerView) {
-        if (activityView != null) {
-            //activityView.showShortToast("onDrawerOpened");
-        }
-
-    }
-
-    @Override
-    public void onDrawerClosed(View drawerView) {
-        if (activityView != null) {
-            //  activityView.showShortToast("onDrawerClosed");
-        }
-
-    }
-
-    @Override
-    public void onDrawerStateChanged(int newState) {
-        if (activityView != null) {
-            //    activityView.showShortToast("onDrawerStateChanged");
-        }
-    }
-
-
-    @Override
     public void onMenuItemCloseMainDrawer() {
         if (activityView != null) {
-            //  activityView.showShortToast("onMenuItemCloseMainDrawer");
             activityView.closeDrawer();
         }
     }
@@ -147,6 +106,7 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
     @Override
     public void onBackButtonPressed() {
         if (activityView != null) {
+            activityView.findAllFragmentsByTags();
             activityView.closeDrawer();
             if (!activityView.webViewGoBack()) {
                 activityView.callSuperOnBackPressed();
@@ -165,11 +125,15 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
 
     @Override
     public void onNavigationMenuSelectAnyItem() {
-
+        if (activityView != null) {
+            activityView.findAllFragmentsByTags();
+        }
         if (currentFragmentContent == FragmentContent.RSS) {
             getRssListFromNetAndCreateOrUpdateRssFragment(currentNewsSource.getXmlApi(), false);
         } else {
-            activityView.cleanBackStack();
+            if (activityView != null) {
+                activityView.cleanBackStack();
+            }
             getRssListFromNetAndCreateOrUpdateRssFragment(currentNewsSource.getXmlApi(), true);
             currentFragmentContent = FragmentContent.RSS;
         }
@@ -205,11 +169,9 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
 
     @Override
     public void rssNewsClick(int position, String newsUrl) {
-        //   activityView.showShortToast("позиция: " + position + " newsUrl " + newsUrl);
         currentFragmentContent = FragmentContent.NOT_RSS;
         if (currentNewsSource == NewsSource.MEDUZA) {
             getNewsFromJsonAndSetToView(position, JsonConverterRetrofit.MEDUZA.getRetrofitApi());
-
         } else {
             if (activityView != null) {
                 activityView.createWebViewFragment(newsUrl);
@@ -218,7 +180,6 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
         }
     }
 
-
     private void setNewsSourceAttributesInActivityView(NewsSource source) {
         if (activityView != null) {
             activityView.setActionBarTitle(source.getNameId());
@@ -226,7 +187,6 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
             activityView.setStatusBarColor(source.getStatusBarColorId());
         }
     }
-
 
     private void getRssListFromNetAndCreateOrUpdateRssFragment(RetrofitApi.Xml xmlApi, final boolean needToCreateRssFragment) {
         xmlApi.getRss().enqueue(new Callback<Rss>() {
@@ -252,7 +212,7 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
             @Override
             public void onFailure(@NonNull Call<Rss> call, @NonNull Throwable t) {
                 activityView.showShortToast(t.toString());
-                Log.d("myLog", "NewsTestList onFailure " + t);
+                Log.d("myLog", "onFailure " + t);
             }
         });
     }
@@ -336,14 +296,10 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
                 });
 */
 
-
         // retrofit с rxjava observer
         Observer<MeduzaNews> observer = new Observer<MeduzaNews>() {
-
             @Override
             public void onSubscribe(Disposable d) {
-                Log.d("myLog", "Disposable ");
-                Log.d("myLog", "Disposable " + d.toString());
             }
 
             @Override
@@ -371,7 +327,6 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
                 .subscribe(observer);
     }
 
-
     private void setDataFromModelToNews(MeduzaNews meduzaNews) {
         if (meduzaNews != null) {
             String titleText = meduzaNews.getRoot().getTitle();
@@ -387,8 +342,16 @@ public class MainActivityPresenter implements MainActivityContract.MainActivityP
             String tempUrl = JsonConverterRetrofit.MEDUZA.getMainUrl() + meduzaNews.getRoot().getShareImage();
             ArrayList<String> imageUrlList = new ArrayList<>();
             imageUrlList.add(tempUrl);
+            if (activityView != null) {
+                activityView.createNewsFromJsonFragment(titleText, descriptionText, bodyText, pubDateText, imageUrlList);
+            }
+        }
+    }
 
-            activityView.createNewsFromJsonFragment(titleText, descriptionText, bodyText, pubDateText, imageUrlList);
+    @Override
+    public void webViewFragmentMessage(String message) {
+        if (activityView != null) {
+            activityView.showShortToast(message);
         }
     }
 }

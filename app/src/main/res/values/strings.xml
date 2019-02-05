@@ -16,11 +16,9 @@
     <string name="lenta_menu_category">Lenta news</string>
     <string name="rbc_menu_category">RBC news</string>
 
-    <string name="yandex_world">World</string>
-    <string name="yandex_politics">Politics</string>
-    <string name="yandex_incident">Incident</string>
-    <string name="yandex_computers">Technologies</string>
-    <string name="yandex_business">Economics</string>
+    <!-- web fragment messages -->
+    <string name="message_page_started">Start loading web page</string>
+    <string name="message_page_finished">Finish loading web page</string>
 
     <string name="rss_news_content">Image with news</string>
 

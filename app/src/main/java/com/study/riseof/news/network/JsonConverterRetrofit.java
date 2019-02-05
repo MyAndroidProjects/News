@@ -27,9 +27,11 @@ public enum JsonConverterRetrofit {
                 .build();
         retrofitApiJson = retrofit.create(RetrofitApi.Json.class);
     }
+
     public String getMainUrl() {
         return mainUrl;
     }
+
     public RetrofitApi.Json getRetrofitApi() {
         return retrofitApiJson;
     }

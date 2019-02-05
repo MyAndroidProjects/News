@@ -35,7 +35,13 @@ public class NewsFromJsonFragment extends BaseFragment {
     private String descriptionText;
     private String bodyText;
     private String pubDateText;
-    private ArrayList<String> imageUrlList;
+    private ArrayList<String> imageUrlList; // массив создан для примера (на будущее), в данном случае достаточно одного imageUrl
+
+    private final String titleTextArgName = "titleText";
+    private final String descriptionTextArgName = "descriptionText";
+    private final String bodyTextArgName = "bodyText";
+    private final String pubDateTextArgName = "pubDateText";
+    private final String imageUrlListArgName = "imageUrlList";
 
     @Override
     protected int getLayoutId() {
@@ -60,11 +66,11 @@ public class NewsFromJsonFragment extends BaseFragment {
     private void getBundleArgs() {
         if (this.getArguments() != null) {
             Bundle args = getArguments();
-            titleText = args.getString("titleText", EMPTY_STRING);
-            descriptionText = args.getString("descriptionText", EMPTY_STRING);
-            bodyText = args.getString("bodyText", EMPTY_STRING);
-            pubDateText = args.getString("pubDateText", EMPTY_STRING);
-            imageUrlList = args.getStringArrayList("imageUrlList");
+            titleText = args.getString(titleTextArgName, EMPTY_STRING);
+            descriptionText = args.getString(descriptionTextArgName, EMPTY_STRING);
+            bodyText = args.getString(bodyTextArgName, EMPTY_STRING);
+            pubDateText = args.getString(pubDateTextArgName, EMPTY_STRING);
+            imageUrlList = args.getStringArrayList(imageUrlListArgName);
         } else {
             titleText = null;
             descriptionText = null;

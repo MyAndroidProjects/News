@@ -1,4 +1,4 @@
 package com.study.riseof.news.model.meduza;
 
-public class Prefs {
+class Prefs {
 }

@@ -1,7 +1,5 @@
 package com.study.riseof.news.presenter;
 
-import android.view.View;
-
 import com.study.riseof.news.model.xml.Item;
 import com.study.riseof.news.ui.activity.MainActivity;
 
@@ -29,7 +27,11 @@ public interface MainActivityContract {
 
         void replaceRssFragmentWithWebViewFragment();
 
-        void createNewsFromJsonFragment(String titleText, String descriptionText, String bodyText, String pubDateText, ArrayList<String> imageUrlList);
+        void createNewsFromJsonFragment(String titleText,
+                                        String descriptionText,
+                                        String bodyText,
+                                        String pubDateText,
+                                        ArrayList<String> imageUrlList);
 
         void replaceRssFragmentWithNewsFromJsonFragment();
 
@@ -46,6 +48,8 @@ public interface MainActivityContract {
         void updateRssListAndAdapter(List<Item> rssList);
 
         boolean isNavigationViewFragmentExist();
+
+        void findAllFragmentsByTags();
     }
 
     interface MainActivityPresenter {
@@ -56,14 +60,6 @@ public interface MainActivityContract {
         void onMenuButtonHome();
 
         void onActivityDestroy();
-
-        void onDrawerSlide(View drawerView, float slideOffset);
-
-        void onDrawerOpened(View drawerView);
-
-        void onDrawerClosed(View drawerView);
-
-        void onDrawerStateChanged(int newState);
 
         void onBackButtonPressed();
 
@@ -82,9 +78,7 @@ public interface MainActivityContract {
         void onNavigationMenuSelectAnyItem();
 
         void rssNewsClick(int position, String newsUrl);
-    }
 
-    interface MainActivityDataLoader {
+        void webViewFragmentMessage(String message);
     }
-
 }

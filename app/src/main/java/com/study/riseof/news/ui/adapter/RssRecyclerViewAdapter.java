@@ -47,7 +47,7 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
         holder.getAdapterPosition();
         int imageWidth = context.getResources().getInteger(R.integer.size_xxxxxlarge_integer);
         int imageHeight = context.getResources().getInteger(R.integer.size_xxxxxlarge_integer);
-        if(item.getEnclosureList()!=null)   {
+        if (item.getEnclosureList() != null) {
             Picasso.get()
                     .load(item.getEnclosureList().get(0).getUrl())
                     .placeholder(R.drawable.icon_default_news_72)
@@ -55,8 +55,6 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
                     .centerCrop()
                     .into(holder.newsImage);
         }
-
-
         holder.rssItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,7 +63,6 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
                 }
             }
         });
-
     }
 
     @Override
@@ -88,7 +85,6 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
         Holder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
-
         }
     }
 

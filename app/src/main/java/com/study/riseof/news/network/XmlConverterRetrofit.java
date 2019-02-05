@@ -22,7 +22,6 @@ public enum XmlConverterRetrofit {
     }
 
     private void buildRetrofit() {
-       // Log.d("myLog", "buildRetrofit " + baseUrl);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .client(new OkHttpClient())

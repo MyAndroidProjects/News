@@ -34,5 +34,4 @@ public interface RetrofitApi {
         @GET()
         Observable<MeduzaNews> getObservableData(@Url String url);
     }
-
 }

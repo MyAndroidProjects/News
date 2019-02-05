@@ -1,7 +1,6 @@
 package com.study.riseof.news.ui.fragment;
 
 import android.annotation.TargetApi;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,9 +8,10 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
@@ -27,7 +27,9 @@ public class WebViewFragment extends BaseFragment {
     @BindView(R.id.web_view)
     public WebView webView;
 
+    private WebViewListener webViewListener;
     private String newsUrl;
+    private final String newsUrlArgName = "newsUrl";
 
     @Override
     protected int getLayoutId() {
@@ -59,18 +61,53 @@ public class WebViewFragment extends BaseFragment {
             @SuppressWarnings("deprecation")
             @Override
             public boolean shouldOverrideUrlLoading(WebView webView, String url) {
-                return shouldOverrideUrlLoading(url);
+                return false;
             }
 
             @TargetApi(Build.VERSION_CODES.N)
             @Override
             public boolean shouldOverrideUrlLoading(WebView webView, WebResourceRequest request) {
-                Uri uri = request.getUrl();
-                return shouldOverrideUrlLoading(uri.toString());
+                return false;
             }
 
-            private boolean shouldOverrideUrlLoading(final String url) {
-                return false;
+/*            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                if (webViewListener != null) {
+                    webViewListener.webViewFragmentMessage(getResources().getString(R.string.message_page_started));
+                }
+            }*/
+
+/*
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                if (webViewListener != null) {
+                    webViewListener.webViewFragmentMessage(getResources().getString(R.string.message_page_finished));
+                }
+            }
+*/
+
+            @SuppressWarnings("deprecation")
+            @Override
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                if (webViewListener != null) {
+                    webViewListener.webViewFragmentMessage(description);
+                }
+            }
+
+            @TargetApi(Build.VERSION_CODES.M)
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+                if (webViewListener != null) {
+                    webViewListener.webViewFragmentMessage(error.toString());
+                }
+            }
+
+            @TargetApi(Build.VERSION_CODES.M)
+            @Override
+            public void onReceivedHttpError(WebView view, WebResourceRequest request, WebResourceResponse errorResponse) {
+                if (webViewListener != null) {
+                    webViewListener.webViewFragmentMessage(errorResponse.toString());
+                }
             }
         });
 
@@ -81,9 +118,18 @@ public class WebViewFragment extends BaseFragment {
     private void getBundleArgs() {
         if (this.getArguments() != null) {
             Bundle args = getArguments();
-            newsUrl = args.getString("newsUrl", EMPTY_STRING);
+            newsUrl = args.getString(newsUrlArgName, EMPTY_STRING);
         } else {
             newsUrl = EMPTY_STRING;
         }
     }
+
+    public void setWebViewListener(WebViewListener webViewListener) {
+        this.webViewListener = webViewListener;
+    }
+
+    public interface WebViewListener {
+        void webViewFragmentMessage(String message);
+    }
+
 }
