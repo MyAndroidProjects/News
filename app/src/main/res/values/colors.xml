@@ -3,4 +3,69 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <!-- color list -->
+    <color name="red_50">#FFEBEE</color>
+    <color name="red_100">#FFCDD2</color>
+    <color name="red_500">#F44336</color>
+    <color name="red_700">#D32F2F</color>
+    <color name="orange_50">#FFF3E0</color>
+    <color name="orange_100">#FFE0B2</color>
+    <color name="orange_500">#FF9800</color>
+    <color name="orange_700">#F57C00</color>
+    <color name="yellow_50">#FFFDE7</color>
+    <color name="yellow_100">#FFF9C4</color>
+    <color name="yellow_500">#FFEB3B</color>
+    <color name="yellow_700">#FBC02D</color>
+    <color name="green_50">#E8F5E9</color>
+    <color name="green_100">#C8E6C9</color>
+    <color name="green_500">#4CAF50</color>
+    <color name="green_700">#388E3C</color>
+    <color name="light_blue_50">#E1F5FE</color>
+    <color name="light_blue_100">#B3E5FC</color>
+    <color name="light_blue_500">#03A9F4</color>
+    <color name="light_blue_700">#0288D1</color>
+    <color name="indigo_50">#E8EAF6</color>
+    <color name="indigo_100">#C5CAE9</color>
+    <color name="indigo_500">#3F51B5</color>
+    <color name="indigo_700">#303F9F</color>
+    <color name="cyan_50">#E0F7FA</color>
+    <color name="cyan_100">#B2EBF2</color>
+    <color name="cyan_500">#00BCD4</color>
+    <color name="cyan_700">#0097A7</color>
+    <color name="deep_purple_50">#EDE7F6</color>
+    <color name="deep_purple_100">#D1C4E9</color>
+    <color name="deep_purple_500">#673AB7</color>
+    <color name="deep_purple_700">#512DA8</color>
+    <color name="gray_50">#FAFAFA</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_700">#616161</color>
+
+    <!-- default colors -->
+    <color name="primary_background">@color/cyan_50</color>
+    <color name="secondary_background">@color/light_blue_50</color>
+
+
+
+    <!-- colors for different news source -->
+    <!-- default -->
+    <color name="default_action_bar">@color/cyan_500</color>
+    <color name="default_status_bar">@color/cyan_700</color>
+    <!-- ngs.ru -->
+    <color name="ngs_action_bar">@color/indigo_500</color>
+    <color name="ngs_status_bar">@color/indigo_700</color>
+    <!-- lenta.ru -->
+    <color name="lenta_action_bar">@color/gray_500</color>
+    <color name="lenta_status_bar">@color/gray_700</color>
+    <!-- meduza.ru -->
+    <color name="meduza_action_bar">@color/green_500</color>
+    <color name="meduza_status_bar">@color/green_700</color>
+    <!-- yandex.ru -->
+    <color name="yandex_action_bar">@color/red_500</color>
+    <color name="yandex_status_bar">@color/red_700</color>
+    <!-- rbc.ru -->
+    <color name="rbc_action_bar">@color/orange_500</color>
+    <color name="rbc_status_bar">@color/orange_700</color>
+
+
 </resources>

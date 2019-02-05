@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">News</string>
+
+    <!-- news sources -->
+    <string name="empty_source_name"/>
+    <string name="yandex_source_name">yandex.ru</string>
+    <string name="meduza_source_name">meduza.ru</string>
+    <string name="ngs_source_name">ngs.ru</string>
+    <string name="lenta_source_name">lenta.ru</string>
+    <string name="rbc_source_name">rbc.ru</string>
+
+    <!-- menu categories -->
+    <string name="yandex_menu_category">Yandex news</string>
+    <string name="meduza_menu_category">Meduza news</string>
+    <string name="ngs_menu_category">Ngs news</string>
+    <string name="lenta_menu_category">Lenta news</string>
+    <string name="rbc_menu_category">RBC news</string>
+
+    <!-- web fragment messages -->
+    <string name="message_page_started">Start loading web page</string>
+    <string name="message_page_finished">Finish loading web page</string>
+
+    <string name="rss_news_content">Image with news</string>
+
+
 </resources>

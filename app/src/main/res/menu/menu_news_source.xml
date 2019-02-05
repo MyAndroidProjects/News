@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/menu_item_back"
+            android:icon="@drawable/ic_baseline_arrow_back_24px"
+            tools:ignore="MenuTitle" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_baseline_rss_feed_24px"
+            android:id="@+id/menu_item_ngs"
+            android:title="@string/ngs_menu_category"/>
+
+        <item
+            android:id="@+id/menu_item_meduza"
+            android:icon="@drawable/ic_baseline_rss_feed_24px"
+            android:title="@string/meduza_menu_category" />
+        <item
+            android:icon="@drawable/ic_baseline_arrow_forward_24px"
+            android:id="@+id/menu_item_yandex"
+            android:title="@string/yandex_menu_category" />
+        <item
+            android:icon="@drawable/ic_baseline_bookmarks_24px"
+            android:id="@+id/menu_item_lenta"
+            android:title="@string/lenta_menu_category"/>
+        <item
+            android:icon="@drawable/ic_baseline_bookmarks_24px"
+            android:id="@+id/menu_item_rbc"
+            android:title="@string/rbc_menu_category" />
+    </group>
+</menu>
