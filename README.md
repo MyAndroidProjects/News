@@ -27,7 +27,10 @@ Navigator view, выполнен в отдельном фрагменте, от�
 ### <a name="screenshots"></a>Screenshots:
 
 ![Start screen](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/start_screen.png)
-![Open navigation drawer](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/rbc_open_nav_drawer.png)
-![RSS from meduza.io](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/meduza_rss.png)
-![news](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/meduza_news.png)
-![RSS from lenta.ru](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/lenta_rss.png)
+![Rbc navigation drawer](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/rbc_open_nav_drawer.png)
+![Meduza rss](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/meduza_rss.png)
+![Meduza news](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/meduza_news.png)
+![Lenta rss](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/lenta_rss.png)
+![Lenta web](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/lenta_web.png)
+![Ngs rss](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/ngs_rss.png)
+![Yandex navigation drawer](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/yandex_nav_drawer.png)
