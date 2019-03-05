@@ -3,12 +3,15 @@ package com.study.riseof.news.presenter;
 import android.os.Handler;
 import android.util.Log;
 
+import com.study.riseof.news.NewsSource;
+
 
 public class MainActivityPresenter implements MainActivityContract.Presenter {
 
 
     private static MainActivityPresenter instance;
     private MainActivityContract.Navigator navigator;
+    private MainActivityContract.View activityView;
 
     private MainActivityPresenter(MainActivityContract.Navigator navigator) {
         this.navigator = navigator;
@@ -23,6 +26,11 @@ public class MainActivityPresenter implements MainActivityContract.Presenter {
     }
 
     @Override
+    public void setActivityView(MainActivityContract.View activityView) {
+        this.activityView = activityView;
+    }
+
+    @Override
     public void activityFirstLaunch() {
         if (navigator != null) {
             navigator.createNavigatorViewFragment();
@@ -30,9 +38,21 @@ public class MainActivityPresenter implements MainActivityContract.Presenter {
     }
 
     @Override
+    public void backStackIsEmpty() {
+        if (activityView != null) {
+            activityView.openDrawer();
+            activityView.setCurrentNewsSource(NewsSource.EMPTY);
+            activityView.setNewsSourceAttributes(NewsSource.EMPTY);
+        }
+        else {
+            Log.d("myLog", " backStackIsEmpty activityView == null ");
+        }
+    }
+
+    @Override
     public void onMenuButtonHome() {
         if (navigator != null) {
-            navigator.createNavigatorViewFragment();
+            navigator.openDrawer();
            // navigator.openDrawer();
         }
     }

@@ -81,7 +81,7 @@ public class MainActivity extends BaseActivity implements
     protected void getBundleArgs(Bundle savedInstanceState) {
         if (savedInstanceState != null) {
             isFirstLaunch = savedInstanceState.getBoolean(isFirsLaunchVarName, true);
-            currentNewsSourceName =savedInstanceState.getString(currentNewsSourceNameVarName,NewsSource.EMPTY.name());
+            currentNewsSourceName = savedInstanceState.getString(currentNewsSourceNameVarName, NewsSource.EMPTY.name());
             currentNewsSource = NewsSource.valueOf(currentNewsSourceName);
         } else {
             isFirstLaunch = true;
@@ -92,6 +92,10 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void onStart() {
         super.onStart();
+        if (presenter != null) {
+            presenter.setActivityView(this);
+            Log.d("myLog", "onStart ActivityView ======  THIS ");
+        }
         setNewsSourceAttributes(currentNewsSource);
         if (manager != null) {
             manager.setMainActivityToNavigationManager(this);
@@ -123,6 +127,16 @@ public class MainActivity extends BaseActivity implements
             Log.d("myLog", " null manager == null ");
         }
 // todo отписать активити от менеджера
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (presenter != null) {
+            presenter.setActivityView(null);
+            Log.d("myLog", " ActivityView ======  NULL ");
+        }
+
     }
 
     @Override
@@ -220,6 +234,12 @@ public class MainActivity extends BaseActivity implements
     public void onBackButtonPressed() {
         Log.d("myLog", " onBackButtonPressed ");
         super.onBackPressed();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        int count = fragmentManager.getBackStackEntryCount();
+        if (count == 0) {
+            presenter.backStackIsEmpty();
+        }
+        Log.d("myLog", " BackStack COUNT = " + count);
     }
 
     @Override
@@ -247,7 +267,10 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void createNavigatorViewFragment() {
         NavigationViewFragment fragment = new NavigationViewFragment();
-        replaceFragment(R.id.navigation_view_fragment, fragment);
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        fragmentTransaction.add(R.id.navigation_view_fragment, fragment);
+        fragmentTransaction.commit();
     }
 
     @Override
