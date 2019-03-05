@@ -17,6 +17,9 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 import com.study.riseof.news.R;
+import com.study.riseof.news.presenter.WebViewFragmentContract;
+import com.study.riseof.news.presenter.WebViewFragmentNavigator;
+import com.study.riseof.news.presenter.WebViewFragmentPresenter;
 
 import butterknife.BindView;
 
@@ -27,9 +30,11 @@ public class WebViewFragment extends BaseFragment {
     @BindView(R.id.web_view)
     public WebView webView;
 
-    private WebViewListener webViewListener;
     private String newsUrl;
     private final String newsUrlArgName = "newsUrl";
+
+    private WebViewFragmentContract.Presenter presenter;
+    private WebViewFragmentContract.Navigator navigator;
 
     @Override
     protected int getLayoutId() {
@@ -70,43 +75,27 @@ public class WebViewFragment extends BaseFragment {
                 return false;
             }
 
-/*            @Override
-            public void onPageStarted(WebView view, String url, Bitmap favicon) {
-                if (webViewListener != null) {
-                    webViewListener.webViewFragmentMessage(getResources().getString(R.string.message_page_started));
-                }
-            }*/
-
-/*
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                if (webViewListener != null) {
-                    webViewListener.webViewFragmentMessage(getResources().getString(R.string.message_page_finished));
-                }
-            }
-*/
-
             @SuppressWarnings("deprecation")
             @Override
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-                if (webViewListener != null) {
-                    webViewListener.webViewFragmentMessage(description);
+                if (presenter != null) {
+                    presenter.receivedError(description);
                 }
             }
 
             @TargetApi(Build.VERSION_CODES.M)
             @Override
             public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
-                if (webViewListener != null) {
-                    webViewListener.webViewFragmentMessage(error.toString());
+                if (presenter != null) {
+                    presenter.receivedError(error.toString());
                 }
             }
 
             @TargetApi(Build.VERSION_CODES.M)
             @Override
             public void onReceivedHttpError(WebView view, WebResourceRequest request, WebResourceResponse errorResponse) {
-                if (webViewListener != null) {
-                    webViewListener.webViewFragmentMessage(errorResponse.toString());
+                if (presenter != null) {
+                    presenter.receivedHttpError(errorResponse.toString());
                 }
             }
         });
@@ -124,12 +113,16 @@ public class WebViewFragment extends BaseFragment {
         }
     }
 
-    public void setWebViewListener(WebViewListener webViewListener) {
-        this.webViewListener = webViewListener;
+
+    @Override
+    public void setPresenterAndNavigator() {
+        navigator = WebViewFragmentNavigator.getInstance();
+        presenter = WebViewFragmentPresenter.getInstance(navigator);
     }
 
-    public interface WebViewListener {
-        void webViewFragmentMessage(String message);
+    @Override
+    public void nullifyPresenterAndNavigator() {
+        navigator = null;
+        presenter = null;
     }
-
 }

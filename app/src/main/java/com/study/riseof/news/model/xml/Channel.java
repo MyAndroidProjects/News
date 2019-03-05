@@ -5,6 +5,7 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.AccessLevel;
@@ -43,5 +44,5 @@ public class Channel {
     List<Link> linkList;
 
     @ElementList(inline = true, entry = "item", required = false)
-    private List<Item> itemList;
+    private ArrayList<Item> itemList;
 }

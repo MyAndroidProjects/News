@@ -1,5 +1,9 @@
 package com.study.riseof.news.model.meduza;
 
+import android.content.Context;
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -17,7 +21,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @AllArgsConstructor
-public class Root {
+public class Root implements Parcelable {
     @SerializedName("second_title")
     @Expose
     String secondTitle;
@@ -105,4 +109,108 @@ public class Root {
     @SerializedName("full")
     @Expose
     Boolean full;
+
+
+    public static final Creator<Root> CREATOR = new Creator<Root>() {
+        @Override
+        public Root createFromParcel(Parcel in) {
+
+            String secondTitle = in.readString();
+            List<Object> authors = null;
+            in.readTypedList(null, null);
+            String documentType = in.readString();
+            Source source = null;
+            in.readValue(null);
+            Boolean pushed = (in.readByte() != 0);
+            NewsImage image = null;
+            in.readValue(null);
+            String shareImage = in.readString();
+            String shareTitle = in.readString();
+            Content content = in.readParcelable(Content.class.getClassLoader());
+            Boolean withBanners = (in.readByte() != 0);
+            Boolean fullWidth = (in.readByte() != 0);
+            String description = in.readString();
+            Prefs prefs = null;
+            in.readValue(null);
+            int version = in.readInt();
+            String title = in.readString();
+            String url = in.readString();
+            long modifiedAt = in.readLong();
+            int publishedAt = in.readInt();
+            String pubDate = in.readString();
+            NewsTag tag = null;
+            in.readValue(null);
+            Footer footer = null;
+            in.readValue(null);
+            Boolean full = (in.readByte() != 0);
+
+            return new Root(
+                    secondTitle,
+                    authors,
+                    documentType,
+                    source,
+                    pushed,
+                    image,
+                    shareImage,
+                    shareTitle,
+                    content,
+                    withBanners,
+                    fullWidth,
+                    description,
+                    prefs,
+                    version,
+                    title,
+                    url,
+                    modifiedAt,
+                    publishedAt,
+                    pubDate,
+                    tag,
+                    footer,
+                    full
+            );
+        }
+
+        @Override
+        public Root[] newArray(int size) {
+            return new Root[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+
+        dest.writeString(secondTitle);
+        // List<Object> authors = null;
+        dest.writeTypedList(null);
+        dest.writeString(documentType);
+        // Source source;
+        dest.writeValue(null);
+        dest.writeByte((byte) (pushed ? 1 : 0));
+        // NewsImage image;
+        dest.writeValue(null);
+        dest.writeString(shareImage);
+        dest.writeString(shareTitle);
+        dest.writeParcelable(content, flags);
+        dest.writeByte((byte) (withBanners ? 1 : 0));
+        dest.writeByte((byte) (fullWidth ? 1 : 0));
+        dest.writeString(description);
+        // Prefs prefs;
+        dest.writeValue(null);
+        dest.writeInt(version);
+        dest.writeString(title);
+        dest.writeString(url);
+        dest.writeLong(modifiedAt);
+        dest.writeInt(publishedAt);
+        dest.writeString(pubDate);
+        // NewsTag tag;
+        dest.writeValue(null);
+        // Footer footer;
+        dest.writeValue(null);
+        dest.writeByte((byte) (full ? 1 : 0));
+    }
 }

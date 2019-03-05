@@ -4,37 +4,76 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.study.riseof.news.presenter.BaseContract;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment implements BaseContract.View {
     protected Unbinder unbinder;
     protected View view;
     protected final String EMPTY_STRING = "";
 
     protected abstract int getLayoutId();
 
+
     @Nullable
     @Override
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         view = inflater.inflate(getLayoutId(), container, false);
         unbinder = ButterKnife.bind(this, view);
+        Log.d("myLog", " NavigationView onCreateView "+ this.toString());
         return view;
     }
 
+
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setRetainInstance(true);
+    public void onStart() {
+        super.onStart();
+       setPresenterAndNavigator();
+        Log.d("myLog", " Fragment on START "+ this.toString());
+    }
+
+
+
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        nullifyPresenterAndNavigator();
+        Log.d("myLog", " Fragment on STOP "+ this.toString());
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+        Log.d("myLog", " Fragment  onDestroyView "+ this.toString());
     }
+
+    abstract public void nullifyPresenterAndNavigator();
+    abstract public void setPresenterAndNavigator();
+   /*  abstract public void setPresenterAndNavigator();{
+        setNavigator();
+        setActivityToNavigator();
+        setPresenter();
+    }*/
+
+/*    private void nullifyPresenterAndNavigator() {
+        nullifyNavigator();
+        nullifyPresenter();
+    }*/
+
+   // protected abstract <T> T kkk();
+
+  /*   public <T> T testFun(T t){
+        T n = t;
+        return n;
+    }*/
+
 }

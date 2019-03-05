@@ -14,6 +14,7 @@ import com.squareup.picasso.Picasso;
 import com.study.riseof.news.R;
 import com.study.riseof.news.model.xml.Item;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -21,13 +22,15 @@ import butterknife.ButterKnife;
 
 public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerViewAdapter.Holder> {
     private final LayoutInflater inflater;
-    private final List<Item> rssList;
-    private final Context context;
+    private final ArrayList<Item> rssList;
     private RssNewsClickListener rssNewsClickListener;
+    private int imageWidth;
+    private int imageHeight;
 
-    public RssRecyclerViewAdapter(Context context, List<Item> rssList) {
+    public RssRecyclerViewAdapter(Context context, ArrayList<Item> rssList) {
         this.rssList = rssList;
-        this.context = context;
+        imageWidth = context.getResources().getInteger(R.integer.size_xxxxxlarge_integer);
+        imageHeight = context.getResources().getInteger(R.integer.size_xxxxxlarge_integer);
         this.inflater = LayoutInflater.from(context);
     }
 
@@ -45,8 +48,6 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
         holder.newsCutText.setText(item.getDescription());
         holder.pubDate.setText((item.getPubDate()));
         holder.getAdapterPosition();
-        int imageWidth = context.getResources().getInteger(R.integer.size_xxxxxlarge_integer);
-        int imageHeight = context.getResources().getInteger(R.integer.size_xxxxxlarge_integer);
         if (item.getEnclosureList() != null) {
             Picasso.get()
                     .load(item.getEnclosureList().get(0).getUrl())

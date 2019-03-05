@@ -43,6 +43,16 @@
             android:textAlignment="textStart"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Overline" />
 
+        <ImageView
+            android:id="@+id/image_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/size_xsmall"
+            android:contentDescription="@string/image_json_news_content_description"
+            android:padding="@dimen/size_xlarge"
+            android:scaleType="centerInside" />
+
     </LinearLayout>
 
 </ScrollView>

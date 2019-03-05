@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">News</string>
+    <string name="app_name">Newsfeed</string>
 
     <!-- news sources -->
-    <string name="empty_source_name"/>
+    <string name="empty_source_name" />
     <string name="yandex_source_name">yandex.ru</string>
     <string name="meduza_source_name">meduza.ru</string>
     <string name="ngs_source_name">ngs.ru</string>
@@ -20,7 +20,8 @@
     <string name="message_page_started">Start loading web page</string>
     <string name="message_page_finished">Finish loading web page</string>
 
+    <!-- content descriptions -->
     <string name="rss_news_content">Image with news</string>
-
+    <string name="image_json_news_content_description">Image with news</string>
 
 </resources>

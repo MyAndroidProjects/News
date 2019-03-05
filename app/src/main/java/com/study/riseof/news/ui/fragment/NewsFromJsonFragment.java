@@ -12,7 +12,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+import com.study.riseof.news.NewsSource;
 import com.study.riseof.news.R;
+import com.study.riseof.news.model.meduza.MeduzaNews;
+import com.study.riseof.news.network.JsonConverterRetrofit;
+
+import org.jsoup.Jsoup;
 
 import java.util.ArrayList;
 
@@ -28,20 +33,18 @@ public class NewsFromJsonFragment extends BaseFragment {
     TextView body;
     @BindView(R.id.pub_date)
     TextView pubDate;
+    @BindView(R.id.image_news)
+    ImageView imageNews;
+
     @BindView(R.id.news_from_json_fragment_layout)
     LinearLayout linearLayout;
 
-    private String titleText;
-    private String descriptionText;
-    private String bodyText;
-    private String pubDateText;
-    private ArrayList<String> imageUrlList; // массив создан для примера (на будущее), в данном случае достаточно одного imageUrl
 
-    private final String titleTextArgName = "titleText";
-    private final String descriptionTextArgName = "descriptionText";
-    private final String bodyTextArgName = "bodyText";
-    private final String pubDateTextArgName = "pubDateText";
-    private final String imageUrlListArgName = "imageUrlList";
+    private MeduzaNews meduzaNews = null;
+    private String meduzaNewsVarName = "meduzaNews";
+    private String imageUrl = null;
+    private String imageUrlVarName = "imageUrl";
+
 
     @Override
     protected int getLayoutId() {
@@ -52,6 +55,9 @@ public class NewsFromJsonFragment extends BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
+        if (savedInstanceState != null) {
+            meduzaNews = savedInstanceState.getParcelable(meduzaNewsVarName);
+        }
         setTextToFields();
         createAndDownloadImages();
         return view;
@@ -60,48 +66,68 @@ public class NewsFromJsonFragment extends BaseFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getBundleArgs();
+        getBundleArgs(savedInstanceState);
     }
 
-    private void getBundleArgs() {
-        if (this.getArguments() != null) {
-            Bundle args = getArguments();
-            titleText = args.getString(titleTextArgName, EMPTY_STRING);
-            descriptionText = args.getString(descriptionTextArgName, EMPTY_STRING);
-            bodyText = args.getString(bodyTextArgName, EMPTY_STRING);
-            pubDateText = args.getString(pubDateTextArgName, EMPTY_STRING);
-            imageUrlList = args.getStringArrayList(imageUrlListArgName);
-        } else {
-            titleText = null;
-            descriptionText = null;
-            bodyText = null;
-            pubDateText = null;
-            imageUrlList = null;
+    private void getBundleArgs(Bundle savedInstanceState) {
+        Bundle args = getArguments();
+        if (args != null) {
+            meduzaNews = args.getParcelable(meduzaNewsVarName);
+            if(meduzaNews ==null){
+                meduzaNews = savedInstanceState.getParcelable(meduzaNewsVarName);            }
         }
+        if (savedInstanceState != null) {
+            imageUrl = savedInstanceState.getString(imageUrlVarName, null);
+        } else {
+            imageUrl = null;
+        }
+    }
+
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(imageUrlVarName, imageUrl);
+        outState.putParcelable(meduzaNewsVarName,meduzaNews);
     }
 
     private void createAndDownloadImages() {
-        if (imageUrlList == null) {
-            return;
+        if (imageUrl == null) {
+            imageUrl = JsonConverterRetrofit.MEDUZA.getMainUrl() + meduzaNews.getRoot().getShareImage();
         }
-        LinearLayout.LayoutParams imageViewLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        Context context = getContext();
-        for (String url :
-                imageUrlList) {
-            ImageView imageView = new ImageView(context);
-            Picasso.get()
-                    .load(url)
-                    .placeholder(R.drawable.icon_default_news_72)
-                    .into(imageView);
-            imageView.setLayoutParams(imageViewLayoutParams);
-            linearLayout.addView(imageView);
-        }
+        Picasso.get()
+                .load(imageUrl)
+                .placeholder(R.drawable.icon_default_news_72)
+                .into(imageNews);
     }
 
     private void setTextToFields() {
-        title.setText(titleText);
-        description.setText(descriptionText);
-        body.setText(bodyText);
-        pubDate.setText(pubDateText);
+        if (meduzaNews != null) {
+            String titleText = meduzaNews.getRoot().getTitle();
+            String descriptionText = meduzaNews.getRoot().getDescription();
+            String bodyTextHtml = meduzaNews.getRoot().getContent().getBody();
+            String bodyText;
+            if (bodyTextHtml != null) {
+                bodyText = Jsoup.parse(bodyTextHtml).text();
+            } else {
+                bodyText = EMPTY_STRING;
+            }
+            String pubDateText = meduzaNews.getRoot().getPubDate();
+
+            title.setText(titleText);
+            description.setText(descriptionText);
+            body.setText(bodyText);
+            pubDate.setText(pubDateText);
+        }
+    }
+
+    @Override
+    public void nullifyPresenterAndNavigator() {
+
+    }
+
+    @Override
+    public void setPresenterAndNavigator() {
+
     }
 }
