@@ -1,15 +1,13 @@
-package com.study.riseof.news.presenter;
+package com.study.riseof.news.fragment.navigationView;
 
 import com.study.riseof.news.NewsSource;
 import com.study.riseof.news.model.xml.Item;
+import com.study.riseof.news.BaseContract;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public interface NavigationViewFragmentContract {
     interface View extends BaseContract.View {
-
-        void uncheckAllNavigationMenuItems();
     }
 
     interface Presenter extends BaseContract.Presenter {
@@ -27,7 +25,7 @@ public interface NavigationViewFragmentContract {
 
         void onNavigationMenuSelectAnyItem();
 
-        void fragmentIsOnResume();
+        void setView(NavigationViewFragmentContract.View view);
     }
 
     interface Navigator extends BaseContract.Navigator {
@@ -40,8 +38,7 @@ public interface NavigationViewFragmentContract {
 
         void createRssFragment(ArrayList<Item> rssList, int sourceNameId);
 
-        void openDrawer();
-
         void setCurrentNewsSource(NewsSource currentNewsSource);
+
     }
 }

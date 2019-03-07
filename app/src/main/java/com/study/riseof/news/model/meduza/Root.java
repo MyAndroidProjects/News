@@ -117,18 +117,18 @@ public class Root implements Parcelable {
 
             String secondTitle = in.readString();
             List<Object> authors = null;
-            in.readTypedList(null, null);
+//            in.readTypedList(null, null);
             String documentType = in.readString();
             Source source = null;
             in.readValue(null);
-            Boolean pushed = (in.readByte() != 0);
+            Boolean pushed = null;
             NewsImage image = null;
             in.readValue(null);
             String shareImage = in.readString();
             String shareTitle = in.readString();
             Content content = in.readParcelable(Content.class.getClassLoader());
-            Boolean withBanners = (in.readByte() != 0);
-            Boolean fullWidth = (in.readByte() != 0);
+            Boolean withBanners = null;
+            Boolean fullWidth = null;
             String description = in.readString();
             Prefs prefs = null;
             in.readValue(null);
@@ -142,7 +142,7 @@ public class Root implements Parcelable {
             in.readValue(null);
             Footer footer = null;
             in.readValue(null);
-            Boolean full = (in.readByte() != 0);
+            Boolean full = null;
 
             return new Root(
                     secondTitle,
@@ -186,18 +186,18 @@ public class Root implements Parcelable {
 
         dest.writeString(secondTitle);
         // List<Object> authors = null;
-        dest.writeTypedList(null);
+    //    dest.writeTypedList(null);
         dest.writeString(documentType);
         // Source source;
         dest.writeValue(null);
-        dest.writeByte((byte) (pushed ? 1 : 0));
+       // dest.writeByte((byte) (pushed ? 1 : 0));
         // NewsImage image;
         dest.writeValue(null);
         dest.writeString(shareImage);
         dest.writeString(shareTitle);
         dest.writeParcelable(content, flags);
-        dest.writeByte((byte) (withBanners ? 1 : 0));
-        dest.writeByte((byte) (fullWidth ? 1 : 0));
+      //  dest.writeByte((byte) (withBanners ? 1 : 0));
+       // dest.writeByte((byte) (fullWidth ? 1 : 0));
         dest.writeString(description);
         // Prefs prefs;
         dest.writeValue(null);
@@ -211,6 +211,6 @@ public class Root implements Parcelable {
         dest.writeValue(null);
         // Footer footer;
         dest.writeValue(null);
-        dest.writeByte((byte) (full ? 1 : 0));
+     //   dest.writeByte((byte) (full ? 1 : 0));
     }
 }

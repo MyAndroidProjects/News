@@ -1,11 +1,11 @@
-package com.study.riseof.news.presenter;
+package com.study.riseof.news.fragment.navigationView;
 
 import android.util.Log;
 
 import com.study.riseof.news.NewsSource;
 import com.study.riseof.news.model.xml.Item;
-import com.study.riseof.news.ui.activity.Navigation;
-import com.study.riseof.news.ui.activity.NavigationManager;
+import com.study.riseof.news.Navigation;
+import com.study.riseof.news.NavigationManager;
 
 import java.util.ArrayList;
 
@@ -15,6 +15,7 @@ public class NavigationViewFragmentNavigator
 
     private static NavigationViewFragmentNavigator instance;
     private Navigation.Manager manager;
+
 
     private NavigationViewFragmentNavigator() {
         manager = NavigationManager.getManagerInstance();
@@ -36,24 +37,11 @@ public class NavigationViewFragmentNavigator
     }
 
     @Override
-    public void openDrawer() {
-        Log.d("myLog", " navigator openDrawer ");
-        if (manager != null) {
-            manager.openDrawer();
-            Log.d("myLog", " navigator manager.openDrawer(); ");
-        }else{
-            Log.d("myLog", " navigator  manager == null");
-        }
-    }
-
-    @Override
     public void cleanBackStack() {
         if (manager != null) {
             manager.cleanBackStack();
         }
-
     }
-
 
     @Override
     public void showShortToast(String message) {
@@ -85,4 +73,5 @@ public class NavigationViewFragmentNavigator
             Log.d("myLog", " manager == null ");
         }
     }
+
 }

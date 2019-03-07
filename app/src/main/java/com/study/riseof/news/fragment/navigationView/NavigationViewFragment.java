@@ -1,4 +1,4 @@
-package com.study.riseof.news.ui.fragment;
+package com.study.riseof.news.fragment.navigationView;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,9 +8,7 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.study.riseof.news.R;
-import com.study.riseof.news.presenter.NavigationViewFragmentContract;
-import com.study.riseof.news.presenter.NavigationViewFragmentNavigator;
-import com.study.riseof.news.presenter.NavigationViewFragmentPresenter;
+import com.study.riseof.news.fragment.BaseFragment;
 
 import butterknife.BindView;
 
@@ -21,8 +19,6 @@ public class NavigationViewFragment extends BaseFragment
     NavigationView widgetNavigationView;
 
     private NavigationViewFragmentContract.Presenter presenter;
-    private NavigationViewFragmentContract.Navigator navigator;
-
 
     @Override
     protected int getLayoutId() {
@@ -46,11 +42,21 @@ public class NavigationViewFragment extends BaseFragment
     public void onResume() {
         super.onResume();
         if (presenter != null) {
-            presenter.fragmentIsOnResume();
+            presenter.setView(this);
             Log.d("myLog", " NavigationView onResume ");
         }
         else{
             Log.d("myLog", " NavigationView onResume presenter == null ");
+        }
+        //todo
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (presenter != null) {
+            presenter.setView(null);
+            Log.d("myLog", " NavigationView onPause ");
         }
     }
 
@@ -87,25 +93,13 @@ public class NavigationViewFragment extends BaseFragment
     }
 
     @Override
-    public void uncheckAllNavigationMenuItems() {
-        if (widgetNavigationView == null) {
-            return;
-        }
-        int menuSize = widgetNavigationView.getMenu().size();
-        for (int i = 0; i < menuSize; i++) {
-            widgetNavigationView.getMenu().getItem(i).setChecked(false);
-        }
+    public void setPresenter() {
+        presenter = NavigationViewFragmentPresenter.getInstance();
     }
 
     @Override
-    public void setPresenterAndNavigator() {
-        navigator = NavigationViewFragmentNavigator.getInstance();
-        presenter = NavigationViewFragmentPresenter.getInstance(navigator);
-    }
-
-    @Override
-    public void nullifyPresenterAndNavigator() {
-        navigator = null;
+    public void nullifyPresenter() {
         presenter = null;
     }
+
 }

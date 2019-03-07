@@ -1,9 +1,7 @@
-package com.study.riseof.news.ui.activity;
+package com.study.riseof.news.activity.mainActivity;
 
 import android.graphics.drawable.ColorDrawable;
-import android.icu.util.Currency;
 import android.os.Build;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -22,15 +20,15 @@ import android.widget.Toast;
 
 import com.study.riseof.news.NewsSource;
 import com.study.riseof.news.R;
+import com.study.riseof.news.activity.BaseActivity;
+import com.study.riseof.news.Navigation;
+import com.study.riseof.news.NavigationManager;
 import com.study.riseof.news.model.meduza.MeduzaNews;
 import com.study.riseof.news.model.xml.Item;
-import com.study.riseof.news.presenter.MainActivityContract;
-import com.study.riseof.news.presenter.MainActivityNavigator;
-import com.study.riseof.news.presenter.MainActivityPresenter;
-import com.study.riseof.news.ui.fragment.NavigationViewFragment;
-import com.study.riseof.news.ui.fragment.NewsFromJsonFragment;
-import com.study.riseof.news.ui.fragment.RssFragment;
-import com.study.riseof.news.ui.fragment.WebViewFragment;
+import com.study.riseof.news.fragment.navigationView.NavigationViewFragment;
+import com.study.riseof.news.fragment.newsFromJson.NewsFromJsonFragment;
+import com.study.riseof.news.fragment.rss.RssFragment;
+import com.study.riseof.news.fragment.webView.WebViewFragment;
 
 import java.util.ArrayList;
 
@@ -92,19 +90,12 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void onStart() {
         super.onStart();
-        if (presenter != null) {
-            presenter.setActivityView(this);
-            Log.d("myLog", "onStart ActivityView ======  THIS ");
-        }
         setNewsSourceAttributes(currentNewsSource);
-        if (manager != null) {
-            manager.setMainActivityToNavigationManager(this);
-        } else {
-            Log.d("myLog", " this manager == null ");
-        }
         if (isFirstLaunch) {
             if (presenter != null) {
                 presenter.activityFirstLaunch();
+            } else {
+                Log.d("myLog", " FirstLaunch presenter == null ");
             }
         }
     }
@@ -116,27 +107,6 @@ public class MainActivity extends BaseActivity implements
         outState.putString(currentNewsSourceNameVarName, currentNewsSource.name());
 
         //todo
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        if (manager != null) {
-            manager.setMainActivityToNavigationManager(null);
-        } else {
-            Log.d("myLog", " null manager == null ");
-        }
-// todo отписать активити от менеджера
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (presenter != null) {
-            presenter.setActivityView(null);
-            Log.d("myLog", " ActivityView ======  NULL ");
-        }
-
     }
 
     @Override
@@ -173,25 +143,33 @@ public class MainActivity extends BaseActivity implements
 
 
     @Override
-    public void setPresenterAndNavigator() {
-        navigator = MainActivityNavigator.getInstance();
-        presenter = MainActivityPresenter.getInstance(navigator);
+    public void setPresenter() {
+        presenter = MainActivityPresenter.getInstance();
+        presenter.setActivityView(this);
     }
 
     @Override
-    public void nullifyPresenterAndNavigator() {
+    public void nullifyPresenter() {
+        presenter.setActivityView(null);
         presenter = null;
-        navigator = null;
     }
 
     @Override
     public void setActivityToManager() {
-        //todo setActivityToManager
+        Log.d("myLog", " setActivityToManager ");
+        if (manager != null) {
+            Log.d("myLog", " setMainActivityToNavigationManager  ");
+            manager.setMainActivityToNavigationManager(this);
+        }else {
+            Log.d("myLog", " setMainActivityToNavigationManager manager == null ");
+        }
     }
 
     @Override
     public void nullifyActivityInManager() {
-        //todo nullifyActivityInManager
+        if (manager != null) {
+            manager.setMainActivityToNavigationManager(null);
+        }
     }
 
     //------------------------------
@@ -211,6 +189,16 @@ public class MainActivity extends BaseActivity implements
         presenter.onBackButtonPressed();
     }
 
+    @Override
+    public void callSuperOnBackPressed() {
+        Log.d("myLog", " callSuperOnBackPressed() ");
+        super.onBackPressed();
+    }
+
+    @Override
+    public FragmentManager getCurrentFragmentManager() {
+        return getSupportFragmentManager();
+    }
 
     //-----------------------------
 //  Override from Manager
@@ -228,18 +216,6 @@ public class MainActivity extends BaseActivity implements
     public void openDrawer() {
         drawerLayout.openDrawer(GravityCompat.START);
         Log.d("myLog", " openDrawer(GravityCompat.START) ");
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-        Log.d("myLog", " onBackButtonPressed ");
-        super.onBackPressed();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        int count = fragmentManager.getBackStackEntryCount();
-        if (count == 0) {
-            presenter.backStackIsEmpty();
-        }
-        Log.d("myLog", " BackStack COUNT = " + count);
     }
 
     @Override

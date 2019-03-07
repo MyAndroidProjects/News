@@ -1,12 +1,10 @@
-package com.study.riseof.news.ui.activity;
+package com.study.riseof.news;
 
-import android.content.Context;
-import android.support.v4.app.FragmentManager;
 import android.util.Log;
 
-import com.study.riseof.news.NewsSource;
 import com.study.riseof.news.model.meduza.MeduzaNews;
 import com.study.riseof.news.model.xml.Item;
+
 
 import java.util.ArrayList;
 
@@ -96,11 +94,6 @@ public class NavigationManager implements Navigation.Manager, Navigation.SetActi
     @Override
     public void createWebViewFragment(String newsUrl) {
         mainActivity.createWebViewFragment(newsUrl);
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-        mainActivity.onBackButtonPressed();
     }
 
     @Override

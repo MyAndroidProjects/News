@@ -1,4 +1,4 @@
-package com.study.riseof.news.presenter;
+package com.study.riseof.news.fragment.webView;
 
 import android.util.Log;
 
@@ -7,14 +7,14 @@ public class WebViewFragmentPresenter implements WebViewFragmentContract.Present
     private static WebViewFragmentPresenter instance;
     private WebViewFragmentContract.Navigator navigator;
 
-    private WebViewFragmentPresenter(WebViewFragmentContract.Navigator navigator) {
-        this.navigator = navigator;
+    private WebViewFragmentPresenter() {
+        navigator = WebViewFragmentNavigator.getInstance();
         Log.d("myLog", " WebViewFragmentPresenter CONSTRUCTOR ");
     }
 
-    public static WebViewFragmentContract.Presenter getInstance(WebViewFragmentContract.Navigator navigator) {
+    public static WebViewFragmentContract.Presenter getInstance() {
         if (instance == null) {
-            instance = new WebViewFragmentPresenter(navigator);
+            instance = new WebViewFragmentPresenter();
         }
         return instance;
     }

@@ -1,6 +1,5 @@
-package com.study.riseof.news.presenter;
+package com.study.riseof.news.fragment.navigationView;
 
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -11,7 +10,6 @@ import com.study.riseof.news.model.xml.Rss;
 import com.study.riseof.news.network.RetrofitApi;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -22,38 +20,27 @@ public class NavigationViewFragmentPresenter implements NavigationViewFragmentCo
 
     private static NavigationViewFragmentPresenter instance;
     private NavigationViewFragmentContract.Navigator navigator;
+    private NavigationViewFragmentContract.View view;
 
     private NewsSource currentNewsSource = NewsSource.EMPTY;
     private ArrayList<Item> rssList;
-    private int delayOpenNavigatorView = 30;
 
-    private NavigationViewFragmentPresenter(NavigationViewFragmentContract.Navigator navigator) {
-        this.navigator = navigator;
+
+    private NavigationViewFragmentPresenter() {
+        navigator = NavigationViewFragmentNavigator.getInstance();
         Log.d("myLog", " NavigationViewFragmentPresenter CONSTRUCTOR ");
     }
 
-    public static NavigationViewFragmentContract.Presenter getInstance(NavigationViewFragmentContract.Navigator navigator) {
+    public static NavigationViewFragmentContract.Presenter getInstance() {
         if (instance == null) {
-            instance = new NavigationViewFragmentPresenter(navigator);
+            instance = new NavigationViewFragmentPresenter();
         }
         return instance;
     }
 
     @Override
-    public void fragmentIsOnResume() {
-        if (navigator != null) {
-            Log.d("myLog", " onNavigationMenu navigator !!!!!!!!!!111111 null");
-            navigator.openDrawer();
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                public void run() {
-                    navigator.openDrawer();
-                }
-            }, delayOpenNavigatorView);
-        }
-        else{
-            Log.d("myLog", " onNavigationMenu navigator ======= null");
-        }
+    public void setView(NavigationViewFragmentContract.View view) {
+        this.view = view;
     }
 
     @Override
@@ -138,5 +125,4 @@ public class NavigationViewFragmentPresenter implements NavigationViewFragmentCo
             }
         });
     }
-
 }

@@ -1,6 +1,5 @@
-package com.study.riseof.news.ui.fragment;
+package com.study.riseof.news.fragment.newsFromJson;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,14 +11,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
-import com.study.riseof.news.NewsSource;
 import com.study.riseof.news.R;
+import com.study.riseof.news.fragment.BaseFragment;
 import com.study.riseof.news.model.meduza.MeduzaNews;
 import com.study.riseof.news.network.JsonConverterRetrofit;
 
 import org.jsoup.Jsoup;
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
 
@@ -122,12 +119,12 @@ public class NewsFromJsonFragment extends BaseFragment {
     }
 
     @Override
-    public void nullifyPresenterAndNavigator() {
+    public void nullifyPresenter() {
 
     }
 
     @Override
-    public void setPresenterAndNavigator() {
+    public void setPresenter() {
 
     }
 }

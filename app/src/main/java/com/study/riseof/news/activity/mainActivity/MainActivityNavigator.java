@@ -1,9 +1,9 @@
-package com.study.riseof.news.presenter;
+package com.study.riseof.news.activity.mainActivity;
 
 import android.util.Log;
 
-import com.study.riseof.news.ui.activity.Navigation;
-import com.study.riseof.news.ui.activity.NavigationManager;
+import com.study.riseof.news.Navigation;
+import com.study.riseof.news.NavigationManager;
 
 public class MainActivityNavigator implements MainActivityContract.Navigator {
 
@@ -29,30 +29,10 @@ public class MainActivityNavigator implements MainActivityContract.Navigator {
     }
 
     @Override
-    public void closeDrawer() {
-        if(manager!=null){
-            manager.closeDrawer();
-        }
-    }
-
-    @Override
-    public void openDrawer() {
-        if(manager!=null){
-            manager.openDrawer();
-        }
-    }
-
-    @Override
     public void createNavigatorViewFragment() {
         if(manager!=null) {
             manager.createNavigatorViewFragment();
         }
     }
 
-    @Override
-    public void onBackButtonPressed() {
-        if(manager!=null) {
-            manager.onBackButtonPressed();
-        }
-    }
 }

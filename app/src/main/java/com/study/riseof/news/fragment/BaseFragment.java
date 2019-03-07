@@ -1,4 +1,4 @@
-package com.study.riseof.news.ui.fragment;
+package com.study.riseof.news.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.study.riseof.news.presenter.BaseContract;
+import com.study.riseof.news.BaseContract;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -27,7 +27,7 @@ public abstract class BaseFragment extends Fragment implements BaseContract.View
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         view = inflater.inflate(getLayoutId(), container, false);
         unbinder = ButterKnife.bind(this, view);
-        Log.d("myLog", " NavigationView onCreateView "+ this.toString());
+        Log.d("myLog", " NavigationView onCreateView " + this.toString());
         return view;
     }
 
@@ -35,45 +35,28 @@ public abstract class BaseFragment extends Fragment implements BaseContract.View
     @Override
     public void onStart() {
         super.onStart();
-       setPresenterAndNavigator();
-        Log.d("myLog", " Fragment on START "+ this.toString());
+        setPresenter();
+        Log.d("myLog", " Fragment on START " + this.toString());
     }
-
-
 
 
     @Override
     public void onStop() {
         super.onStop();
-        nullifyPresenterAndNavigator();
-        Log.d("myLog", " Fragment on STOP "+ this.toString());
+        nullifyPresenter();
+        Log.d("myLog", " Fragment on STOP " + this.toString());
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
-        Log.d("myLog", " Fragment  onDestroyView "+ this.toString());
+        Log.d("myLog", " Fragment  onDestroyView " + this.toString());
     }
 
-    abstract public void nullifyPresenterAndNavigator();
-    abstract public void setPresenterAndNavigator();
-   /*  abstract public void setPresenterAndNavigator();{
-        setNavigator();
-        setActivityToNavigator();
-        setPresenter();
-    }*/
+    abstract public void setPresenter();
 
-/*    private void nullifyPresenterAndNavigator() {
-        nullifyNavigator();
-        nullifyPresenter();
-    }*/
+    abstract public void nullifyPresenter();
 
-   // protected abstract <T> T kkk();
-
-  /*   public <T> T testFun(T t){
-        T n = t;
-        return n;
-    }*/
 
 }

@@ -1,6 +1,5 @@
-package com.study.riseof.news.ui.activity;
+package com.study.riseof.news;
 
-import com.study.riseof.news.NewsSource;
 import com.study.riseof.news.model.meduza.MeduzaNews;
 import com.study.riseof.news.model.xml.Item;
 
@@ -32,8 +31,6 @@ public interface Navigation {
 
         void createWebViewFragment(String newsUrl);
 
-        void onBackButtonPressed();
-
         void setCurrentNewsSource(NewsSource currentNewsSource);
     }
 
@@ -55,8 +52,6 @@ public interface Navigation {
         void createNewsFromJsonFragment(MeduzaNews meduzaNews);
 
         void createWebViewFragment(String newsUrl);
-
-        void onBackButtonPressed();
 
         void setCurrentNewsSource(NewsSource currentNewsSource);
     }

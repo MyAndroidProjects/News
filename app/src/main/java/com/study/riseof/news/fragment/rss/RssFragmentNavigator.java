@@ -1,10 +1,10 @@
-package com.study.riseof.news.presenter;
+package com.study.riseof.news.fragment.rss;
 
 import android.util.Log;
 
 import com.study.riseof.news.model.meduza.MeduzaNews;
-import com.study.riseof.news.ui.activity.Navigation;
-import com.study.riseof.news.ui.activity.NavigationManager;
+import com.study.riseof.news.Navigation;
+import com.study.riseof.news.NavigationManager;
 
 
 public class RssFragmentNavigator implements RssFragmentContract.Navigator {

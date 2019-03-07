@@ -1,4 +1,4 @@
-package com.study.riseof.news.ui.fragment;
+package com.study.riseof.news.fragment.webView;
 
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -17,9 +17,7 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 import com.study.riseof.news.R;
-import com.study.riseof.news.presenter.WebViewFragmentContract;
-import com.study.riseof.news.presenter.WebViewFragmentNavigator;
-import com.study.riseof.news.presenter.WebViewFragmentPresenter;
+import com.study.riseof.news.fragment.BaseFragment;
 
 import butterknife.BindView;
 
@@ -34,7 +32,6 @@ public class WebViewFragment extends BaseFragment {
     private final String newsUrlArgName = "newsUrl";
 
     private WebViewFragmentContract.Presenter presenter;
-    private WebViewFragmentContract.Navigator navigator;
 
     @Override
     protected int getLayoutId() {
@@ -115,14 +112,12 @@ public class WebViewFragment extends BaseFragment {
 
 
     @Override
-    public void setPresenterAndNavigator() {
-        navigator = WebViewFragmentNavigator.getInstance();
-        presenter = WebViewFragmentPresenter.getInstance(navigator);
+    public void setPresenter() {
+        presenter = WebViewFragmentPresenter.getInstance();
     }
 
     @Override
-    public void nullifyPresenterAndNavigator() {
-        navigator = null;
+    public void nullifyPresenter() {
         presenter = null;
     }
 }

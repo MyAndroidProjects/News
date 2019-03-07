@@ -1,4 +1,4 @@
-package com.study.riseof.news.ui.fragment;
+package com.study.riseof.news.fragment.rss;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,11 +12,8 @@ import android.view.ViewGroup;
 
 import com.study.riseof.news.NewsSource;
 import com.study.riseof.news.R;
+import com.study.riseof.news.fragment.BaseFragment;
 import com.study.riseof.news.model.xml.Item;
-import com.study.riseof.news.presenter.RssFragmentContract;
-import com.study.riseof.news.presenter.RssFragmentNavigator;
-import com.study.riseof.news.presenter.RssFragmentPresenter;
-import com.study.riseof.news.ui.adapter.RssRecyclerViewAdapter;
 
 import java.util.ArrayList;
 
@@ -30,7 +27,6 @@ public class RssFragment extends BaseFragment implements
 
 
     private RssFragmentContract.Presenter presenter;
-    private RssFragmentContract.Navigator navigator;
 
     private ArrayList<Item> rssList;
     private int sourceNameId = NewsSource.EMPTY.getNameId();
@@ -99,14 +95,12 @@ public class RssFragment extends BaseFragment implements
     }
 
     @Override
-    public void setPresenterAndNavigator() {
-        navigator = RssFragmentNavigator.getInstance();
-        presenter = RssFragmentPresenter.getInstance(navigator);
+    public void setPresenter() {
+        presenter = RssFragmentPresenter.getInstance();
     }
 
     @Override
-    public void nullifyPresenterAndNavigator() {
-        navigator = null;
+    public void nullifyPresenter() {
         presenter = null;
     }
 }

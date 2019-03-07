@@ -7,6 +7,7 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.AccessLevel;
@@ -22,7 +23,7 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @Root(name = "item")
-public class Item  implements Parcelable {
+public class Item implements Parcelable {
     @Element(name = "title", data = true, required = false)
     String title;
 
@@ -50,7 +51,7 @@ public class Item  implements Parcelable {
     @Element(name = "pubDate", required = false)
     String pubDate;
 
-    public final Creator<Item> CREATOR = new Creator<Item>() {
+    public static final Creator<Item> CREATOR = new Creator<Item>() {
         @Override
         public Item createFromParcel(Parcel in) {
             String title = in.readString();
@@ -60,9 +61,10 @@ public class Item  implements Parcelable {
             String pdalink = in.readString();
             String author = in.readString();
             String category = in.readString();
-            in.readTypedList(enclosureList, Enclosure.CREATOR);
+            List<Enclosure> list = new ArrayList<>();
+            in.readTypedList(list, Enclosure.CREATOR);
             String pubDate = in.readString();
-            return new Item(title, description, guid, link, pdalink, author, category, enclosureList, pubDate);
+            return new Item(title, description, guid, link, pdalink, author, category, list, pubDate);
         }
 
         @Override
@@ -88,5 +90,4 @@ public class Item  implements Parcelable {
         dest.writeTypedList(enclosureList);
         dest.writeString(pubDate);
     }
-
 }

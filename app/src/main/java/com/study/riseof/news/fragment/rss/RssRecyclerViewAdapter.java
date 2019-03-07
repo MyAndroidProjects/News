@@ -1,4 +1,4 @@
-package com.study.riseof.news.ui.adapter;
+package com.study.riseof.news.fragment.rss;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -15,7 +15,6 @@ import com.study.riseof.news.R;
 import com.study.riseof.news.model.xml.Item;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

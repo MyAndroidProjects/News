@@ -1,26 +1,16 @@
-package com.study.riseof.news.presenter;
+package com.study.riseof.news.fragment.rss;
 
-import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.study.riseof.news.NewsSource;
 import com.study.riseof.news.model.meduza.MeduzaNews;
-import com.study.riseof.news.model.xml.Channel;
-import com.study.riseof.news.model.xml.Rss;
 import com.study.riseof.news.network.JsonConverterRetrofit;
 import com.study.riseof.news.network.RetrofitApi;
-
-import org.jsoup.Jsoup;
-
-import java.util.ArrayList;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class RssFragmentPresenter implements RssFragmentContract.Presenter {
 
@@ -28,14 +18,14 @@ public class RssFragmentPresenter implements RssFragmentContract.Presenter {
     private static RssFragmentPresenter instance;
     private RssFragmentContract.Navigator navigator;
 
-    private RssFragmentPresenter(RssFragmentContract.Navigator navigator) {
-        this.navigator = navigator;
+    private RssFragmentPresenter() {
+       navigator = RssFragmentNavigator.getInstance();
         Log.d("myLog", " RssFragmentPresenter CONSTRUCTOR ");
     }
 
-    public static RssFragmentContract.Presenter getInstance(RssFragmentContract.Navigator navigator) {
+    public static RssFragmentContract.Presenter getInstance() {
         if (instance == null) {
-            instance = new RssFragmentPresenter(navigator);
+            instance = new RssFragmentPresenter();
         }
         return instance;
     }

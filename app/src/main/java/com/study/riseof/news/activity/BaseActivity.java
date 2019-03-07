@@ -1,12 +1,11 @@
-package com.study.riseof.news.ui.activity;
+package com.study.riseof.news.activity;
 
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.study.riseof.news.presenter.BaseContract;
+import com.study.riseof.news.BaseContract;
 
 import butterknife.ButterKnife;
 
@@ -21,9 +20,9 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseCont
 
     protected abstract void setStatusBarColor(int color);
 
-    abstract public void setPresenterAndNavigator();
+    abstract public void setPresenter();
 
-    abstract public void nullifyPresenterAndNavigator();
+    abstract public void nullifyPresenter();
 
     abstract public void setActivityToManager();
 
@@ -41,15 +40,15 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseCont
     @Override
     public void onStart() {
         super.onStart();
-        setPresenterAndNavigator();
-        setActivityToManager(); // todo попробовать в onCreate
+        setPresenter();
+        setActivityToManager();
         Log.d("myLog", " onStart "+this.toString());
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        nullifyPresenterAndNavigator();
+        nullifyPresenter();
         nullifyActivityInManager();
         Log.d("myLog", " onStop "+this.toString());
     }

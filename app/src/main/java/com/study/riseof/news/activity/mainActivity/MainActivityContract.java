@@ -1,8 +1,10 @@
-package com.study.riseof.news.presenter;
+package com.study.riseof.news.activity.mainActivity;
 
+
+import android.support.v4.app.FragmentManager;
 
 import com.study.riseof.news.NewsSource;
-import com.study.riseof.news.ui.activity.MainActivity;
+import com.study.riseof.news.BaseContract;
 
 public interface MainActivityContract {
 
@@ -13,6 +15,12 @@ public interface MainActivityContract {
         void setCurrentNewsSource(NewsSource currentNewsSource);
 
         void setNewsSourceAttributes(NewsSource currentNewsSource);
+
+        FragmentManager getCurrentFragmentManager();
+
+        void closeDrawer();
+
+        void callSuperOnBackPressed();
     }
 
     interface Presenter  extends BaseContract.Presenter  {
@@ -22,20 +30,11 @@ public interface MainActivityContract {
 
         void activityFirstLaunch();
 
-        void backStackIsEmpty();
-
         void setActivityView(MainActivityContract.View activityView);
     }
 
     interface Navigator  extends BaseContract.Navigator {
 
-        void closeDrawer();
-
-        void openDrawer();
-        //todo посмотреть создание навигатор view при нажатии кнопки
         void createNavigatorViewFragment();
-
-        void onBackButtonPressed();
     }
-
 }

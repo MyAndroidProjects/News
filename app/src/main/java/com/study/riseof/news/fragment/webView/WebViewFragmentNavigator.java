@@ -1,9 +1,9 @@
-package com.study.riseof.news.presenter;
+package com.study.riseof.news.fragment.webView;
 
 import android.util.Log;
 
-import com.study.riseof.news.ui.activity.Navigation;
-import com.study.riseof.news.ui.activity.NavigationManager;
+import com.study.riseof.news.Navigation;
+import com.study.riseof.news.NavigationManager;
 
 public class WebViewFragmentNavigator implements WebViewFragmentContract.Navigator {
 
