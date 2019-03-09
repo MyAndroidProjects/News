@@ -35,7 +35,12 @@ public class NavigationViewFragmentNavigator
             manager.closeDrawer();
         }
     }
-
+    @Override
+    public void openDrawer() {
+        if (manager != null) {
+            manager.openDrawer();
+        }
+    }
     @Override
     public void cleanBackStack() {
         if (manager != null) {
@@ -68,5 +73,20 @@ public class NavigationViewFragmentNavigator
             manager.setNewsSourceAttributes(currentNewsSource);
         }
     }
+
+    @Override
+    public void startMainProgressBar() {
+        if (manager != null) {
+            manager.startMainProgressBar();
+        }
+    }
+
+    @Override
+    public void stopMainProgressBar() {
+        if (manager != null) {
+            manager.stopMainProgressBar();
+        }
+    }
+
 
 }

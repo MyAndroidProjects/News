@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public interface Navigation {
     interface SetActivities {
         void setMainActivityToNavigationManager(Navigation.MainActivity mainActivity);
+
         void setSecondActivityToNavigationManager(Navigation.SecondActivity secondActivity); //for test
     }
 
@@ -32,6 +33,10 @@ public interface Navigation {
         void createWebViewFragment(String newsUrl);
 
         void setCurrentNewsSource(NewsSource currentNewsSource);
+
+        void startMainProgressBar();
+
+        void stopMainProgressBar();
     }
 
     interface MainActivity {
@@ -54,6 +59,10 @@ public interface Navigation {
         void createWebViewFragment(String newsUrl);
 
         void setCurrentNewsSource(NewsSource currentNewsSource);
+
+        void startMainProgressBar();
+
+        void stopMainProgressBar();
     }
 
     // for testing

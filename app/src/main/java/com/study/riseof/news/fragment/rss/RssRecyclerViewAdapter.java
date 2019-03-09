@@ -14,7 +14,10 @@ import com.squareup.picasso.Picasso;
 import com.study.riseof.news.R;
 import com.study.riseof.news.model.xml.Item;
 
+import org.jsoup.Jsoup;
+
 import java.util.ArrayList;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,6 +28,8 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
     private RssNewsClickListener rssNewsClickListener;
     private final int imageWidth;
     private final int imageHeight;
+    @SuppressWarnings("FieldCanBeLocal")
+    private final String EMPTY_STRING = "";
 
     RssRecyclerViewAdapter(Context context, ArrayList<Item> rssList) {
         this.rssList = rssList;
@@ -44,7 +49,14 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
         final Item item = rssList.get(position);
         holder.newsHeader.setText(item.getTitle());
-        holder.newsCutText.setText(item.getDescription());
+        String newsCutTextRaw = item.getDescription();
+        String newsCutTextParsed;
+        if (newsCutTextRaw != null) {
+            newsCutTextParsed = Jsoup.parse(newsCutTextRaw).text();
+        } else {
+            newsCutTextParsed = EMPTY_STRING;
+        }
+        holder.newsCutText.setText(newsCutTextParsed);
         holder.pubDate.setText((item.getPubDate()));
         holder.getAdapterPosition();
         if (item.getEnclosureList() != null) {

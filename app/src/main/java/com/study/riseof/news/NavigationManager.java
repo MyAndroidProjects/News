@@ -110,4 +110,18 @@ public class NavigationManager implements Navigation.Manager, Navigation.SetActi
             mainActivity.setCurrentNewsSource(currentNewsSource);
         }
     }
+
+    @Override
+    public void startMainProgressBar() {
+        if (mainActivity != null) {
+            mainActivity.startMainProgressBar();
+        }
+    }
+
+    @Override
+    public void stopMainProgressBar() {
+        if (mainActivity != null) {
+            mainActivity.stopMainProgressBar();
+        }
+    }
 }

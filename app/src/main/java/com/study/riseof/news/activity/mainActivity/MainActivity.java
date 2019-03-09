@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,6 +48,8 @@ public class MainActivity extends BaseActivity implements
     private final String currentNewsSourceNameVarName = "currentNewsSourceName";
     private boolean isFirstLaunch = true;
     private final String isFirsLaunchVarName = "isFirstLaunch";
+    private boolean isProgressBarActive = false;
+    private final String isProgressBarActiveVarName = "isProgressBarActive";
 
     @BindView(R.id.toolbar_news)
     Toolbar toolbar;
@@ -60,6 +63,9 @@ public class MainActivity extends BaseActivity implements
     @BindView(R.id.news_fragment_container)
     FrameLayout frameNews;
 
+    @BindView(R.id.main_progress_bar)
+    ProgressBar mainProgressBar;
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_main;
@@ -69,16 +75,21 @@ public class MainActivity extends BaseActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getBundleArgs(savedInstanceState);
+        if (isProgressBarActive) {
+            startMainProgressBar();
+        }
         manager = NavigationManager.getSetActivitiesInstance();
     }
 
     protected void getBundleArgs(Bundle savedInstanceState) {
         if (savedInstanceState != null) {
             isFirstLaunch = savedInstanceState.getBoolean(isFirsLaunchVarName, true);
+            isProgressBarActive = savedInstanceState.getBoolean(isProgressBarActiveVarName, false);
             currentNewsSourceName = savedInstanceState.getString(currentNewsSourceNameVarName, NewsSource.EMPTY.name());
             currentNewsSource = NewsSource.valueOf(currentNewsSourceName);
         } else {
             isFirstLaunch = true;
+            isProgressBarActive = false;
             currentNewsSource = NewsSource.EMPTY;
         }
     }
@@ -98,6 +109,7 @@ public class MainActivity extends BaseActivity implements
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putBoolean(isFirsLaunchVarName, false);
+        outState.putBoolean(isProgressBarActiveVarName, isProgressBarActive);
         outState.putString(currentNewsSourceNameVarName, currentNewsSource.name());
     }
 
@@ -281,4 +293,15 @@ public class MainActivity extends BaseActivity implements
         fragmentTransaction.commit();
     }
 
+    @Override
+    public void startMainProgressBar() {
+        isProgressBarActive = true;
+        mainProgressBar.setVisibility(ProgressBar.VISIBLE);
+    }
+
+    @Override
+    public void stopMainProgressBar() {
+        isProgressBarActive = false;
+        mainProgressBar.setVisibility(ProgressBar.GONE);
+    }
 }

@@ -26,6 +26,7 @@ public class NavigationViewFragmentPresenter implements NavigationViewFragmentCo
     private NewsSource currentNewsSource = NewsSource.EMPTY;
     private ArrayList<Item> rssList;
 
+    private boolean userIsWaitingForCurrentRss = false;
 
     private NavigationViewFragmentPresenter() {
         navigator = NavigationViewFragmentNavigator.getInstance();
@@ -78,6 +79,7 @@ public class NavigationViewFragmentPresenter implements NavigationViewFragmentCo
 
     @Override
     public void menuItemSelectionIsCompleted() {
+        userIsWaitingForCurrentRss = false;
         if (navigator != null) {
             navigator.cleanBackStack();
             navigator.setCurrentNewsSource(currentNewsSource);
@@ -91,6 +93,8 @@ public class NavigationViewFragmentPresenter implements NavigationViewFragmentCo
     }
 
     private void getRssListFromNetAndCreateRssFragment() {
+        navigator.startMainProgressBar();
+        userIsWaitingForCurrentRss = true;
         RetrofitApi.Xml xmlApi = currentNewsSource.getXmlApi();
         xmlApi.getRss().enqueue(new Callback<Rss>() {
             @Override
@@ -102,17 +106,23 @@ public class NavigationViewFragmentPresenter implements NavigationViewFragmentCo
                         rssList = chanel.getItemList();
                     }
                 }
-                if (navigator != null) {
-                    navigator.setNewsSourceAttributesInActivityView(currentNewsSource);
-                    if (rssList != null) {
-                        navigator.createRssFragment(rssList, currentNewsSource.getNameId());
-                    }
+                navigator.setNewsSourceAttributesInActivityView(currentNewsSource);
+                if (rssList != null) {
+                    navigator.stopMainProgressBar();
+                    navigator.createRssFragment(rssList, currentNewsSource.getNameId());
+                    userIsWaitingForCurrentRss = false;
                 }
             }
 
             @Override
             public void onFailure(@NonNull Call<Rss> call, @NonNull Throwable t) {
+                navigator.stopMainProgressBar();
+                if (userIsWaitingForCurrentRss) {
+                    navigator.openDrawer();
+                }
+
                 navigator.showShortToast(t.toString());
+                userIsWaitingForCurrentRss = false;
                 Log.d("myLog", "onFailure " + t);
             }
         });

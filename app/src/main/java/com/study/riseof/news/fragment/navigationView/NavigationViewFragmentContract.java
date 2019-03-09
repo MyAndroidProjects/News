@@ -25,7 +25,7 @@ public interface NavigationViewFragmentContract {
 
         void menuItemSelectionIsCompleted();
 
-     //   void setView(NavigationViewFragmentContract.View view);
+        //   void setView(NavigationViewFragmentContract.View view);
     }
 
     interface Navigator extends BaseContract.Navigator {
@@ -40,5 +40,10 @@ public interface NavigationViewFragmentContract {
 
         void setCurrentNewsSource(NewsSource currentNewsSource);
 
+        void startMainProgressBar();
+
+        void stopMainProgressBar();
+
+        void openDrawer();
     }
 }
