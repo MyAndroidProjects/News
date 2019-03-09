@@ -20,13 +20,13 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseCont
 
     protected abstract void setStatusBarColor(int color);
 
-    abstract public void setPresenter();
+    protected abstract void setPresenter();
 
-    abstract public void nullifyPresenter();
+    protected abstract void nullifyPresenter();
 
-    abstract public void setActivityToManager();
+    protected abstract void setActivityToManager();
 
-    abstract public void nullifyActivityInManager();
+    protected abstract void nullifyActivityInManager();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

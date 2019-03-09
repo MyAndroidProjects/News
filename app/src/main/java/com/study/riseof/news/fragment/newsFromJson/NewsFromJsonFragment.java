@@ -36,11 +36,10 @@ public class NewsFromJsonFragment extends BaseFragment {
     @BindView(R.id.news_from_json_fragment_layout)
     LinearLayout linearLayout;
 
-
     private MeduzaNews meduzaNews = null;
-    private String meduzaNewsVarName = "meduzaNews";
+    private final String meduzaNewsVarName = "meduzaNews";
     private String imageUrl = null;
-    private String imageUrlVarName = "imageUrl";
+    private final String imageUrlVarName = "imageUrl";
 
 
     @Override
@@ -70,8 +69,9 @@ public class NewsFromJsonFragment extends BaseFragment {
         Bundle args = getArguments();
         if (args != null) {
             meduzaNews = args.getParcelable(meduzaNewsVarName);
-            if(meduzaNews ==null){
-                meduzaNews = savedInstanceState.getParcelable(meduzaNewsVarName);            }
+            if (meduzaNews == null) {
+                meduzaNews = savedInstanceState.getParcelable(meduzaNewsVarName);
+            }
         }
         if (savedInstanceState != null) {
             imageUrl = savedInstanceState.getString(imageUrlVarName, null);
@@ -85,7 +85,7 @@ public class NewsFromJsonFragment extends BaseFragment {
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString(imageUrlVarName, imageUrl);
-        outState.putParcelable(meduzaNewsVarName,meduzaNews);
+        outState.putParcelable(meduzaNewsVarName, meduzaNews);
     }
 
     private void createAndDownloadImages() {

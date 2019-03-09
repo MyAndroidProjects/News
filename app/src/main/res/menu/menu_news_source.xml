@@ -19,15 +19,15 @@
             android:title="@string/meduza_menu_category" />
         <item
             android:icon="@drawable/ic_baseline_arrow_forward_24px"
-            android:id="@+id/menu_item_yandex"
-            android:title="@string/yandex_menu_category" />
+            android:id="@+id/menu_item_washingtonpost"
+            android:title="@string/washingtonpost_menu_category" />
         <item
             android:icon="@drawable/ic_baseline_bookmarks_24px"
             android:id="@+id/menu_item_lenta"
             android:title="@string/lenta_menu_category"/>
         <item
             android:icon="@drawable/ic_baseline_bookmarks_24px"
-            android:id="@+id/menu_item_rbc"
-            android:title="@string/rbc_menu_category" />
+            android:id="@+id/menu_item_rt"
+            android:title="@string/rt_menu_category" />
     </group>
 </menu>

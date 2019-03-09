@@ -8,32 +8,30 @@ import com.study.riseof.news.BaseContract;
 
 public interface MainActivityContract {
 
-    interface View  extends BaseContract.View {
+    interface View extends BaseContract.View {
 
         void openDrawer();
 
-        void setCurrentNewsSource(NewsSource currentNewsSource);
+        void closeDrawer();
 
         void setNewsSourceAttributes(NewsSource currentNewsSource);
 
-        FragmentManager getCurrentFragmentManager();
-
-        void closeDrawer();
-
         void callSuperOnBackPressed();
+
+        FragmentManager getCurrentFragmentManager();
     }
 
-    interface Presenter  extends BaseContract.Presenter  {
-        void onMenuButtonHome();
+    interface Presenter extends BaseContract.Presenter {
+        void menuButtonHomeSelected();
 
-        void onBackButtonPressed();
+        void backButtonSelected();
 
         void activityFirstLaunch();
 
         void setActivityView(MainActivityContract.View activityView);
     }
 
-    interface Navigator  extends BaseContract.Navigator {
+    interface Navigator extends BaseContract.Navigator {
 
         void createNavigatorViewFragment();
     }

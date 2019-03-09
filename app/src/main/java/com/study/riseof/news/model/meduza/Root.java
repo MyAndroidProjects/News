@@ -1,6 +1,5 @@
 package com.study.riseof.news.model.meduza;
 
-import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -16,6 +15,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
+@SuppressWarnings("ALL")
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)

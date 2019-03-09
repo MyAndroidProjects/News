@@ -14,13 +14,14 @@ import io.reactivex.schedulers.Schedulers;
 
 public class RssFragmentPresenter implements RssFragmentContract.Presenter {
 
+    @SuppressWarnings("FieldCanBeLocal")
     private final String EMPTY_STRING = "";
     private static RssFragmentPresenter instance;
-    private RssFragmentContract.Navigator navigator;
+    private final RssFragmentContract.Navigator navigator;
 
     private RssFragmentPresenter() {
-       navigator = RssFragmentNavigator.getInstance();
-        Log.d("myLog", " RssFragmentPresenter CONSTRUCTOR ");
+        navigator = RssFragmentNavigator.getInstance();
+        // Log.d("myLog", " RssFragmentPresenter CONSTRUCTOR ");
     }
 
     public static RssFragmentContract.Presenter getInstance() {
@@ -30,9 +31,8 @@ public class RssFragmentPresenter implements RssFragmentContract.Presenter {
         return instance;
     }
 
-
     @Override
-    public void rssNewsClick(int position, String newsUrl, int sourceNameId) {
+    public void rssNewsSelected(int position, String newsUrl, int sourceNameId) {
         if (sourceNameId == NewsSource.MEDUZA.getNameId()) {
             getNewsFromJsonAndSetToView(newsUrl, JsonConverterRetrofit.MEDUZA.getRetrofitApi());
         } else {
@@ -40,16 +40,6 @@ public class RssFragmentPresenter implements RssFragmentContract.Presenter {
                 navigator.createWebViewFragment(newsUrl);
             }
         }
-
-/*        currentFragmentContent = MainActivityPresenter.FragmentContent.NOT_RSS;
-        if (currentNewsSource == NewsSource.MEDUZA) {
-            getNewsFromJsonAndSetToView(position, JsonConverterRetrofit.MEDUZA.getRetrofitApi());
-        } else {
-            if (navigator != null) {
-                navigator.createWebViewFragment(newsUrl);
-                navigator.replaceRssFragmentWithWebViewFragment();
-            }
-        }*/
     }
 
     private void getNewsFromJsonAndSetToView(String newsUrl, RetrofitApi.Json jsonApi) {
@@ -63,7 +53,7 @@ public class RssFragmentPresenter implements RssFragmentContract.Presenter {
 
             @Override
             public void onNext(MeduzaNews meduzaNews) {
-                Log.d("myLog", "onSuccess " + meduzaNews.getRoot().getTitle());
+                //        Log.d("myLog", "onSuccess " + meduzaNews.getRoot().getTitle());
                 navigator.createNewsFromJsonFragment(meduzaNews);
             }
 

@@ -28,66 +28,56 @@ public class NavigationViewFragment extends BaseFragment
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("myLog", " NavigationView onCreate ");
     }
 
     @Override
     public void onStart() {
         super.onStart();
         widgetNavigationView.setNavigationItemSelectedListener(this);
-        Log.d("myLog", " NavigationView onStart ");
     }
 
-    @Override
+/*    @Override
     public void onResume() {
         super.onResume();
         if (presenter != null) {
             presenter.setView(this);
-            Log.d("myLog", " NavigationView onResume ");
         }
-        else{
-            Log.d("myLog", " NavigationView onResume presenter == null ");
-        }
-        //todo
-    }
+    }*/
 
-    @Override
+/*    @Override
     public void onPause() {
         super.onPause();
         if (presenter != null) {
             presenter.setView(null);
-            Log.d("myLog", " NavigationView onPause ");
         }
-    }
+    }*/
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         if (presenter != null) {
             int id = menuItem.getItemId();
             if (id == R.id.menu_item_back) {
-                presenter.onMenuItemCloseMainDrawer();
+                presenter.menuItemBackSelected();
                 return true;
             }
             switch (id) {
                 case R.id.menu_item_ngs:
-                    presenter.onNavigationMenuItemNgs();
+                    presenter.menuItemNgsSelected();
                     break;
                 case R.id.menu_item_meduza:
-                    presenter.onNavigationMenuItemMeduza();
+                    presenter.menuItemMeduzaSelected();
                     break;
-                case R.id.menu_item_yandex:
-                    presenter.onNavigationMenuItemYandex();
+                case R.id.menu_item_washingtonpost:
+                    presenter.menuItemWashingtonpostSelected();
                     break;
                 case R.id.menu_item_lenta:
-                    presenter.onNavigationMenuItemLenta();
+                    presenter.menuItemLentaSelected();
                     break;
-                case R.id.menu_item_rbc:
-                    presenter.onNavigationMenuItemRbc();
+                case R.id.menu_item_rt:
+                    presenter.menuItemRtSelected();
                     break;
             }
-            presenter.onNavigationMenuSelectAnyItem();
-        } else {
-            Log.d("myLog", " onNavigationItemSelected presenter ==null ");
+            presenter.menuItemSelectionIsCompleted();
         }
         return true;
     }

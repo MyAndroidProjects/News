@@ -12,10 +12,9 @@ public class NavigationManager implements Navigation.Manager, Navigation.SetActi
 
     private static NavigationManager instance;
     private Navigation.MainActivity mainActivity;
-    private Navigation.SecondActivity secondActivity;
+    // private Navigation.SecondActivity secondActivity;
 
     private NavigationManager() {
-        Log.d("myLog", " NavigationManager CONSTRUCTOR ");
     }
 
     public static Navigation.SetActivities getSetActivitiesInstance() {
@@ -33,10 +32,6 @@ public class NavigationManager implements Navigation.Manager, Navigation.SetActi
     }
 
     public void setMainActivityToNavigationManager(Navigation.MainActivity mainActivity) {
-        if (mainActivity != null) {
-            Log.d("myLog", " setMainActivityToNavigationManager " + mainActivity.toString());
-        }
-
         this.mainActivity = mainActivity;
     }
 
@@ -44,7 +39,7 @@ public class NavigationManager implements Navigation.Manager, Navigation.SetActi
     @Override
     public void setSecondActivityToNavigationManager(Navigation.SecondActivity secondActivity) {
         // for testing
-        this.secondActivity = secondActivity;
+        //  this.secondActivity = secondActivity;
     }
 
     @Override
@@ -62,42 +57,57 @@ public class NavigationManager implements Navigation.Manager, Navigation.SetActi
 
     @Override
     public void openDrawer() {
-        mainActivity.openDrawer();
-        Log.d("myLog", " NavigationManager openDrawer(); ");
+        if (mainActivity != null) {
+            mainActivity.openDrawer();
+        }
     }
 
     @Override
     public void cleanBackStack() {
-        mainActivity.cleanBackStack();
+        if (mainActivity != null) {
+            mainActivity.cleanBackStack();
+        }
     }
 
     @Override
     public void setNewsSourceAttributes(NewsSource currentNewsSource) {
-        mainActivity.setNewsSourceAttributes(currentNewsSource);
+        if (mainActivity != null) {
+            mainActivity.setNewsSourceAttributes(currentNewsSource);
+        }
     }
 
     @Override
     public void createNavigatorViewFragment() {
-        mainActivity.createNavigatorViewFragment();
+        if (mainActivity != null) {
+            mainActivity.createNavigatorViewFragment();
+        }
     }
 
     @Override
     public void createRssFragment(ArrayList<Item> rssList, int sourceNameId) {
-        mainActivity.createRssFragment(rssList, sourceNameId);
+        if (mainActivity != null) {
+            mainActivity.createRssFragment(rssList, sourceNameId);
+        }
     }
 
     @Override
     public void createNewsFromJsonFragment(MeduzaNews meduzaNews) {
-        mainActivity.createNewsFromJsonFragment(meduzaNews);
+        if (mainActivity != null) {
+            mainActivity.createNewsFromJsonFragment(meduzaNews);
+        }
     }
 
     @Override
     public void createWebViewFragment(String newsUrl) {
-        mainActivity.createWebViewFragment(newsUrl);
+        if (mainActivity != null) {
+            mainActivity.createWebViewFragment(newsUrl);
+        }
     }
 
     @Override
     public void setCurrentNewsSource(NewsSource currentNewsSource) {
-        mainActivity.setCurrentNewsSource(currentNewsSource);
+        if (mainActivity != null) {
+            mainActivity.setCurrentNewsSource(currentNewsSource);
+        }
     }
 }

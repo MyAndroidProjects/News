@@ -9,7 +9,7 @@ public interface RssFragmentContract {
 
     interface Presenter extends BaseContract.Presenter {
 
-        void rssNewsClick(int position, String newsUrl, int sourceNameId);
+        void rssNewsSelected(int position, String newsUrl, int sourceNameId);
 
     }
 
@@ -17,6 +17,5 @@ public interface RssFragmentContract {
         void createNewsFromJsonFragment(MeduzaNews meduzaNews);
 
         void createWebViewFragment(String newsUrl);
-
     }
 }

@@ -8,11 +8,11 @@ import com.study.riseof.news.NavigationManager;
 public class MainActivityNavigator implements MainActivityContract.Navigator {
 
     private static MainActivityNavigator instance;
-    private Navigation.Manager manager;
+    private final Navigation.Manager manager;
 
     private MainActivityNavigator() {
         manager = NavigationManager.getManagerInstance();
-        Log.d("myLog", " MainActivityNavigator CONSTRUCTOR ");
+        //   Log.d("myLog", " MainActivityNavigator CONSTRUCTOR ");
     }
 
     public static MainActivityContract.Navigator getInstance() {
@@ -22,7 +22,6 @@ public class MainActivityNavigator implements MainActivityContract.Navigator {
         return instance;
     }
 
-
     @Override
     public void showShortToast(String message) {
         manager.showShortToast(message);
@@ -30,7 +29,7 @@ public class MainActivityNavigator implements MainActivityContract.Navigator {
 
     @Override
     public void createNavigatorViewFragment() {
-        if(manager!=null) {
+        if (manager != null) {
             manager.createNavigatorViewFragment();
         }
     }

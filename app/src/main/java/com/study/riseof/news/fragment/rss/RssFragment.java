@@ -25,21 +25,17 @@ public class RssFragment extends BaseFragment implements
     @BindView(R.id.recycler_view_rss)
     RecyclerView recyclerView;
 
-
     private RssFragmentContract.Presenter presenter;
-
     private ArrayList<Item> rssList;
     private int sourceNameId = NewsSource.EMPTY.getNameId();
 
     private final String arrayListName = "rssList";
     private final String sourceNameIdVarName = "sourceNameId";
 
-
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_rss;
     }
-
 
     @Nullable
     @Override
@@ -69,7 +65,7 @@ public class RssFragment extends BaseFragment implements
         outState.putInt(sourceNameIdVarName, sourceNameId);
     }
 
-    public void setRecyclerAdapter() {
+    private void setRecyclerAdapter() {
         RssRecyclerViewAdapter adapter;
         LinearLayoutManager layoutManager;
         Context context = getContext();
@@ -86,11 +82,10 @@ public class RssFragment extends BaseFragment implements
         }
     }
 
-
     @Override
     public void rssNewsClick(int position, String newsUrl) {
         if (presenter != null) {
-            presenter.rssNewsClick(position, newsUrl, sourceNameId);
+            presenter.rssNewsSelected(position, newsUrl, sourceNameId);
         }
     }
 

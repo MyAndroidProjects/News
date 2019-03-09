@@ -21,9 +21,9 @@ android {
         buildConfigField "String", "URL_RSS_MEDUZA", '"https://meduza.io/rss/news/"'
         buildConfigField "String", "BASE_JSON_URL_MEDUZA", '"https://meduza.io/api/v3/"'
         buildConfigField "String", "MAIN_URL_MEDUZA", '"https://meduza.io/"'
-        buildConfigField "String", "URL_RSS_YANDEX", '"https://news.yandex.ru/index.rss/"'
+        buildConfigField "String", "URL_RSS_WASHINGTONPOST", '"http://feeds.washingtonpost.com/rss/rss_blogpost/"'
         buildConfigField "String", "URL_RSS_LENTA", '"https://lenta.ru/rss/"'
-        buildConfigField "String", "URL_RSS_RBC", '"http://static.feed.rbc.ru/rbc/logical/footer/news.rss/"'
+        buildConfigField "String", "URL_RSS_RT", '"https://russian.rt.com/rss/"'
         buildConfigField "String", "URL_BASE_API_JSON_MEDUZA", '"https://meduza.io/api/v3/"'
     }
 }
@@ -51,7 +51,7 @@ dependencies {
 
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.7.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     implementation ('com.squareup.retrofit2:converter-simplexml:2.1.0', {
         exclude module: 'stax'
         exclude module: 'stax-api'

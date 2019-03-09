@@ -23,10 +23,10 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
     private final LayoutInflater inflater;
     private final ArrayList<Item> rssList;
     private RssNewsClickListener rssNewsClickListener;
-    private int imageWidth;
-    private int imageHeight;
+    private final int imageWidth;
+    private final int imageHeight;
 
-    public RssRecyclerViewAdapter(Context context, ArrayList<Item> rssList) {
+    RssRecyclerViewAdapter(Context context, ArrayList<Item> rssList) {
         this.rssList = rssList;
         imageWidth = context.getResources().getInteger(R.integer.size_xxxxxlarge_integer);
         imageHeight = context.getResources().getInteger(R.integer.size_xxxxxlarge_integer);
@@ -88,7 +88,7 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
         }
     }
 
-    public void setRssNewsClickListener(RssNewsClickListener rssNewsClickListener) {
+    void setRssNewsClickListener(RssNewsClickListener rssNewsClickListener) {
         this.rssNewsClickListener = rssNewsClickListener;
     }
 

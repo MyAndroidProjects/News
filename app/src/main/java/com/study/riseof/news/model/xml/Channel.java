@@ -31,6 +31,9 @@ public class Channel {
     @Element(name = "language", required = false)
     String language;
 
+    @Element(name = "copyright", required = false)
+    String copyright;
+
     @Element(name = "image", required = false)
     RssImage rssImage;
 
@@ -39,6 +42,15 @@ public class Channel {
 
     @Element(name = "pubDate", required = false)
     String pubDate;
+
+    @Element(name = "ttl", required = false)
+    String ttl;
+
+    @Element(name = "updatePeriod", required = false)
+    String updatePeriod;
+
+    @Element(name = "updateFrequency", required = false)
+    String updateFrequency;
 
     @ElementList(inline = true, entry = "link", required = false)
     List<Link> linkList;

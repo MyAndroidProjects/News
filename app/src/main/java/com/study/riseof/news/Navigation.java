@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public interface Navigation {
     interface SetActivities {
         void setMainActivityToNavigationManager(Navigation.MainActivity mainActivity);
-        void setSecondActivityToNavigationManager(Navigation.SecondActivity secondActivity);
+        void setSecondActivityToNavigationManager(Navigation.SecondActivity secondActivity); //for test
     }
 
     interface Manager {
@@ -17,7 +17,7 @@ public interface Navigation {
 
         void closeDrawer();
 
-        void openDrawer();
+        void openDrawer(); // need for manager (the same method in view interface)
 
         void cleanBackStack();
 

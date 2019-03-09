@@ -29,6 +29,7 @@ public class WebViewFragment extends BaseFragment {
     public WebView webView;
 
     private String newsUrl;
+    @SuppressWarnings("FieldCanBeLocal")
     private final String newsUrlArgName = "newsUrl";
 
     private WebViewFragmentContract.Presenter presenter;

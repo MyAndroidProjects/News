@@ -8,11 +8,11 @@ import com.study.riseof.news.NavigationManager;
 public class WebViewFragmentNavigator implements WebViewFragmentContract.Navigator {
 
     private static WebViewFragmentNavigator instance;
-    private Navigation.Manager manager;
+    private final Navigation.Manager manager;
 
     private WebViewFragmentNavigator() {
         manager = NavigationManager.getManagerInstance();
-        Log.d("myLog", " WebViewFragmentNavigator CONSTRUCTOR ");
+        // Log.d("myLog", " WebViewFragmentNavigator CONSTRUCTOR ");
     }
 
     public static WebViewFragmentContract.Navigator getInstance() {
@@ -25,7 +25,7 @@ public class WebViewFragmentNavigator implements WebViewFragmentContract.Navigat
 
     @Override
     public void showShortToast(String message) {
-            manager.showShortToast(message);
+        manager.showShortToast(message);
     }
 
 }

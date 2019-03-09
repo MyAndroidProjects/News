@@ -10,11 +10,11 @@ import com.study.riseof.news.NavigationManager;
 public class RssFragmentNavigator implements RssFragmentContract.Navigator {
 
     private static RssFragmentNavigator instance;
-    private Navigation.Manager manager;
+    private final Navigation.Manager manager;
 
     private RssFragmentNavigator() {
         manager = NavigationManager.getManagerInstance();
-        Log.d("myLog", " RssFragmentNavigator CONSTRUCTOR ");
+        //    Log.d("myLog", " RssFragmentNavigator CONSTRUCTOR ");
     }
 
     public static RssFragmentContract.Navigator getInstance() {
@@ -44,6 +44,4 @@ public class RssFragmentNavigator implements RssFragmentContract.Navigator {
             manager.showShortToast(message);
         }
     }
-//todo RssFragmentNavigator
-
 }

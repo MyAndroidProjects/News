@@ -18,7 +18,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @AllArgsConstructor
-public class Content implements Parcelable{
+public class Content implements Parcelable {
 
     @SerializedName("body")
     @Expose

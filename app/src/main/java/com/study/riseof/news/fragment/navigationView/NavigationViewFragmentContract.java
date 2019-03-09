@@ -11,21 +11,21 @@ public interface NavigationViewFragmentContract {
     }
 
     interface Presenter extends BaseContract.Presenter {
-        void onMenuItemCloseMainDrawer();
+        void menuItemBackSelected();
 
-        void onNavigationMenuItemYandex();
+        void menuItemWashingtonpostSelected();
 
-        void onNavigationMenuItemMeduza();
+        void menuItemMeduzaSelected();
 
-        void onNavigationMenuItemNgs();
+        void menuItemNgsSelected();
 
-        void onNavigationMenuItemLenta();
+        void menuItemLentaSelected();
 
-        void onNavigationMenuItemRbc();
+        void menuItemRtSelected();
 
-        void onNavigationMenuSelectAnyItem();
+        void menuItemSelectionIsCompleted();
 
-        void setView(NavigationViewFragmentContract.View view);
+     //   void setView(NavigationViewFragmentContract.View view);
     }
 
     interface Navigator extends BaseContract.Navigator {

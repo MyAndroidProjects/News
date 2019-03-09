@@ -27,7 +27,7 @@ public abstract class BaseFragment extends Fragment implements BaseContract.View
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         view = inflater.inflate(getLayoutId(), container, false);
         unbinder = ButterKnife.bind(this, view);
-        Log.d("myLog", " NavigationView onCreateView " + this.toString());
+        //  Log.d("myLog", " onCreateView " + this.toString());
         return view;
     }
 
@@ -36,7 +36,7 @@ public abstract class BaseFragment extends Fragment implements BaseContract.View
     public void onStart() {
         super.onStart();
         setPresenter();
-        Log.d("myLog", " Fragment on START " + this.toString());
+        //    Log.d("myLog", " Fragment on START " + this.toString());
     }
 
 
@@ -44,19 +44,19 @@ public abstract class BaseFragment extends Fragment implements BaseContract.View
     public void onStop() {
         super.onStop();
         nullifyPresenter();
-        Log.d("myLog", " Fragment on STOP " + this.toString());
+        //  Log.d("myLog", " Fragment on STOP " + this.toString());
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
-        Log.d("myLog", " Fragment  onDestroyView " + this.toString());
+        //   Log.d("myLog", " Fragment  onDestroyView " + this.toString());
     }
 
-    abstract public void setPresenter();
+    protected abstract void setPresenter();
 
-    abstract public void nullifyPresenter();
+    protected abstract void nullifyPresenter();
 
 
 }

@@ -51,6 +51,9 @@ public class Item implements Parcelable {
     @Element(name = "pubDate", required = false)
     String pubDate;
 
+    @Element(name = "creator", required = false)
+    String creator;
+
     public static final Creator<Item> CREATOR = new Creator<Item>() {
         @Override
         public Item createFromParcel(Parcel in) {
@@ -64,7 +67,8 @@ public class Item implements Parcelable {
             List<Enclosure> list = new ArrayList<>();
             in.readTypedList(list, Enclosure.CREATOR);
             String pubDate = in.readString();
-            return new Item(title, description, guid, link, pdalink, author, category, list, pubDate);
+            String creator = in.readString();
+            return new Item(title, description, guid, link, pdalink, author, category, list, pubDate, creator);
         }
 
         @Override
@@ -89,5 +93,6 @@ public class Item implements Parcelable {
         dest.writeString(category);
         dest.writeTypedList(enclosureList);
         dest.writeString(pubDate);
+        dest.writeString(creator);
     }
 }

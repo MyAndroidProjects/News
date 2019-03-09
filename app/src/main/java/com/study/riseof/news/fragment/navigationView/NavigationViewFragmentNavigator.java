@@ -14,12 +14,12 @@ public class NavigationViewFragmentNavigator
         implements NavigationViewFragmentContract.Navigator {
 
     private static NavigationViewFragmentNavigator instance;
-    private Navigation.Manager manager;
+    private final Navigation.Manager manager;
 
 
     private NavigationViewFragmentNavigator() {
         manager = NavigationManager.getManagerInstance();
-        Log.d("myLog", " RssFragmentNavigator CONSTRUCTOR ");
+ //       Log.d("myLog", " RssFragmentNavigator CONSTRUCTOR ");
     }
 
     public static NavigationViewFragmentContract.Navigator getInstance() {
@@ -54,7 +54,6 @@ public class NavigationViewFragmentNavigator
     public void createRssFragment(ArrayList<Item> rssList, int sourceNameId) {
         if (manager != null) {
             manager.createRssFragment(rssList, sourceNameId);
-            Log.d("myLog", " manager.createRssFragment ");
         }
     }
 
@@ -66,11 +65,7 @@ public class NavigationViewFragmentNavigator
     @Override
     public void setNewsSourceAttributesInActivityView(NewsSource currentNewsSource) {
         if (manager != null) {
-            Log.d("myLog", " manager.setNewsSourceAttributes == " +currentNewsSource.toString());
             manager.setNewsSourceAttributes(currentNewsSource);
-        }
-        else {
-            Log.d("myLog", " manager == null ");
         }
     }
 

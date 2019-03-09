@@ -17,10 +17,11 @@ import retrofit2.Response;
 
 public class NavigationViewFragmentPresenter implements NavigationViewFragmentContract.Presenter {
 
-
     private static NavigationViewFragmentPresenter instance;
-    private NavigationViewFragmentContract.Navigator navigator;
-    private NavigationViewFragmentContract.View view;
+    private final NavigationViewFragmentContract.Navigator navigator;
+/*    // for check
+    @SuppressWarnings("FieldCanBeLocal")
+    private NavigationViewFragmentContract.View view;*/
 
     private NewsSource currentNewsSource = NewsSource.EMPTY;
     private ArrayList<Item> rssList;
@@ -28,7 +29,7 @@ public class NavigationViewFragmentPresenter implements NavigationViewFragmentCo
 
     private NavigationViewFragmentPresenter() {
         navigator = NavigationViewFragmentNavigator.getInstance();
-        Log.d("myLog", " NavigationViewFragmentPresenter CONSTRUCTOR ");
+        //     Log.d("myLog", " NavigationViewFragmentPresenter CONSTRUCTOR ");
     }
 
     public static NavigationViewFragmentContract.Presenter getInstance() {
@@ -38,47 +39,45 @@ public class NavigationViewFragmentPresenter implements NavigationViewFragmentCo
         return instance;
     }
 
-    @Override
+/*    @Override
     public void setView(NavigationViewFragmentContract.View view) {
         this.view = view;
-    }
+    }*/
 
     @Override
-    public void onNavigationMenuItemNgs() {
+    public void menuItemNgsSelected() {
         currentNewsSource = NewsSource.NGS;
-
     }
 
     @Override
-    public void onNavigationMenuItemMeduza() {
+    public void menuItemMeduzaSelected() {
         currentNewsSource = NewsSource.MEDUZA;
     }
 
     @Override
-    public void onNavigationMenuItemYandex() {
-        currentNewsSource = NewsSource.YANDEX;
+    public void menuItemWashingtonpostSelected() {
+        currentNewsSource = NewsSource.WASHINGTONPOST;
     }
 
     @Override
-    public void onNavigationMenuItemLenta() {
+    public void menuItemLentaSelected() {
         currentNewsSource = NewsSource.LENTA;
     }
 
     @Override
-    public void onNavigationMenuItemRbc() {
-        currentNewsSource = NewsSource.RBC;
+    public void menuItemRtSelected() {
+        currentNewsSource = NewsSource.RT;
     }
 
     @Override
-    public void onMenuItemCloseMainDrawer() {
+    public void menuItemBackSelected() {
         if (navigator != null) {
             navigator.closeDrawer();
         }
     }
 
     @Override
-    public void onNavigationMenuSelectAnyItem() {
-        Log.d("myLog", " onNavigationMenuSelectAnyItem  " + currentNewsSource.toString());
+    public void menuItemSelectionIsCompleted() {
         if (navigator != null) {
             navigator.cleanBackStack();
             navigator.setCurrentNewsSource(currentNewsSource);
@@ -96,25 +95,18 @@ public class NavigationViewFragmentPresenter implements NavigationViewFragmentCo
         xmlApi.getRss().enqueue(new Callback<Rss>() {
             @Override
             public void onResponse(@NonNull Call<Rss> call, @NonNull Response<Rss> response) {
-                Log.d("myLog", " onResponse  ");
                 Rss rss = response.body();
                 if (rss != null) {
-                    Log.d("myLog", " rss != null  ");
                     Channel chanel = rss.getChannel();
                     if (chanel != null) {
                         rssList = chanel.getItemList();
                     }
-                } else {
-                    Log.d("myLog", " rss == null  ");
                 }
                 if (navigator != null) {
                     navigator.setNewsSourceAttributesInActivityView(currentNewsSource);
                     if (rssList != null) {
                         navigator.createRssFragment(rssList, currentNewsSource.getNameId());
-                        Log.d("myLog", " currentNewsSource == " + currentNewsSource.toString());
                     }
-                } else {
-                    Log.d("myLog", " navigator == null  ");
                 }
             }
 
