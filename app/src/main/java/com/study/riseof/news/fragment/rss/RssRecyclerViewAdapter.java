@@ -1,4 +1,4 @@
-package com.study.riseof.news.ui.adapter;
+package com.study.riseof.news.fragment.rss;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -14,20 +14,27 @@ import com.squareup.picasso.Picasso;
 import com.study.riseof.news.R;
 import com.study.riseof.news.model.xml.Item;
 
-import java.util.List;
+import org.jsoup.Jsoup;
+
+import java.util.ArrayList;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerViewAdapter.Holder> {
     private final LayoutInflater inflater;
-    private final List<Item> rssList;
-    private final Context context;
+    private final ArrayList<Item> rssList;
     private RssNewsClickListener rssNewsClickListener;
+    private final int imageWidth;
+    private final int imageHeight;
+    @SuppressWarnings("FieldCanBeLocal")
+    private final String EMPTY_STRING = "";
 
-    public RssRecyclerViewAdapter(Context context, List<Item> rssList) {
+    RssRecyclerViewAdapter(Context context, ArrayList<Item> rssList) {
         this.rssList = rssList;
-        this.context = context;
+        imageWidth = context.getResources().getInteger(R.integer.size_xxxxxlarge_integer);
+        imageHeight = context.getResources().getInteger(R.integer.size_xxxxxlarge_integer);
         this.inflater = LayoutInflater.from(context);
     }
 
@@ -42,11 +49,16 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
         final Item item = rssList.get(position);
         holder.newsHeader.setText(item.getTitle());
-        holder.newsCutText.setText(item.getDescription());
+        String newsCutTextRaw = item.getDescription();
+        String newsCutTextParsed;
+        if (newsCutTextRaw != null) {
+            newsCutTextParsed = Jsoup.parse(newsCutTextRaw).text();
+        } else {
+            newsCutTextParsed = EMPTY_STRING;
+        }
+        holder.newsCutText.setText(newsCutTextParsed);
         holder.pubDate.setText((item.getPubDate()));
         holder.getAdapterPosition();
-        int imageWidth = context.getResources().getInteger(R.integer.size_xxxxxlarge_integer);
-        int imageHeight = context.getResources().getInteger(R.integer.size_xxxxxlarge_integer);
         if (item.getEnclosureList() != null) {
             Picasso.get()
                     .load(item.getEnclosureList().get(0).getUrl())
@@ -88,7 +100,7 @@ public class RssRecyclerViewAdapter extends RecyclerView.Adapter<RssRecyclerView
         }
     }
 
-    public void setRssNewsClickListener(RssNewsClickListener rssNewsClickListener) {
+    void setRssNewsClickListener(RssNewsClickListener rssNewsClickListener) {
         this.rssNewsClickListener = rssNewsClickListener;
     }
 

@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="text_12sp">12sp</dimen>
-    <dimen name="text_14sp">14sp</dimen>
-    <dimen name="text_16sp">16sp</dimen>
-    <dimen name="text_20sp">20sp</dimen>
-    <dimen name="text_24sp">24sp</dimen>
-    <dimen name="text_28sp">28sp</dimen>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="text_12sp" tools:keep="@dimen/text_12sp">12sp</dimen>
+    <dimen name="text_14sp" tools:keep="@dimen/text_14sp">14sp</dimen>
+    <dimen name="text_16sp" tools:keep="@dimen/text_16sp">16sp</dimen>
+    <dimen name="text_20sp" tools:keep="@dimen/text_20sp">20sp</dimen>
+    <dimen name="text_24sp" tools:keep="@dimen/text_24sp">24sp</dimen>
+    <dimen name="text_28sp" tools:keep="@dimen/text_28sp">28sp</dimen>
 
-    <dimen name="size_1dp">1dp</dimen>
-    <dimen name="size_2dp">2dp</dimen>
+    <dimen name="size_1dp" tools:keep="@dimen/size_1dp">1dp</dimen>
+    <dimen name="size_2dp" tools:keep="@dimen/size_2dp">2dp</dimen>
     <dimen name="size_4dp">4dp</dimen>
     <dimen name="size_8dp">8dp</dimen>
     <dimen name="size_16dp">16dp</dimen>
-    <dimen name="size_24dp">24dp</dimen>
+    <dimen name="size_24dp" tools:keep="@dimen/size_24dp">24dp</dimen>
     <dimen name="size_32dp">32dp</dimen>
-    <dimen name="size_40dp">40dp</dimen>
-    <dimen name="size_48dp">48dp</dimen>
+    <dimen name="size_40dp" tools:keep="@dimen/size_40dp">40dp</dimen>
+    <dimen name="size_48dp" tools:keep="@dimen/size_48dp">48dp</dimen>
     <dimen name="size_72dp">72dp</dimen>
     <dimen name="size_144dp">144dp</dimen>
 
-    <dimen name="text_size_xsmall">@dimen/text_12sp</dimen>
-    <dimen name="text_size_small">@dimen/text_14sp</dimen>
-    <dimen name="text_size_medium">@dimen/text_16sp</dimen>
-    <dimen name="text_size_large">@dimen/text_20sp</dimen>
-    <dimen name="text_size_xlarge">@dimen/text_24sp</dimen>
-    <dimen name="text_size_xxlarge">@dimen/text_28sp</dimen>
+    <dimen name="text_size_xsmall" tools:keep="@dimen/text_size_xsmall">@dimen/text_12sp</dimen>
+    <dimen name="text_size_small" tools:keep="@dimen/text_size_small">@dimen/text_14sp</dimen>
+    <dimen name="text_size_medium" tools:keep="@dimen/text_size_medium">@dimen/text_16sp</dimen>
+    <dimen name="text_size_large" tools:keep="@dimen/text_size_large">@dimen/text_20sp</dimen>
+    <dimen name="text_size_xlarge" tools:keep="@dimen/text_size_xlarge">@dimen/text_24sp</dimen>
+    <dimen name="text_size_xxlarge" tools:keep="@dimen/text_size_xxlarge">@dimen/text_28sp</dimen>
 
-    <dimen name="size_xxxsmall">@dimen/size_1dp</dimen>
-    <dimen name="size_xxsmall">@dimen/size_2dp</dimen>
+    <dimen name="size_xxxsmall" tools:keep="@dimen/size_xxxsmall">@dimen/size_1dp</dimen>
+    <dimen name="size_xxsmall" tools:keep="@dimen/size_xxsmall">@dimen/size_2dp</dimen>
     <dimen name="size_xsmall">@dimen/size_4dp</dimen>
     <dimen name="size_small">@dimen/size_8dp</dimen>
     <dimen name="size_medium">@dimen/size_16dp</dimen>
-    <dimen name="size_large">@dimen/size_24dp</dimen>
+    <dimen name="size_large" tools:keep="@dimen/size_large">@dimen/size_24dp</dimen>
     <dimen name="size_xlarge">@dimen/size_32dp</dimen>
-    <dimen name="size_xxlarge">@dimen/size_40dp</dimen>
-    <dimen name="size_xxxlarge">@dimen/size_48dp</dimen>
+    <dimen name="size_xxlarge" tools:keep="@dimen/size_xxlarge">@dimen/size_40dp</dimen>
+    <dimen name="size_xxxlarge" tools:keep="@dimen/size_xxxlarge">@dimen/size_48dp</dimen>
     <dimen name="size_xxxxlarge">@dimen/size_72dp</dimen>
     <dimen name="size_xxxxxlarge">@dimen/size_144dp</dimen>
 
     <!--  for picasso dimens -->
-    <integer name="size_xxxxlarge_integer">72</integer>
+    <integer name="size_xxxxlarge_integer" tools:keep="@integer/size_xxxxlarge_integer">72</integer>
     <integer name="size_xxxxxlarge_integer">144</integer>
 
 

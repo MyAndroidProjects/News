@@ -9,9 +9,9 @@ import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
 public enum XmlConverterRetrofit {
     NGS(BuildConfig.URL_RSS_NGS),
     MEDUZA(BuildConfig.URL_RSS_MEDUZA),
-    YANDEX(BuildConfig.URL_RSS_YANDEX),
+    WASHINGTONPOST(BuildConfig.URL_RSS_WASHINGTONPOST),
     LENTA(BuildConfig.URL_RSS_LENTA),
-    RBC(BuildConfig.URL_RSS_RBC);
+    RT(BuildConfig.URL_RSS_RT);
 
     private final String baseUrl;
     private RetrofitApi.Xml retrofitApiXml;

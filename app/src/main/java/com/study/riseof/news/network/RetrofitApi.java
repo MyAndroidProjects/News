@@ -18,6 +18,8 @@ public interface RetrofitApi {
     }
 
     interface Json {
+        /*
+        // проcто retrofit2
         @GET()
         Call<MeduzaNews> getCallData(@Url String url);
 
@@ -29,7 +31,7 @@ public interface RetrofitApi {
         // Maybe
         @GET()
         Maybe<MeduzaNews> getMaybeData(@Url String url);
-
+*/
         //   Observable
         @GET()
         Observable<MeduzaNews> getObservableData(@Url String url);
