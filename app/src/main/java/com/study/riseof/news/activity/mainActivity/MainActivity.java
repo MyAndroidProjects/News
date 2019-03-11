@@ -136,12 +136,11 @@ public class MainActivity extends BaseActivity implements
     }
 
     @Override
-    protected void setStatusBarColor(int color) {
+    protected void setStatusBarColor(int colorId) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = this.getWindow();
-            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(color);
+            window.setStatusBarColor(getResources().getColor(colorId));
         }
     }
 
