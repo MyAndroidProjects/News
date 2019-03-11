@@ -43,4 +43,4 @@ Navigator view, выполнен в отдельном фрагменте, от�
 ![Lenta web](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/lenta_web.png)
 ![Rt_nav_drawer](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/rt_nav_drawer.png)
 ![Rt_rss](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/rt_rss.png)
-
+![Rt_web](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/rt_web.png)
