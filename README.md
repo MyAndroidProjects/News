@@ -37,10 +37,9 @@ Navigator view, выполнен в отдельном фрагменте, от�
 ![Progress_bar](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/progress_bar.png)
 ![Toast_exception](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/toast_exception.png)
 ![Washington_post_rss](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/wp_rss.png)
+![Washington_post_web](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/wp_web.png)
+
 ![Lenta rss](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/lenta_rss.png)
-
-
-![Lenta web](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/lenta_web.png)
 ![Rt_nav_drawer](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/rt_nav_drawer.png)
 ![Rt_rss](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/rt_rss.png)
 ![Rt_web](https://github.com/MyAndroidProjects/News/blob/master/Screenshots/rt_web.png)
